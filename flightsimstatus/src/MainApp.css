@@ -1,0 +1,42 @@
+/* Generall:
+  Information: The measurement is 25 of its original size and converted into px */
+body {
+  background-color: wjite;
+  font-size: 16px;
+  font-family: arial, "Times New Roman";
+  color: black;
+}
+#headLine{
+  font-size: 30px;
+  text-align: center;
+}
+/* ======================== Main app atyle ======================== */
+
+
+
+
+/* ======================== Left 1, 2:1 & 2:2 ======================== */
+#sektionLeft2_2{
+
+}
+#sektionLeft2_1{
+  
+}
+#sektionLeft1{/* Measure = 21x7,7 */  
+}
+
+
+#connectionFsPart{
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid white;
+}
+#statusHeadLine{
+  line-height: 50px;
+}
+#connectionElecb{
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,2 @@
+Kommandon:
+Starta Electron= npm run electron-dev

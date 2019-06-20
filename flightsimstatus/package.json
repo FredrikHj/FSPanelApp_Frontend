@@ -1,0 +1,39 @@
+{
+  "name": "flightsimstatus",
+  "version": "0.1.0",
+  "description": "Building and Publishing a React Based Electron App From Scratch",
+  "author": "Fredrik Hjärpe <freddehboy@hotmail.com>",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "concurrently": "^4.1.0",
+    "electron": "^5.0.4",
+    "electron-builder": "^20.43.0",
+    "electron-devtools-installer": "^2.2.4",
+    "electron-is-dev": "^0.3.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "2.1.8",
+    "socket.io": "^2.2.0",
+    "wait-on": "^3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \" npm start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "homepage": "./",
+  "main": "public/mainElectron.js",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

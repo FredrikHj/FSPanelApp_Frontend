@@ -1,0 +1,73 @@
+Kod att spara - HTML:
+Switch-
+<div class="mds-switch2">
+  <section class="mds-switch__label2"></section>
+  <div class="mds-switch__switchArea2">
+    <div class="switchArea__btn2"></div>
+  </div>
+</div>
+
+CSS:
+Switchen-
+.mds-switch2{
+  left: 50%;
+  position: relative;
+  top: 22px;
+}
+.mds-switch__label2{
+  color: black;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 33px;
+}
+.mds-switch__switchArea2{
+  background-color: grey;
+  border-radius: 15px;
+  height: 15px;
+  position: absolute;
+  width: 36px;
+}
+.switchArea__btn2{
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 3px 15px 5px #757575;
+  height: 20px;
+  margin-left: -1px;
+  position: relative;
+  top: -3px;
+  width: 20px;
+}
+
+JS:
+// switch: function (element) {
+//   let getSwitchArea = element.querySelector('.mds-switch__switchArea');
+//   let getSwitchLabel = element.querySelector('.mds-switch__label');
+//   let getSwitchBtn = element.querySelector('.switchArea__btn');
+//   let getMain = document.querySelector('.mainContent');
+//   let getDisabledlabel = document.querySelector('.header h3');
+//
+//   getSwitchLabel.textContent = 'OFF';
+//   let switchStateOff = true;
+//   //let getSwitchListenArea = element.querySelector('.mds-switch');
+//   element.addEventListener('click', function () {
+//     console.log('refdv');
+//     if (switchStateOff === true) {
+//       getSwitchLabel.textContent = 'ON';
+//       getSwitchArea.style.backgroundColor = 'rgb(177, 156, 217)';
+//       getSwitchBtn.setAttribute('class', 'switchArea__btn switchArea__btn--on');
+//
+//       getMain.setAttribute('class', 'mainContent mainContent--disabled');
+//       getDisabledlabel.setAttribute('style', 'display: block');
+//       switchStateOff = false;
+//     }
+//     else if (switchStateOff === false) {
+//       getSwitchLabel.textContent = 'OFF';
+//       getSwitchArea.style.backgroundColor = 'grey';
+//       getSwitchBtn.setAttribute('class', 'switchArea__btn switchArea__btn--off');
+//
+//       getMain.setAttribute('class', 'mainContent');
+//       getDisabledlabel.setAttribute('style', 'display: none');
+//       switchStateOff = true;
+//     }
+//   });
+//},
