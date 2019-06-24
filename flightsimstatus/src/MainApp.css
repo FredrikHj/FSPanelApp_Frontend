@@ -1,5 +1,5 @@
 /* Generall:
-  Information: The measurement is 25 of its original size and converted into px */
+  Information: The measurement is 1/4 of its original size and converted into px */
 body {
   background-color: wjite;
   font-size: 16px;
@@ -10,19 +10,133 @@ body {
   font-size: 30px;
   text-align: center;
 }
+/* Common style rouls =============================================================== */
+:root{
+  --color-darkgrey--: rgb(169,169,169);
+  --width--: 198.425197px;
+}
+#sektionContainer{
+
+}
+
+.section1Label{
+  text-align: center;
+  margin-bottom: -16px;
+  width: 198.4px;
+  border-bottom: 3px solid black;
+}
+
+/* Switches ===========================================================================
+Overall */
+.mds-switch{
+  left: -27px;
+  transform: rotate(90deg);
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  top: 10px;
+  left: -25px;
+}
+.mds-switch__SwitchState{
+  margin-top: -37px;
+  margin-left: 54px;
+}
+.mds-switch__chhide{
+  margin-top: -50px;
+  margin-left: -33px;
+  height: 50px;
+  width: 100px;
+  border-radius: 50px;
+  display: block;
+  opacity: 0;
+  z-index: 1;
+}
+.mds-switch__slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 7.7px;
+  width: 18px;
+  border-radius: 15px;
+  background-color: white;
+  transition: .4s;
+  z-index: -1;
+}
+.mds-switch__slider::before{
+  position: absolute;
+  content: "";
+  background-color: green;
+  box-shadow: 0 3px 15px 5px #757575;
+  border-radius: 20px;
+  height: 10px;
+  margin-left: -1px;
+  width: 10px;
+  top: -1.5px;
+  transition: .4s;
+  z-index: 0;
+}
+.mds-switch__chhide:checked + .mds-switch__slider {
+  background-color: white;
+}
+.mds-switch__chhide:checked + .mds-switch__slider::before {
+  background-color: red;
+  transform: translateY(26px);
+}
+
+/* Format 2 poss vertical */
+.switch2PossVertical{
+  width: 20px;
+  height: 60px;
+}
+.spdt{
+  font-size: 0.7em;
+}
+.spdtLabelTop{
+  position: relative;
+  top: -4px;
+  width: 13px;
+  text-align: center;
+}
+.spdtLabelBottom{
+  position: relative;
+  bottom: 20px;
+  width: 13px;
+  text-align: center;
+}
+
+/* Poss of components */
+#vs1_1_p1{
+  position: relative;
+  top: 5%;
+  left: 2%;
+}
 /* ======================== Main app atyle ======================== */
 
 
 
 
 /* ======================== Left 1, 2:1 & 2:2 ======================== */
-#sektionLeft2_2{
+#sektionLeft2_1{/* Measure = 5.25x2.2 */
+  margin-top: 15px;
+  height: 83.149606px;
+  width: var(--width--);
+  background-color: var(--color-darkgrey--);
+}
+#sektionLeft2_2{ /* Measure = 5.25x3,5 */
+  margin-top: 15px;
+  height: 132.283465px;
+  width: var(--width--);
+  background-color: var(--color-darkgrey--);
+}
 
-}
-#sektionLeft2_1{
-  
-}
-#sektionLeft1{/* Measure = 21x7,7 */  
+#sektionLeft1{/* Measure = 5.25x1.925 */
+  margin-top: 15px;
+  height: 72.755906px;
+  width: var(--width--);
+  background-color: var(--color-darkgrey--);
 }
 
 

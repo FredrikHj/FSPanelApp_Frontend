@@ -1,1 +1,1 @@
-nodemon flightSimServer.js
+nodemon -e js flightSimServer.js

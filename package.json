@@ -2,21 +2,26 @@
   "name": "fs_projekt",
   "version": "1.0.0",
   "description": "",
+  "main": "flightSimServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FredrikHj/FSElectron.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FredrikHj/FSElectron/issues"
+  },
+  "homepage": "https://github.com/FredrikHj/FSElectron#readme",
   "dependencies": {
-    "@babel/core": "^7.3.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
-    "@babel/register": "^7.0.0",
-    "cli": "^1.0.1",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
-    "fsuipc": "^0.2.1",
-    "johnny-five": "^1.0.0",
-    "node-gyp": "^3.8.0",
+    "express": "^4.17.1",
+    "fsuipc": "^0.3.0",
+    "johnny-five": "^1.1.0",
+    "node-gyp": "^5.0.1",
     "socket.io": "^2.2.0"
   }
 }
