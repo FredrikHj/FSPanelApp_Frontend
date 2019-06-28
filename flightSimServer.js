@@ -4,6 +4,9 @@ let express = require('express');
 var cors = require('cors');
 let fileSystem = require('fs');
 
+const fsuipc = require('fsuipc');
+const obj = new fsuipc.FSUIPC();  
+
 let app = express(express.json());
 app.use(cors());
 
@@ -18,103 +21,236 @@ let jFive =  require("johnny-five");
 let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
 
 // Setup the boards and its com port 
-let boardVs1_2 = new jFive.Board({ port: 'COM3'});
+let boardVs1_2 = new jFive.Board({ port: // Runt skrivaren usb = 'COM11',
+  // Bakom datorn
+'COM12'});
 
-/* // Initizial run
-app.get('/FSData', (req, res) => {
+// Initizial run
+/* app.get('/FSData', (req, res) => {
   res.status(200).send(dbFlightSimTest);
-}); */
-
+});
+ */
 //Integrerar kortfiler
 boardVs1_2.on("ready", function () {
-  
-  // Left section 2:1
+  // Left section 1 | Pin =  0 & 1 = Reserv!
+
+//38 Flera triggering, fixa genom kod
+
+  let vs1_13 = new jFive.Switch(43);
+  vs1_13.on('open', function () {
+    console.log('vs1_13 on');
+    
+    // Status setting
+    
+    // FlightSim setting
+  });
+  vs1_13.on('close', function () {
+    console.log('vs1_13 off');
+    
+    // Status setting
+    
+    // FlightSim setting
+  });
+  /*
   let dp2 = new jFive.Switch(2);
   let dp3 = new jFive.Switch(3);
-  let dp4 = new jFive.Switch(4);
-  let dp5 = new jFive.Switch(5);
-  let dp6 = new jFive.Switch(6);
-  let dp7 = new jFive.Switch(7);
-  let dp8 = new jFive.Switch(8);
-  let dp9_1 = new jFive.Switch(9);
-  let dp9_2 = new jFive.Switch(10);
-  let dp10 = new jFive.Switch(11);
-  let dp11 = new jFive.Switch(12);
-  let dp12 = new jFive.Switch(13);
-  let dataObj = {};
+
+  // Left section 2:1
+  
+  
   /* Component place:
-  1 */
-
-
-  dp4.on('open', function () {
-    console.log(boardVs1_2);
- 
-    /*   let vs2_1Component1 = '1';
-    //console.log('1 up');
-    dbFlightSimTest['component1'] = vs2_1Component1;
-     
-      // Save the components status if debugging
-      fileSystem.writeFile('./ServerFlightSim/dbFlightSimTest.json', JSON.stringify(dbFlightSimTest //debugging
-          , null, 2
-        ), function(err) {});  
-        //console.log(dbFlightSimTest);
- */    });
-  
-    dp4.on('close', function () {
-      console.log(boardVs1_2.Switch);
-      
-    /*   let vs2_1Component1 = '0';
-      dbFlightSimTest['component1'] = vs2_1Component1;
-     console.log('1 dn');
-      console.log('==================================================');
-     // Save the components status if debugging
-      fileSystem.writeFile('./ServerFlightSim/dbFlightSimTest.json', JSON.stringify(dbFlightSimTest //debugging
-        , null, 2
-      ), function(err) {});   
-
-      //console.log(dbFlightSimTest); */
-    });
-    // 2
-   dp5.on('open', function () {
-    console.log(boardVs1_2.Switch);
-   /*  let vs2_1Component2 = '1';
-      dbFlightSimTest['component2'] = vs2_1Component2;
-    // console.log('2 up');
-
-
-      // Save the components status if debugging
-      fileSystem.writeFile('./ServerFlightSim/dbFlightSimTest.json', JSON.stringify(dbFlightSimTest //debugging
-          , null, 2
-        ), function(err) {});  
-         console.log(dbFlightSimTest);
-        console.log(dp2.pin); */
-     });
-    dp5.on('close', function () {
-      console.log(boardVs1_2.Switch);
-      
-    /*let vs2_1Component2 = '0';
-      dbFlightSimTest['component2'] = vs2_1Component2;
-      console.log('2 dn');
-      console.log('==================================================');
- 
-      // Save the components status if debugging
-      fileSystem.writeFile('./ServerFlightSim/dbFlightSimTest.json', JSON.stringify(dbFlightSimTest //debugging
-        , null, 2
-      ), function(err) {});    
-       console.log(dbFlightSimTest);
-      console.log(dp2); */
-     }); 
+  1 ====================================================
+  let vs1_1 = new jFive.Switch(4); // Function = OK
+  vs1_1.on('open', function () {
+    console.log('vs1_1 on');
+    
+    // Status setting
+    
+    // FlightSim setting
   });
+  vs1_1.on('close', function () {
+    console.log('vs1_1 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 2 ====================================================
+  let vs1_2 = new jFive.Switch(21); // Function = OK
+  vs1_2.on('open', function () {
+    console.log('vs1_2 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_2.on('close', function () {
+    console.log('vs1_2 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 3 ====================================================
+  let vs1_3 = new jFive.Switch(6); // Function = OK
+  vs1_3.on('open', function () {
+    console.log('vs1_3 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_3.on('close', function () {
+    console.log('vs1_3 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 4 ====================================================
+  let vs1_4 = new jFive.Switch(7); // Function = OK
+  vs1_4.on('open', function () {
+    console.log('vs1_4 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_4.on('close', function () {
+    console.log('vs1_4 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 5 ====================================================
+  let vs1_5 = new jFive.Switch(8); // Function = OK
+  vs1_5.on('open', function () {
+    console.log('vs1_5 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_5.on('close', function () {
+    console.log('vs1_5 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 6 ====================================================
+  let vs1_6 = new jFive.Switch(9); // Function = OK
+  vs1_6.on('open', function () {
+    console.log('vs1_6 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_6.on('close', function () {
+    console.log('vs1_6 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 7 ====================================================
+  let vs1_7 = new jFive.Switch(10); // Function = Work widh to many triggering, fix it later by code
+  vs1_7.on('open', function () {
+    console.log('vs1_7 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_7.on('close', function () {
+    console.log('vs1_7 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 8 ====================================================
+  let vs1_8 = new jFive.Switch(11); // Function = OK
+  vs1_8.on('open', function () {
+    console.log('vs1_8 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_8.on('close', function () {
+    console.log('vs1_8 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 9up ====================================================
+  let vs1_9Up = new jFive.Switch(12); // Function = OK
+  vs1_9Up.on('open', function () {
+    console.log('vs1_9up');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_9Up.on('close', function () {
+    console.log('vs1_9up off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 9dn ====================================================
+  let vs1_9Dn = new jFive.Switch(13); // Function = OK
+  vs1_9Dn.on('open', function () {
+    console.log('vs1_9dn');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_9Dn.on('close', function () {
+    console.log('vs1_9dn');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 10 ====================================================
+  let vs1_10 = new jFive.Switch(14); // Function = OK
+  vs1_10.on('open', function () {
+    console.log('vs1_10 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_10.on('close', function () {
+    console.log('vs1_10 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 11 ====================================================
+  let vs1_11 = new jFive.Switch(19); // Function = OK
+  vs1_11.on('open', function () {
+    console.log('vs1_11 on');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_11.on('close', function () {
+    console.log('vs1_11 off');
+    
+    // Status setting
+    // FlightSim setting
+  });
+  // 12 ====================================================
+  let vs1_12 = new jFive.Switch(18); // Function = OK
+  vs1_12.on('open', function () {
+    console.log('vs1_12 on');
+     
+    // Status setting
+    // FlightSim setting
+  });
+  vs1_12.on('close', function () {
+    console.log('vs1_12 off');
+     
+    // Status setting
+    // FlightSim setting
+  }); */
+}); 
   
-  /* let test = {
+/*    let test = {
     nodeServer: true,
     fsuipc: true,
     board1: true, 
     testC1: vs2_1Component1,
     testC2: vs2_1Component2,
-  }  */
-  
-  
+  } 
   //Useing Socket.io as a the webbhooks for auto updating the Frontend
   const socket = require('socket.io');
   const io = socket(server);
@@ -140,7 +276,7 @@ boardVs1_2.on("ready", function () {
             , null, 2
               ), function(err) {});       
       }); */
-  });
+  //});
  
 
 

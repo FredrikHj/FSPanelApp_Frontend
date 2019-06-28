@@ -1,49 +1,62 @@
 
 import React, {useState, useEffect } from 'react';
+import { render } from 'react-dom';
 import io from 'socket.io-client';
 //import axios from 'axios';
 
 
 // =========================================================================================
 function MainApp() {
-  let [url, setUrl] = useState('');
+  let [restAPIUrl, setRestAPIUrl] = useState('');
   let [fsApi, setFsApi] = useState({});
 
+
+
+/* 
+
+
+  render() {
+    return (<div />);
+  }
+
+}
+render(<App />, document.getElementById('root'));
+ */
   useEffect(() => {
-    setUrl('http://localhost:3001/');
-    let listen = io.connect(url);
-    console.log(url);
+    setRestAPIUrl('http://localhost:3001/FSData');
+    loadData();
+    setInterval(loadData, 500);
+    
+    //let listen = io.connect(url);
+
     // Listen on respponse from the chatserver
-    listen.on('fsAPIData', res => {
+/*     listen.on('fsAPIData', res => {
       console.log(res);
       setFsApi(res)
-    });  
+    });   */
     console.log('vd<s');
     
 /*     listen.on('connection', function(){
 
       
     });     */   
-  }, [fsApi]);
-/*   setInterval(function(){ 
-        console.log('bdfb');
-    
-    axios.get(url, 'FSData/', {
-      headers: 'application/json, text/plain',
-    })
-    .then(response => {
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log(error.response);
-    });
-  }, 3000);
-
+  });
+  async function loadData(){
+    try {
+      const res = await fetch(restAPIUrl);
+      const blocks = await res.json();
+      setFsApi(blocks);
+      console.log(blocks)
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }
   function getFSData() {
 
   }
 
- */
+ 
 let twoPossSwitch = () => {
 /*   let getSwitchName = element.querySelector('.mds-switch__SwitchName');
   let getSwitchState = element.querySelector('.mds-switch__SwitchState');
