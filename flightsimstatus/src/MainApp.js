@@ -2,66 +2,68 @@
 import React, {useState, useEffect } from 'react';
 import { render } from 'react-dom';
 import io from 'socket.io-client';
-//import axios from 'axios';
+import axios from 'axios';
 
+/* let fsDataApi = {};
+setInterval(getFSData, 500);im
+function getFSData() {
 
+} */
 // =========================================================================================
 function MainApp() {
   let [restAPIUrl, setRestAPIUrl] = useState('');
-  let [fsApi, setFsApi] = useState({});
-
-
-
-/* 
-
-
+  let [fsApi, setFsApi] = useState();
+  //let listen = io.connect('http://localhost:3001/');
+/*   
+  function test(fsDataApi) {
+    console.log(fsDataApi);
+  } */
+  
+  
+  /* 
+  
+  
   render() {
     return (<div />);
   }
-
+  
 }
 render(<App />, document.getElementById('root'));
- */
-  useEffect(() => {
-    setRestAPIUrl('http://localhost:3001/FSData');
-    loadData();
-    setInterval(loadData, 500);
-    
-    //let listen = io.connect(url);
-
-    // Listen on respponse from the chatserver
-/*     listen.on('fsAPIData', res => {
-      console.log(res);
-      setFsApi(res)
-    });   */
-    console.log('vd<s');
-    
-/*     listen.on('connection', function(){
-
-      
-    });     */   
+*/
+useEffect(() => {
+ // setRestAPIUrl('http://localhost:3001/'); 
+  
+  
+  
+  axios.get('http://localhost:3001/FSData').
+  then(response => {
+    console.log(response.data);
+    //fsDataApi['fsData'] = response.data;
+    //console.log(fsDataApi.fsData.test);
+    setFsApi(response.data);
+  }).
+  catch(error => {
+    console.log(error.response);
   });
-  async function loadData(){
-    try {
-      const res = await fetch(restAPIUrl);
-      const blocks = await res.json();
-      setFsApi(blocks);
-      console.log(blocks)
-    }
-    catch (e) {
-      console.log(e);
-    }
-  }
-  function getFSData() {
-
-  }
-
- 
-let twoPossSwitch = () => {
+  
+    
+    /*     listen.on('connection', function(){
+    });   */   
+    // });
+/*    listen.on('fsAPIData', res => {
+  //Listen on respponse from the chatserver
+    console.log(res.data);
+    //setFsApi(res);
+  }); */
+  console.log(fsApi);
+  
+});
+  
+  let twoPossSwitch = () => {
 /*   let getSwitchName = element.querySelector('.mds-switch__SwitchName');
-  let getSwitchState = element.querySelector('.mds-switch__SwitchState');
+let getSwitchState = element.querySelector('.mds-switch__SwitchState');
   let getMain = document.querySelector('.mainContent');
-
+  
   getSwitchState.textContent = 'OFF';
   let switchStateOff = true;
   element.addEventListener('click', function () {
@@ -79,10 +81,9 @@ let twoPossSwitch = () => {
 }
 
 return (
-    <>
-    <div id="sektionLeft2_1" style={(fsApi.component1 === '1') ? {color: 'red'} : {color: 'green'}} >
-      2:2
-
+    <> 
+    <div id="sektionLeft2_1">
+    2:2
     </div>
     <div id="sektionLeft2_2">
       2:1

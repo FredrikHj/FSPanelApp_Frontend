@@ -1,60 +1,179 @@
 // ========================================== Kortserver ==========================================
-// Usefull modules for server and set to action
+// Modules for Express Node JS server
 let express = require('express');
-var cors = require('cors');
+let app = express();
+app = express(express.json());
+
+let cors = require('cors');
+app.use(cors());
 let fileSystem = require('fs');
 
-const fsuipc = require('fsuipc');
-const obj = new fsuipc.FSUIPC();  
+// Modules for my B737 panel
+let jFive =  require("johnny-five");
+let fsuipc = require('fsuipc');
+let phidget22 = require('phidget22');
 
-let app = express(express.json());
-app.use(cors());
+const obj = new fsuipc.FSUIPC();  
+/* 
+//Pugview
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }
+)); */
+
+
+
 
 // Configfile and overall configuration
-let configServer = require('./ServerFlightSim/configServer.json'); 
-
-let port = configServer.port;
+const configServer = require('./ServerFlightSim/configServer.json'); 
+const port = configServer.port; // Set server port
 const server = app.listen(port, () =>  console.log(`Server körs på port --> ${port}!`));
 
-// Läser in Arduino moduler occh kopplar upp mig mot mina kort
-let jFive =  require("johnny-five");
-let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
-
-// Setup the boards and its com port 
+// Connect the Arduino boards 
 let boardVs1_2 = new jFive.Board({ port: // Runt skrivaren usb = 'COM11',
-  // Bakom datorn
-'COM12'});
-
-// Initizial run
-/* app.get('/FSData', (req, res) => {
-  res.status(200).send(dbFlightSimTest);
-});
- */
+// Bakom datorn
+'COM4'});
+// ============================ Connect the Arduino and phidget boards =========================================
+let vs1_13Status = 0;
 boardVs1_2.on("ready", function () {
-  //Integrerar kortfiler
-    // Left section 1 & 2
-      //require('./ServerFlightSim/Boards/D1Board.json'); 
-
-
-  let ledSegment = new jFive.Led.Digits({
-    pins: {
-      data: 36, // DIN
-      cs: 38, // CS
-      clock: 40 // CLK
-    }
+  // Connect the Phidget server
+  let ledConn = new phidget22.Connection(3003, 'localhost');
+  ledConn.connect().then(function () {
+    console.log("Ansluten");
+  }).catch(function (err) {
+    console.error("Anslutningsfel", err);
   });
-  ledSegment.print();
-});
+  
+  
+  // Initilize LED Channels ====================================================================================
+  let LEDBoard1ChannelObj = {};
+  let LEDBoard2ChannelObj = {}; 
+  let LEDBoardObj = {};
+  let dimValue = 0.2;
+  
+  initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj);
+  console.log(LEDBoardObj);
+  // ===========================================================================================================
+  //Integrerar kortfiler
+  // Left section 1 & 2
+  //require('./ServerFlightSim/Boards/D1Board.json'); 
+  let vs1_13 = new jFive.Switch(12);
+  vs1_13.on('open', function () {
 
-//38 Flera triggering, fixa genom kod
-/* 
-let vs1_13 = new jFive.Switch(2);
-vs1_13.on('open', function () {
-  console.log('vs1_13 on');
+    LEDBoardObj.board1.chInstance1.setDutyCycle(0.0);  
+    console.log('vs1_13 on');
+    vs1_13Status = "1";
+    //LED on
+    LEDBoardObj.board1.chInstance0.open().then(function () {
+      // code to execute after open succeeds
+      console.log('Utgång 0 - Öppen');
+      LEDBoardObj.board1.chInstance0.setDutyCycle(dimValue);  
+    }).catch(function (err) {
+      // code to execute if open fails
+      console.log('Utgång 0 - Ej öppen');  
+    });
+    // Status setting
+    console.log(vs1_13Status);
+    //sendToFrontend(vs1_13Status);
+    // FlightSim setting
+  });
   
-  // Status setting
+  vs1_13.on('close', function () {
+    LEDBoardObj.board1.chInstance0.setDutyCycle(0.0); 
+    console.log('vs1_13 off');
+    vs1_13Status = "0";
+    //LED on
+    LEDBoardObj.board1.chInstance1.open().then(function () {
+      // code to execute after open succeeds
+      console.log('Utgång 0 - Öppen');
+      LEDBoardObj.board1.chInstance1.setDutyCycle(dimValue);  
+    }).catch(function (err) {
+      // code to execute if open fails
+      console.log('Utgång 0 - Ej öppen');  
+    });
+    // Status setting
+    console.log(vs1_13Status);
+    //sendToFrontend(vs1_13Status);
+    // FlightSim setting
+  });
+  let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
+  // API
+  app.get('/FSData', (req, res) => {
+    res.status(200).send({"test": vs1_13Status});
+  });
   
-  // FlightSim setting
+/*   app.set('Views', './Views');
+  app.set('view engine', 'pug');
+  app.get('/', (req, res) => {
+    res.render('index', { title: 'Filmer', headline: 'Filmer', lista: vs1_13Status });
+  }); */
+
+});
+// ====================================== initilize the Boards ======================================
+function initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj){
+  for (let outputs = 0; outputs <= 63; outputs++) {
+    // Creates LED board1 channel with serieNr and its channel 
+    LEDBoard1ChannelObj['chInstance' + outputs] = new phidget22.DigitalOutput();
+    LEDBoard1ChannelObj['chInstance' + outputs].setDeviceSerialNumber(524938);
+    LEDBoard1ChannelObj['chInstance' + outputs].setChannel(outputs);
+    
+    LEDBoard2ChannelObj['chInstance' + outputs] = new phidget22.DigitalOutput();
+    LEDBoard2ChannelObj['chInstance' + outputs].setDeviceSerialNumber(00000);
+    LEDBoard2ChannelObj['chInstance' + outputs].setChannel(outputs);
+  }
+  // Save the channels into a objects key corresponding a key named board + nr for the board
+  LEDBoardObj['board1'] = LEDBoard1ChannelObj;
+  LEDBoardObj['board2'] = LEDBoard2ChannelObj;
+}
+/* function sendToFrontend(vs1_13Status) {
+  //Using Socket.io as a the webbhooks for auto updating the Frontend
+
+  const socket = require('socket.io');
+  const io = socket(server);
+  io.on('connection', (client) => {
+    client.on('join', function(handshake){
+      console.log(handshake);
+    })
+    console.log(client);
+    
+    console.log(vs1_13Status);
+    
+    let dbFlightSimTest = vs1_13Status;
+    let dbFlightSimTest = {
+      component1: vs1_13Status,
+      component2: 5,
+    }
+    
+    client.emit('fsAPIData', vs1_13Status);
+    
+  });
+  // Initizial run
+
+} */
+
+/*   led.setLEDForwardVoltage(5);
+led.setLEDCurrentLimit(0.04); */
+
+
+/*   let lcd = new jFive.LCD({ 
+  controller: "LCM1602",
+  pins: [20, 21],
+    backlight: 3,
+    rows: 2,
+    cols: 16,
+  });
+  lcd.print("Hi");
+  
+
+ 
+    //38 Flera triggering, fixa genom kod
+    /* 
+    let vs1_13 = new jFive.Switch(2);
+    vs1_13.on('open', function () {
+      console.log('vs1_13 on');
+      
+      // Status setting
+      
+      // FlightSim setting
 });
 vs1_13.on('close', function () {
   console.log('vs1_13 off');
@@ -68,40 +187,16 @@ vs1_13.on('close', function () {
   
 
 }); 
-  
+ */
+
 /*    let test = {
-    nodeServer: true,
-    fsuipc: true,
-    board1: true, 
-    testC1: vs2_1Component1,
-    testC2: vs2_1Component2,
-  } 
-  //Useing Socket.io as a the webbhooks for auto updating the Frontend
-  const socket = require('socket.io');
-  const io = socket(server);
-  io.on('connection', (socket) => {
-      socket.emit('fsAPIData', dbFlightSimTest);
-      /* socket.on('newMessegnes', (data) => {
-          let roomIndex = parseInt(roomNrStr)-1;
-        
-          let chatMessObj = {
-              id: JSON.stringify(messId(roomIndex)),
-              timeStamp: fixDateTime(),
-              usr: data.outUsr,
-              chatMess: data.outChatMess
-          }
-          s
-          // Push the new mes into its place
-          chatRooms.chatRoomSetting[roomIndex].messegnes.push(chatMessObj);
-          
-          chatRooms.chatRoomSetting[roomIndex].userTyped.push(userTypedObj);
-  
-          // Save the movies in an json file
-          fileSystem.writeFile('./server/ChatRooms.json', JSON.stringify(chatRooms //debugging
-            , null, 2
-              ), function(err) {});       
-      }); */
-  //});
+  nodeServer: true,
+  fsuipc: true,
+  board1: true, 
+  testC1: vs2_1Component1,
+  testC2: vs2_1Component2,
+} 
+ 
  
 
 
