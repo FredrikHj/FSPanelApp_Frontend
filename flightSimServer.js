@@ -51,7 +51,7 @@ boardVs1_2.on("ready", function () {
   let dimValue = 0.2;
   
   initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj);
-  console.log(LEDBoardObj);
+
   // ===========================================================================================================
   //Integrerar kortfiler
   // Left section 1 & 2
@@ -124,16 +124,20 @@ function initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj){
   LEDBoardObj['board1'] = LEDBoard1ChannelObj;
   LEDBoardObj['board2'] = LEDBoard2ChannelObj;
 }
-/* function sendToFrontend(vs1_13Status) {
+/* const socket = require('socket.io');
+const io = socket(server);
+ */
+/* // Prevent cors error
+//Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type";
+//io.origins('*:*') // for latest version
+function sendToFrontend(vs1_13Status) {
   //Using Socket.io as a the webbhooks for auto updating the Frontend
 
-  const socket = require('socket.io');
-  const io = socket(server);
   io.on('connection', (client) => {
-    client.on('join', function(handshake){
+/*     client.on('join', function(handshake){
       console.log(handshake);
-    })
-    console.log(client);
+    }) */
+/*     console.log(client);
     
     console.log(vs1_13Status);
     

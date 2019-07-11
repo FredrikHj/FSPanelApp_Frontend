@@ -1,31 +1,154 @@
 /* Generall:
-  Information: The measurement is 1/4 of its original size and converted into px */
+Information: The measurement is 1/4 of its original size and converted into px */
 body {
-  background-color: wjite;
+  background-color: white;
   font-size: 16px;
   font-family: arial, "Times New Roman";
   color: black;
+  margin: 0px 0 0 0;
 }
-#headLine{
-  font-size: 30px;
+.outerFrame{
+  max-width: 1850px;
+}
+.mainHeadLine{
+  font-size: 2em;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: -4px
 }
 /* Common style rouls =============================================================== */
 :root{
   --color-darkgrey--: rgb(169,169,169);
-  --width--: 198.425197px;
 }
-#sektionContainer{
-
+.sectionLeft1_2Container{
+  width: 15%;
 }
-
-.section1Label{
+.sectionHeadline{
+  width: 100%;
   text-align: center;
-  margin-bottom: -16px;
-  width: 198.4px;
-  border-bottom: 3px solid black;
+  margin-bottom: 0;
+}
+/* ======================== Sections ======================== */
+/* Övre nivå 5 */
+.sectionTop5{
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
 }
 
+/*  Övre Nivå 5 - 5:1 | Measure: 1667.905512x591.874016 */
+.section5_1{
+  width: 15%;
+  height: 7vh;
+  margin-top: 11px;
+  margin-bottom: 0;
+  position: relative;
+  background-color: var(--color-darkgrey--);
+}
+.section5_1:before{
+  content: "";
+  position: absolute;
+  border-top: 37px solid white;
+  border-right: 148px solid transparent;
+}
+/*  Övre Nivå 5 - 5:2 | Measure: 1131x633.070866 */
+.section5_2{
+  width: 15%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 5 - 5:3 | Measure: 1093x633.070866 */
+.section5_3{
+  width: 15%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 5 - 5:4 | Measure: 1093x633.070866 */
+.section5_4{
+  width: 15%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 5 - 5:5 | Measure: 1282x633.070866 */
+.section5_5{
+  width: 30%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 5 - 5:6 | Measure: 1667.905512x591x591.874016 */
+.section5_6{
+  width: 15%;
+  height: 7vh;
+  margin-top: 11px;
+  margin-bottom: 0;
+  position: relative;
+  background-color: var(--color-darkgrey--);
+}
+.section5_6:before{
+  content: "";
+  position: absolute;
+  right: 0;
+  border-top: 37px solid white;
+  border-left: 148px solid transparent;
+}
+
+/* Övre nivå 4 */
+.sectionTop4{
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  flex-direction: row;
+}
+
+/*  Övre Nivå 4 - 4:1 | Measure: 1667.905512x591.874016 */
+.section4_1{
+  width: 15%;
+  margin-bottom: 0;
+  position: relative;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 4 - 4:2 | Measure: 1131x633.070866 */
+.section4_2{
+  width: 15%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 4 - 4:3 | Measure: 1093x633.070866 */
+.section4_3{
+  width: 15%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 4 - 4:4 | Measure: 1093x633.070866 */
+.section4_4{
+  width: 15%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 4 - 4:5 | Measure: 1282x633.070866 */
+.section4_5{
+  width: 30%;
+  background-color: var(--color-darkgrey--);
+}
+/*  Övre Nivå 4 - 4:6 | Measure: 1667.905512x591x591.874016 */
+.section4_6{
+  width: 15%;
+  margin-bottom: 0;
+  position: relative;
+  background-color: var(--color-darkgrey--);
+}
+/*  Left 1 - 2:1 | Measure: 5.25x2.2 */
+.sectionLeft2_1{
+  margin-top: 15px;
+  height: 83.149606px;
+  background-color: var(--color-darkgrey--);
+}
+/*  Left 1 - 2:2 | Measure: 5.25x3,5 */
+.sectionLeft2_2{
+  margin-top: 15px;
+  height: 132.283465px;
+  background-color: var(--color-darkgrey--);
+}
+/*  Left 1 - 1 | Measure = 5.25x1.925 */
+.sectionLeft1{
+  margin-top: 15px;
+  height: 72.755906px;
+  background-color: var(--color-darkgrey--);
+}
 /* Switches ===========================================================================
 Overall */
 .mds-switch{
@@ -65,11 +188,10 @@ Overall */
   transition: .4s;
   z-index: -1;
 }
-.mds-switch__slider::before{
+.slider__shaft{
   position: absolute;
-  content: "";
   background-color: green;
-  box-shadow: 0 3px 15px 5px #757575;
+  box-shadow: 0 3px 15px 5px .757575;
   border-radius: 20px;
   height: 10px;
   margin-left: -1px;
@@ -108,7 +230,7 @@ Overall */
 }
 
 /* Poss of components */
-#vs1_1_p1{
+.vs1_1_p1{
   position: relative;
   top: 5%;
   left: 2%;
@@ -118,39 +240,18 @@ Overall */
 
 
 
-/* ======================== Left 1, 2:1 & 2:2 ======================== */
-#sektionLeft2_1{/* Measure = 5.25x2.2 */
-  margin-top: 15px;
-  height: 83.149606px;
-  width: var(--width--);
-  background-color: var(--color-darkgrey--);
-}
-#sektionLeft2_2{ /* Measure = 5.25x3,5 */
-  margin-top: 15px;
-  height: 132.283465px;
-  width: var(--width--);
-  background-color: var(--color-darkgrey--);
-}
 
-#sektionLeft1{/* Measure = 5.25x1.925 */
-  margin-top: 15px;
-  height: 72.755906px;
-  width: var(--width--);
-  background-color: var(--color-darkgrey--);
-}
-
-
-#connectionFsPart{
+.connectionFsPart{
   width: 100%;
   height: 75px;
   display: flex;
   flex-direction: row;
   border: 1px solid white;
 }
-#statusHeadLine{
+.statusHeadLine{
   line-height: 50px;
 }
-#connectionElecb{
+.connectionElecb{
   display: flex;
   flex-direction: row;
 }

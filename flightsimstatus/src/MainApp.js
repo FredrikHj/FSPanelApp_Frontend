@@ -1,114 +1,63 @@
 
-import React, {useState, useEffect } from 'react';
+import React, { PureComponent  } from 'react';
 import { render } from 'react-dom';
 import io from 'socket.io-client';
 import axios from 'axios';
+import { generateKeyPair } from 'crypto';
+import { log } from 'util';
 
-/* let fsDataApi = {};
-setInterval(getFSData, 500);im
-function getFSData() {
+import SectionTop5 from './Components/Section5.js';
+import SectionTop4 from './Components/Section4.js';
+import {SectionLeft2_1, SectionLeft2_2, SectionLeft1} from './Components/SectionLeft1&2.js';
 
-} */
-// =========================================================================================
-function MainApp() {
-  let [restAPIUrl, setRestAPIUrl] = useState('');
-  let [fsApi, setFsApi] = useState();
-  //let listen = io.connect('http://localhost:3001/');
-/*   
-  function test(fsDataApi) {
-    console.log(fsDataApi);
-  } */
-  
-  
-  /* 
-  
-  
-  render() {
-    return (<div />);
+let fsDataApi = {};
+// FS Status ================================================================================
+
+class MainApp extends PureComponent  {
+  constructor(props) {
+    super(props);
+      this.state = {
+        restAPIUrl: '',
+        fsApi: {},
+      };
   }
-  
-}
-render(<App />, document.getElementById('root'));
-*/
-useEffect(() => {
- // setRestAPIUrl('http://localhost:3001/'); 
-  
-  
-  
-  axios.get('http://localhost:3001/FSData').
-  then(response => {
-    console.log(response.data);
-    //fsDataApi['fsData'] = response.data;
-    //console.log(fsDataApi.fsData.test);
-    setFsApi(response.data);
-  }).
-  catch(error => {
-    console.log(error.response);
-  });
-  
-    
-    /*     listen.on('connection', function(){
-    });   */   
-    // });
-/*    listen.on('fsAPIData', res => {
-  //Listen on respponse from the chatserver
-    console.log(res.data);
-    //setFsApi(res);
-  }); */
-  console.log(fsApi);
-  
-});
-  
-  let twoPossSwitch = () => {
-/*   let getSwitchName = element.querySelector('.mds-switch__SwitchName');
-let getSwitchState = element.querySelector('.mds-switch__SwitchState');
-  let getMain = document.querySelector('.mainContent');
-  
-  getSwitchState.textContent = 'OFF';
-  let switchStateOff = true;
-  element.addEventListener('click', function () {
-    if (switchStateOff === true) {
-      getSwitchState.textContent = 'ON';
-      getMain.setAttribute('class', 'mainContent mainContent--disabled');
-      switchStateOff = false;
-    }
-    else if (switchStateOff === false) {
-      getSwitchState.textContent = 'OFF';
-      getMain.setAttribute('class', 'mainContent');
-      switchStateOff = true;
-    }
-  }); */
-}
+  componentDidMount() {
+    setInterval(this.getFSData, 50);
+  }
+  getFSData = () => {
+    axios.get('http://localhost:3001/FSData').
+    then(response => {
+    let incommingData = response.data;
+    let storedResData = response.data;
+    // Checck for new data
+    console.log(incommingData);
 
-return (
-    <> 
-    <div id="sektionLeft2_1">
-    2:2
-    </div>
-    <div id="sektionLeft2_2">
-      2:1
-    </div>
-
-    <section id="sektionContainer"> 
-      <p className="section1Label">Vänster sektion 1 - Nivå 1</p>
-      <div id="sektionLeft1">
-
-        <div id="vs1_1_p1" className="spdt switch2PossVertical">
-          <p className="spdtLabelTop">on</p>
-
-          <div className="mds-switch">
-            <input type="checkbox" className="mds-switch__chhide"/>
-            <label className="mds-switch__slider"></label>
-            <p className="mds-switch__SwitchState"></p>
-          </div>
-
-          <p className="spdtLabelBottom">off</p>
-        </div>
+    // Store the incomming API data in a object
+    fsDataApi = incommingData;
+    this.setState({fsApi: fsDataApi});
+    }).
+    catch(error => {
+      console.log(error.response);
+    });
+  }
+  render() {  
+    return (
+      <div className="outerFrame">
+        <header>
+          <p className="mainHeadLine">FlightSim Status</p>
+        </header>
+        <main>
+          <SectionTop5/>
+          <SectionTop4/>
+          <SectionLeft2_1/>
+          <SectionLeft2_2/>
+          <SectionLeft1
+            thisState={ this.state }
+          />  
+        </main>
       </div>
-    </section>
-    
-  </>
-  );
+    );
+  }
 }
 
 export default MainApp;
