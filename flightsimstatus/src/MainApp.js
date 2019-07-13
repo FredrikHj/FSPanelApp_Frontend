@@ -1,10 +1,8 @@
 
 import React, { PureComponent  } from 'react';
-import { render } from 'react-dom';
-import io from 'socket.io-client';
+
 import axios from 'axios';
-import { generateKeyPair } from 'crypto';
-import { log } from 'util';
+
 
 import SectionTop5 from './Components/Section5.js';
 import SectionTop4 from './Components/Section4.js';
@@ -47,10 +45,18 @@ class MainApp extends PureComponent  {
           <p className="mainHeadLine">FlightSim Status</p>
         </header>
         <main>
-          <SectionTop5/>
-          <SectionTop4/>
-          <SectionLeft2_1/>
-          <SectionLeft2_2/>
+          <SectionTop5
+            thisState={ this.state }
+          />
+          <SectionTop4
+            thisState={ this.state }
+          />
+          <SectionLeft2_1
+            thisState={ this.state }
+          />
+          <SectionLeft2_2
+            thisState={ this.state }
+          />
           <SectionLeft1
             thisState={ this.state }
           />  
