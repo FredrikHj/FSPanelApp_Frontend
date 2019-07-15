@@ -1,12 +1,19 @@
 import { css } from 'glamor';
 
 // ========================= LED Light =========================
-export const ledBasicCSS = {
+export const componentsPartsBasicCSS = {
   ledBContainer: css({
     'height': '30px',
     'width': '25%',
     'margin': '10px 0 0 0',
     'float': 'left',
+  }),
+  spdtVerticalContainer: css({
+    'left': '-18px',
+    'transform': 'rotate(90deg)',
+    'position': 'relative',
+    'display': 'inline-block',
+    'top': '10px',
   }),
 }
 export const ledGenerallCSS = {
@@ -19,7 +26,18 @@ export const ledGenerallCSS = {
   }),
   ledGreenLight: css({
     'backgroundColor': '#ABFF00',
-    'boxShadow': 'rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px',
+    'boxShadow': 'rgba(0, 0, 0, 02) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px',
+  }),
+  ledRedUnlight: css({
+    'margin': '0 auto',
+    'width': '24px',
+    'height': '24px',
+    'backgroundColor': '#A00',
+    'borderRadius': '50%',
+  }),
+  ledRedLight: css({
+    'backgroundColor': '#A00',
+    'boxShadow': 'rgba(0, 0, 0, 02) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px',
   }),
 
   ledStatusStr: css({
@@ -29,94 +47,115 @@ export const ledGenerallCSS = {
   }),
 }
 // ========================= Switches =========================
-/* export const ledBasicCSS = {
-  ledBContainer: css({
+export const spdtGenerallCSS = {
+  spdtVerticalChhide: css({
+    'marginTop': '-50px',
+    'marginLeft': '-33px',
+    'height': '50px',
+    'width': '100px',
+    'borderRadius': '50px',
+    'display': 'block',
+    'opacity': '0',
+    'zIndex': '1',
+  }),
+  spdtVerticalState: css({
+  'marginTop': '-37px',
+  'marginLeft': '54px',
+  }),
+  spdtVerticalSlider: css({
+    'position': 'absolute',
+    'cursor': 'pointer',
+    'top': '0',
+    'left': '0',
+    'right': '0',
+    'bottom': '0',
+    'height': '15.4px',
+    'width': '36px',
+    'borderRadius': '15px',
+    'backgroundColor': 'white',
+    'transition': '4s',
+    'zIndex': '-1',
+  }),
+  spdtVerticalShaft: css({
+    'position': 'absolute',
+    'top': '-3px',
+    'backgroundColor': 'green',
+    'boxShadow': '0 3px 15px 5px 757575',
+    'borderRadius': '20px',
+    'height': '20px',
+    'width': '20px',
+    'transition': '0.5s',
+    'zIndex': '0',
+  }),
 
+  spdtVerticalLabelTop: css({
+    'position': 'relative',
+    'top': '-4px',
+    'left': '2px',
+    'width': '13px',
+    'textAlign': 'center',
+  }),
+  spdtVerticalLabelBottom: css({
+    'position': 'relative',
+    'left': '0',
+    'bottom': '-5px',
+    'width': '13px',
+    'textAlign': 'center',
+  }),
+  // Poss of components
+/*   vs1_1_p1: css({
+    'position': 'relative',
+    'top': '5%',
+    'left': '2%',
+  }), */
+}
+export const LEDSegmentDigit4GenerallCSS = {
+  LEDSegmentDigit4Container: css({
+    'width': '55px',
+    'height': '24px',
+    'color': 'white',
+    'paddingTop': '4px',
+    'paddingLeft': '4px',
+    'backgroundColor': 'black',
   }),
 }
-
-
-.mds-switch{
-  left: -27px;
-  transform: rotate(90deg);
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  top: 10px;
-  left: -25px;
+export const LEDSegmentDigit8GenerallCSS = {
+  LEDSegmentDigit8Container: css({
+    'display': 'flex',
+    'flexDirection': 'row',
+    'justifyContent': 'space-between',
+    'width': '110px',
+    'height': '24px',
+    'color': 'white',
+    'paddingTop': '4px',
+    'paddingLeft': '6px',
+    'backgroundColor': 'black',
+  }),
 }
-.mds-switch__SwitchState{
-  margin-top: -37px;
-  margin-left: 54px;
+export const LEDDisplayGenerallCSS = {
+  LEDDisplayContainer: css({
+    'position': 'relative',
+    'top': '0',
+    'left': '10px',
+    'width': '180px',
+    'height': '130px',
+    'color': 'white',
+    'backgroundColor': 'black',
+  }),
+  LEDDisplayInnnerFrame: css({
+    'position': 'relative',
+    'top': '15px',
+    'left': '20px',
+    'width': '140px',
+    'height': '100px',
+    'color': 'black',
+    'backgroundColor': 'yellow',
+  }),
+  LEDDisplayValueString: css({
+    'marginTop': '10px',
+    'marginLeft': '5px',
+    'width': '100%',
+    'color': 'black',
+    'fontSize': '0.8em',
+  }),
 }
-.mds-switch__chhide{
-  margin-top: -50px;
-  margin-left: -33px;
-  height: 50px;
-  width: 100px;
-  border-radius: 50px;
-  display: block;
-  opacity: 0;
-  z-index: 1;
-}
-.mds-switch__slider{
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 7.7px;
-  width: 18px;
-  border-radius: 15px;
-  background-color: white;
-  transition: .4s;
-  z-index: -1;
-}
-.slider__shaft{
-  position: absolute;
-  background-color: green;
-  box-shadow: 0 3px 15px 5px .757575;
-  border-radius: 20px;
-  height: 10px;
-  margin-left: -1px;
-  width: 10px;
-  top: -1.5px;
-  transition: .4s;
-  z-index: 0;
-}
-.mds-switch__chhide:checked + .mds-switch__slider {
-  background-color: white;
-}
-.mds-switch__chhide:checked + .mds-switch__slider::before {
-  background-color: red;
-  transform: translateY(26px);
-}
-
-// Format 2 poss vertical
-.switch2PossVertical{
-  width: 20px;
-  height: 60px;
-}
-.spdt{
-  font-size: 0.7em;
-}
-.spdtLabelTop{
-  position: relative;
-  top: -4px;
-  width: 13px;
-  text-align: center;
-}
-.spdtLabelBottom{
-  position: relative;
-  bottom: 20px;
-  width: 13px;
-  text-align: center;
-}
-
-// Poss of components
-.vs1_1_p1{
-  position: relative;
-  top: 5%;
-  left: 2%;
-} */

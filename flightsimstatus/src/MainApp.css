@@ -8,7 +8,7 @@ body {
   margin: 0px 0 0 0;
 }
 .outerFrame{
-  width: 1500px;
+  width: 2000px;
 }
 .mainHeadLine{
   font-size: 2em;
@@ -23,265 +23,31 @@ body {
 .sectionLeft1_2Container{
   width: 15%;
 }
-.sectionHeadline{
-  width: 100%;
-  text-align: center;
-  margin-bottom: 0;
-}
-/* ======================== Sections ======================== */
-/* Övre nivå 5 */
-.sectionTop5{
-  width: 100%;
-  height: 151px;
-  display: flex;
-  flex-direction: row;
-}
 
-/*  Övre Nivå 5 - 5:1 | Measure: 1667.905512x591.874016 */
-.section5_1{
-  width: 32%;
-  height: 141px;
-  position: relative;
-  top: 10px;
-  bottom: 0;
-  background-color: var(--color-darkgrey--);
-}
-.section5_1:before{
+/* CSS Roules fo Top 5 and Sections 5:1 and 5:6
+ * This fix the diagonal top corners */
+
+#section5_1TopCorner:before{
   content: "";
   position: absolute;
   border-top: 65px solid white;
   border-right: 200px solid transparent;
 }
-.section5_1__LEDContainer{
-  position: relative;
-  left: 1px;
-  top: 10px;
-}
-.LEDContainer__rowdRTop5_1{
-  width: 180px;
-  margin-left: 165px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.LEDContainer__rowdRMiddle5_1{
-  width: 273px;
-  margin-left: 73px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.LEDContainer__rowdRBottom5_1{
-  width: 335px;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-/*  Övre Nivå 5 - 5:2 | Measure: 1131x633.070866 */
-.section5_2{
-  width: 15%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 5 - 5:3 | Measure: 1093x633.070866 */
-.section5_3{
-  width: 15%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 5 - 5:4 | Measure: 1093x633.070866 */
-.section5_4{
-  width: 15%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 5 - 5:5 | Measure: 1282x633.070866 */
-.section5_5{
-  width: 30%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 5 - 5:6 | Measure: 1667.905512x591x591.874016 */
-.section5_6{
-  width: 32%;
-  height: 141px;
-  position: relative;
-  top: 10px;
-  bottom: 0;
-  background-color: var(--color-darkgrey--);
-}
-.section5_6:before{
+
+#section5_6TopCorner:before{
   content: "";
   position: absolute;
   right: 0;
   border-top: 65px solid white;
   border-left: 200px solid transparent;
 }
-.section5_6__LEDContainer{
-  position: relative;
-  left: -12px;
-  top: 10px;
-}
-.LEDContainer__rowdRTop5_6{
-  width: 180px;
-  margin-left: 11px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.LEDContainer__rowdRMiddle5_6{
-  width: 273px;
-  margin-left: 11px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.LEDContainer__rowdRBottom5_6{
-  width: 335px;
-  margin-left: 11px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
+/* ================================================================ */
 /* Övre nivå 4 */
-.sectionTop4{
-  width: 100%;
-  height: 12vh;
-  display: flex;
-  flex-direction: row;
-}
 
-/*  Övre Nivå 4 - 4:1 | Measure: 1667.905512x591.874016 */
-.section4_1{
-  width: 15%;
-  margin-bottom: 0;
-  position: relative;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 4 - 4:2 | Measure: 1131x633.070866 */
-.section4_2{
-  width: 15%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 4 - 4:3 | Measure: 1093x633.070866 */
-.section4_3{
-  width: 15%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 4 - 4:4 | Measure: 1093x633.070866 */
-.section4_4{
-  width: 15%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 4 - 4:5 | Measure: 1282x633.070866 */
-.section4_5{
-  width: 30%;
-  background-color: var(--color-darkgrey--);
-}
-/*  Övre Nivå 4 - 4:6 | Measure: 1667.905512x591x591.874016 */
-.section4_6{
-  width: 15%;
-  margin-bottom: 0;
-  position: relative;
-  background-color: var(--color-darkgrey--);
-}
-/*  Left 1 - 2:1 | Measure: 5.25x2.2 */
-.sectionLeft2_1{
-  margin-top: 15px;
-  height: 83.149606px;
-  background-color: var(--color-darkgrey--);
-}
-/*  Left 1 - 2:2 | Measure: 5.25x3,5 */
-.sectionLeft2_2{
-  margin-top: 15px;
-  height: 132.283465px;
-  background-color: var(--color-darkgrey--);
-}
-/*  Left 1 - 1 | Measure = 5.25x1.925 */
-.sectionLeft1{
-  margin-top: 15px;
-  height: 72.755906px;
-  background-color: var(--color-darkgrey--);
-}
-/* Switches ===========================================================================
+
+/* /* Switches ===========================================================================
 Overall */
-.mds-switch{
-  left: -27px;
-  transform: rotate(90deg);
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  top: 10px;
-  left: -25px;
-}
-.mds-switch__SwitchState{
-  margin-top: -37px;
-  margin-left: 54px;
-}
-.mds-switch__chhide{
-  margin-top: -50px;
-  margin-left: -33px;
-  height: 50px;
-  width: 100px;
-  border-radius: 50px;
-  display: block;
-  opacity: 0;
-  z-index: 1;
-}
-.mds-switch__slider{
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 7.7px;
-  width: 18px;
-  border-radius: 15px;
-  background-color: white;
-  transition: .4s;
-  z-index: -1;
-}
-.slider__shaft{
-  position: absolute;
-  background-color: green;
-  box-shadow: 0 3px 15px 5px .757575;
-  border-radius: 20px;
-  height: 10px;
-  margin-left: -1px;
-  width: 10px;
-  top: -1.5px;
-  transition: .4s;
-  z-index: 0;
-}
-.mds-switch__chhide:checked + .mds-switch__slider {
-  background-color: white;
-}
-.mds-switch__chhide:checked + .mds-switch__slider::before {
-  background-color: red;
-  transform: translateY(26px);
-}
 
-/* Format 2 poss vertical */
-.switch2PossVertical{
-  width: 20px;
-  height: 60px;
-}
-.spdt{
-  font-size: 0.7em;
-}
-.spdtLabelTop{
-  position: relative;
-  top: -4px;
-  width: 13px;
-  text-align: center;
-}
-.spdtLabelBottom{
-  position: relative;
-  bottom: 20px;
-  width: 13px;
-  text-align: center;
-}
-
-/* Poss of components */
 .vs1_1_p1{
   position: relative;
   top: 5%;
@@ -289,7 +55,7 @@ Overall */
 }
 
 
- *//* ======================== Main app atyle ======================== */
+/* ======================== Main app atyle ======================== */
 
 
 

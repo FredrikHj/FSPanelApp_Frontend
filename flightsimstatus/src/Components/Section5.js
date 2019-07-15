@@ -1,11 +1,12 @@
 import React, { useState  } from 'react';
-import { GreenLED } from './ComponentsParts.js';
+import { GreenLED, LEDSegmentDigit4, LEDSegmentDigit8, LEDDisplay20x4 } from './ComponentsParts.js';
+import { SectionsHeadContainersCSS, SectionsHeadpartsCSS, SectionsSpecialRoulesCSS } from '../CSS/SectionsCSS.js';
 
 function SectionTop5(props){
     return(
-      <section className="sectionContainer"> 
+      <> 
         <p className="sectionHeadline">Övre sektion 5</p>        
-        <div className="sectionTop5">
+        <div className={ SectionsHeadContainersCSS.sectionTop5 }>
             <Section5_1/>
             <Section5_2/>
             <Section5_3/>
@@ -13,16 +14,16 @@ function SectionTop5(props){
             <Section5_5/>
             <Section5_6/>
         </div>
-      </section>
+      </>
     );
-  }
-  export default SectionTop5;
+}
+export default SectionTop5;
 
-  let Section5_1 = () => {
+let Section5_1 = (props) => {
     return(
-        <div className="section5_1"> 
-            <section className="section5_1__LEDContainer">
-                <section className="LEDContainer__rowdRTop5_1">
+        <div className={ SectionsHeadpartsCSS.section5_1 } id="section5_1TopCorner"> 
+            <section className={ SectionsSpecialRoulesCSS.section5_1__LEDContainer }>
+                <section className={ SectionsSpecialRoulesCSS.LEDContainer__rowdTop5_1 }>
                     <GreenLED test={ '1' }/>
                     <GreenLED test={ '2' }/>
                     <GreenLED test={ '3' }/>
@@ -30,7 +31,7 @@ function SectionTop5(props){
                     <GreenLED test={ '5' }/>
                     <GreenLED test={ '6' }/>
                 </section>
-                <section className="LEDContainer__rowdRMiddle5_1">
+                <section className={ SectionsSpecialRoulesCSS.LEDContainer__rowdMiddle5_1 }>
                     <GreenLED test={ '1' }/>
                     <GreenLED test={ '2' }/>
                     <GreenLED test={ '3' }/>
@@ -41,7 +42,7 @@ function SectionTop5(props){
                     <GreenLED test={ '8' }/>
                     <GreenLED test={ '9' }/>
                 </section>
-                <section className="LEDContainer__rowdRBottom5_1">
+                <section className={ SectionsSpecialRoulesCSS.LEDContainer__rowdBottom5_1 }>
                     <GreenLED test={ '1' }/>
                     <GreenLED test={ '2' }/>
                     <GreenLED test={ '3' }/>
@@ -57,43 +58,46 @@ function SectionTop5(props){
             </section>
         </div>
     );
-  }
- 
+}
 
-
-  let Section5_2 = () => {
+let Section5_2 = (props) => {
     return(
-        <div className="section5_2">
-
+        <div className={ SectionsHeadpartsCSS.section5_2 }>
+            <LEDDisplay20x4
+                strRow1={ '11111111111111111111' }
+                strRow2={ '11111111111111111111' }
+                strRow3={ '11111111111111111111' }
+                strRow4={ '11111111111111111111' }
+            />
         </div>
     );
 }
-let Section5_3 = () => {
+let Section5_3 = (props) => {
     return(
-        <div className="section5_3">
+        <div className={ SectionsHeadpartsCSS.section5_3 }>
             efwsdvdsa
         </div>
     );
 }
-let Section5_4 = () => {
+let Section5_4 = (props) => {
     return(
-        <div className="section5_4">
+        <div className={ SectionsHeadpartsCSS.section5_4 }>
             efwsdvdsa
         </div>
     );
 }
-let Section5_5 = () => {
+let Section5_5 = (props) => {
     return(
-        <div className="section5_5">
+        <div className={ SectionsHeadpartsCSS.section5_5 }>
             efwsdvdsa
         </div>
     );
 }
-let Section5_6 = () => {
+let Section5_6 = (props) => {
     return(
-        <div className="section5_6">
-           <section className="section5_6__LEDContainer">
-                <section className="LEDContainer__rowdRTop5_6">
+        <div className={ SectionsHeadpartsCSS.section5_6 } id="section5_6TopCorner">
+           <section className={ SectionsSpecialRoulesCSS.section5_6__LEDContainer }>
+                <section className={ SectionsSpecialRoulesCSS.LEDContainer__rowdTop5_6 }>
                     <GreenLED test={ '1' }/>
                     <GreenLED test={ '2' }/>
                     <GreenLED test={ '3' }/>
@@ -101,7 +105,7 @@ let Section5_6 = () => {
                     <GreenLED test={ '5' }/>
                     <GreenLED test={ '6' }/>
                 </section>
-                <section className="LEDContainer__rowdRMiddle5_6">
+                <section className={ SectionsSpecialRoulesCSS.LEDContainer__rowdMiddle5_6 }>
                     <GreenLED test={ '1' }/>
                     <GreenLED test={ '2' }/>
                     <GreenLED test={ '3' }/>
@@ -112,7 +116,7 @@ let Section5_6 = () => {
                     <GreenLED test={ '8' }/>
                     <GreenLED test={ '9' }/>
                 </section>
-                <section className="LEDContainer__rowdRBottom5_6">
+                <section className={ SectionsSpecialRoulesCSS.LEDContainer__rowdBottom5_6 }>
                     <GreenLED test={ '1' }/>
                     <GreenLED test={ '2' }/>
                     <GreenLED test={ '3' }/>

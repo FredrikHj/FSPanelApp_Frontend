@@ -6,7 +6,7 @@ import axios from 'axios';
 
 import SectionTop5 from './Components/Section5.js';
 import SectionTop4 from './Components/Section4.js';
-import {SectionLeft2_1, SectionLeft2_2, SectionLeft1} from './Components/SectionLeft1&2.js';
+import {SectionLeft2, SectionLeft1} from './Components/SectionLeft1&2.js';
 
 let fsDataApi = {};
 // FS Status ================================================================================
@@ -51,10 +51,7 @@ class MainApp extends PureComponent  {
           <SectionTop4
             thisState={ this.state }
           />
-          <SectionLeft2_1
-            thisState={ this.state }
-          />
-          <SectionLeft2_2
+          <SectionLeft2
             thisState={ this.state }
           />
           <SectionLeft1
