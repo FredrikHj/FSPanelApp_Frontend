@@ -1,12 +1,11 @@
-
 import React, { PureComponent  } from 'react';
-
+import { BasicCSS } from './CSS/GenerallCSS.js';
 import axios from 'axios';
 
 
 import SectionTop5 from './Components/Section5.js';
 import SectionTop4 from './Components/Section4.js';
-import {SectionLeft2, SectionLeft1} from './Components/SectionLeft1&2.js';
+import {SectionLeft2, SectionLeft1 } from './Components/SectionLeft1&2.js';
 
 let fsDataApi = {};
 // FS Status ================================================================================
@@ -40,7 +39,7 @@ class MainApp extends PureComponent  {
   }
   render() {  
     return (
-      <div className="outerFrame">
+      <div className={ BasicCSS.outerFrame }>
         <header>
           <p className="mainHeadLine">FlightSim Status</p>
         </header>

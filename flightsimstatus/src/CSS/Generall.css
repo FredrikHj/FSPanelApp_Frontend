@@ -1,0 +1,145 @@
+/* Generall:
+Information: The measurement is 1/4 of its original size and converted into px */
+body {
+  background-color: white;
+  font-size: 16px;
+  font-family: arial, "Times New Roman";
+  color: black;
+  margin: 0px 0 0 50px;
+}
+.mainHeadLine{
+  font-size: 2em;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: -4px
+}
+/* Common style rouls =============================================================== */
+:root{
+  --color-darkgrey--: rgb(169,169,169);
+}
+.sectionLeft1_2Container{
+  width: 15%;
+}
+
+/* CSS Roules for Top 5 and section 5:1 and 5:6
+ * This fix the diagonal top corners */
+
+#section5_1TopCorner:before{
+  content: "";
+  position: absolute;
+  border-top: 65px solid white;
+  border-right: 200px solid transparent;
+}
+
+#section5_6TopCorner:before{
+  content: "";
+  position: absolute;
+  right: 0;
+  border-top: 65px solid white;
+  border-left: 200px solid transparent;
+}
+/* CSS roule for fix the white line at the rotary spdf */
+#rotarySpdt:before {
+  display: block;
+  content: "";
+  width: 2px;
+  height: 35%;
+  background: #FFF;
+  box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.12);
+  margin: 5px auto;
+  }
+
+/* ================================================================ */
+/* Övre nivå 4 */
+
+
+/* /* Switches ===========================================================================
+Overall */
+
+.vs1_1_p1{
+  position: relative;
+  top: 5%;
+  left: 2%;
+}
+
+
+/* ======================== Main app atyle ======================== */
+
+
+
+.connectionFsPart{
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid white;
+}
+.statusHeadLine{
+  line-height: 50px;
+}
+.connectionElecb{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.select {
+	box-shadow : 0 -2px 5px 0px #fefefe , 0 2px 5px 0 #ccc;
+    background: rgb(210,215,237);
+    background: -webkit-linear-gradient(top,  #ddd 0%, #ddd 30%, #eee 82%,#efefef 100%);
+    background: -moz-linear-gradient(top,  #ddd 0%, #ddd 30%, #eee 82%,#efefef 100%);
+    background: linear-gradient(top,  #ddd 0%, #ddd 30%, #eee 82%,#efefef 100%);
+    border: solid 1px #C5C5C5;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.selected {
+background: -webkit-radial-gradient(center , ellipse cover, #FFF 0% , #03F0C1 80% , #1DAEE6 100%);
+background: -moz-radial-gradient(center , ellipse cover, #FFF 0% , #03F0C1 80% , #1DAEE6 100%);
+background: radial-gradient(center , ellipse cover, #FFF 0% , #03F0C1 80% , #1DAEE6 100%);
+box-shadow: inset 0 1px 1px 0 #FFF ,inset 0 -1px 1px 0 #FFF , 0 0 2px 1px #74F9FF;
+border: solid 1px #05D6B5;
+}
+
+.one {
+position: absolute;
+left: 50px;
+top: 55px;
+}
+
+.two {
+position: absolute;
+top: 30px;
+left: 112px;
+}
+
+.three {
+    position: absolute;
+top: 55px;
+left: 170px;
+}
+.switch-container {
+border-radius: 50%;
+position: relative;
+width: 50px;
+height: 50px;
+background: linear-gradient(#585858,#8F8F8F 70%, #DBDBDB);
+/* linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%); */
+}
+
+.switch {
+border-radius: 50%;
+position: absolute;
+left: 7px;
+top: 7px;
+bottom: 7px;
+right: 7px;
+margin: 0px;
+background: linear-gradient(90deg,#636068,#242424 43%, #474747 44%, #474747 56%, #7A7A7A 57%, #5a5a5a 68%);
+box-shadow: inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A;
+border: solid 1px #7E7E7E;
+transition: .5s;
+}
+

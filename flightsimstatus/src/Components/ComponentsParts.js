@@ -1,56 +1,69 @@
 import React, { useState  } from 'react';
-import { componentsPartsBasicCSS, ledGenerallCSS, spdtGenerallCSS, LEDSegmentDigit4GenerallCSS, LEDSegmentDigit8GenerallCSS, LEDDisplayGenerallCSS } from '../CSS/ComponentsPartsCSS.js';
+import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotaryspdtCSS } from '../CSS/ComponentsPartsCSS.js';
 
 export let GreenLED = (props) => {
     return(
-        <div className={ componentsPartsBasicCSS.ledBContainer }>
-          <div className={ ledGenerallCSS.ledGreenUnlight}><span className={ ledGenerallCSS.ledStatusStr}>{ props.test }</span></div>
+        <div className={ ledLightCSS.ledBContainer }>
+          <div className={ ledLightCSS.ledGreenUnlight}><span className={ ledLightCSS.ledStatusStr}>{ props.test }</span></div>
         </div>
     );
 }
 export let RedLED = (props) => {
   return(
-      <div className={ componentsPartsBasicCSS.ledBContainer }>
-        <div className={ ledGenerallCSS.ledRedUnlight}><span className={ ledGenerallCSS.ledStatusStr}>{ props.test }</span></div>
+      <div className={ ledLightCSS.ledBContainer }>
+        <div className={ ledLightCSS.ledRedUnlight}><span className={ ledLightCSS.ledStatusStr}>{ props.test }</span></div>
       </div>
   );
 }
 export let SPDTVertical = (props) => {
   return(
     <> 
-      <p className={ spdtGenerallCSS.spdtVerticalLabelTop }>on</p>
-      <div className={ componentsPartsBasicCSS.spdtVerticalContainer }>
-        <input type="checkbox" className={ spdtGenerallCSS.spdtVerticalChhide }/>
-        <label className={ spdtGenerallCSS.spdtVerticalSlider }></label>
-        <div className={ spdtGenerallCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '18px'} : {left: '0px'}}></div>
-        <p className={ spdtGenerallCSS.spdtVerticalState }></p>
+      <p className={ spdtCSS.spdtVerticalLabelTop }>on</p>
+      <div className={ spdtCSS.spdtVerticalContainer }>
+        <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
+        <label className={ spdtCSS.spdtVerticalSlider }></label>
+        <div className={ spdtCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '18px'} : {left: '0px'}}></div>
+        <p className={ spdtCSS.spdtVerticalState }></p>
       </div>
-      <p className={ spdtGenerallCSS.spdtVerticalLabelBottom }>off</p>
+      <p className={ spdtCSS.spdtVerticalLabelBottom }>off</p>
     </>
   );
 }
+export let RotarySpdt = (props) => {
+  return(
+    <> 
+      <div className="select one">1</div>
+      <div className="select two">2</div>
+      <div className="select three">3</div>
+      <div className={ rotaryspdtCSS.rotarySpdtContainer }>
+        <div className={ rotaryspdtCSS.rotarySpdt } id="rotarySpdt"></div>
+      </div>
+    </>
+  );
+}
+
 export let LEDSegmentDigit4 = (props) => {
   return(
-    <div className={ LEDSegmentDigit4GenerallCSS.LEDSegmentDigit4Container }>
+    <div className={ LEDSegmentDigitCSS.LEDSegmentDigit4Container }>
       { props.ledStatusStr }
     </div>
   );
 }
 export let LEDSegmentDigit8 = (props) => {
   return(
-    <div className={ LEDSegmentDigit8GenerallCSS.LEDSegmentDigit8Container }>
+    <div className={ LEDSegmentDigitCSS.LEDSegmentDigit8Container }>
     { props.ledStatusStr } 
     </div>
   );
 }
 export let LEDDisplay20x4 = (props) => {
   return(
-    <div className={ LEDDisplayGenerallCSS.LEDDisplayContainer }>
-      <div className={ LEDDisplayGenerallCSS.LEDDisplayInnnerFrame }>
-        <p className={ LEDDisplayGenerallCSS.LEDDisplayValueString }>{ props.strRow1 }</p>
-        <p className={ LEDDisplayGenerallCSS.LEDDisplayValueString }>{ props.strRow2 }</p>
-        <p className={ LEDDisplayGenerallCSS.LEDDisplayValueString }>{ props.strRow3 }</p>
-        <p className={ LEDDisplayGenerallCSS.LEDDisplayValueString }>{ props.strRow4 }</p>
+    <div className={ LEDDisplayCSS.LEDDisplayContainer }>
+      <div className={ LEDDisplayCSS.LEDDisplayInnnerFrame }>
+        <p className={ LEDDisplayCSS.LEDDisplayValueString }>{ props.strRow1 }</p>
+        <p className={ LEDDisplayCSS.LEDDisplayValueString }>{ props.strRow2 }</p>
+        <p className={ LEDDisplayCSS.LEDDisplayValueString }>{ props.strRow3 }</p>
+        <p className={ LEDDisplayCSS.LEDDisplayValueString }>{ props.strRow4 }</p>
       </div>
     </div>
   );
