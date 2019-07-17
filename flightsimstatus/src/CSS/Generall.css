@@ -43,15 +43,14 @@ body {
   display: block;
   content: "";
   width: 2px;
-  height: 35%;
+  height: 40px;
   background: #FFF;
   box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.12);
   margin: 5px auto;
-  }
-
-/* ================================================================ */
-/* Övre nivå 4 */
-
+  margin-top: -25px;
+  border-top-right-radius: 100%;
+  border-top-left-radius: 100%;
+}
 
 /* /* Switches ===========================================================================
 Overall */
@@ -82,44 +81,13 @@ Overall */
   flex-direction: row;
 }
 
-
-.select {
-	box-shadow : 0 -2px 5px 0px #fefefe , 0 2px 5px 0 #ccc;
-    background: rgb(210,215,237);
-    background: -webkit-linear-gradient(top,  #ddd 0%, #ddd 30%, #eee 82%,#efefef 100%);
-    background: -moz-linear-gradient(top,  #ddd 0%, #ddd 30%, #eee 82%,#efefef 100%);
-    background: linear-gradient(top,  #ddd 0%, #ddd 30%, #eee 82%,#efefef 100%);
-    border: solid 1px #C5C5C5;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 .selected {
-background: -webkit-radial-gradient(center , ellipse cover, #FFF 0% , #03F0C1 80% , #1DAEE6 100%);
-background: -moz-radial-gradient(center , ellipse cover, #FFF 0% , #03F0C1 80% , #1DAEE6 100%);
 background: radial-gradient(center , ellipse cover, #FFF 0% , #03F0C1 80% , #1DAEE6 100%);
 box-shadow: inset 0 1px 1px 0 #FFF ,inset 0 -1px 1px 0 #FFF , 0 0 2px 1px #74F9FF;
 border: solid 1px #05D6B5;
 }
 
-.one {
-position: absolute;
-left: 50px;
-top: 55px;
-}
 
-.two {
-position: absolute;
-top: 30px;
-left: 112px;
-}
-
-.three {
-    position: absolute;
-top: 55px;
-left: 170px;
-}
 .switch-container {
 border-radius: 50%;
 position: relative;

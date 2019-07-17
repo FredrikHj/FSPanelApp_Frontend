@@ -1,5 +1,8 @@
 import React, { useState  } from 'react';
-import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotaryspdtCSS } from '../CSS/ComponentsPartsCSS.js';
+import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotarySpdtCSS, rotarySpdtCLCSSPossisons } from '../CSS/ComponentsPartsCSS.js';
+import { log } from 'util';
+
+console.log(rotarySpdtCLCSSPossisons);
 
 export let GreenLED = (props) => {
     return(
@@ -30,14 +33,48 @@ export let SPDTVertical = (props) => {
   );
 }
 export let RotarySpdt = (props) => {
+  console.log(props.rotaryStatus);
+
+  function setRotaryPoss() {
+    /*
+    Pos:    Värde
+    1       15
+    2       50
+    3       82
+    4        
+    5        
+    6        
+    7        
+    8        
+    9        
+    10       
+    11       
+    12       
+    */    //console.log('Nr ' + );
+
+
+    
+  }
   return(
     <> 
-      <div className="select one">1</div>
-      <div className="select two">2</div>
-      <div className="select three">3</div>
-      <div className={ rotaryspdtCSS.rotarySpdtContainer }>
-        <div className={ rotaryspdtCSS.rotarySpdt } id="rotarySpdt"></div>
-      </div>
+      <div className={ rotarySpdtCSS.rotarySpdt12pContainer }>    
+        <div className={ rotarySpdtCSS.rotarySpdtContainer }>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossOne }>1</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTwo }>2</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossThree }>3</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossFour }>4</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossFive }>5</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossSix }>6</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossSeven }>7</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossEight }>8</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossNine }>9</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTen }>10</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossEleven }>11</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTwelve }>12</div>
+          <div className={ rotarySpdtCSS.rotarySpdt } style={(props.rotaryStatus === '1') ? {transform: 'rotate(82deg)'} : {transform: 'rotate(10deg)'}}id="rotarySpdt"></div>
+        </div>
+      </div>    
+  
     </>
   );
 }

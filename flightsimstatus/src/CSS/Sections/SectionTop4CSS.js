@@ -128,7 +128,8 @@ export const SectionTop4CSS = {
     section4_4: css({
         'display': 'flex',
         'flexDirection': 'row',
-        'width': '25%',
+        'width': '20%',
+        'paddingLeft': '20px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3,
     }),
@@ -139,7 +140,6 @@ export const SectionTop4CSS = {
         'width': '80px',
         'marginTop': '10px',
         'marginLeft': '20px',
-        'border': '1px solid red',
     }),
     section4_4TopRowRotarySpdf: css({
         'marginTop': '0',
@@ -150,6 +150,7 @@ export const SectionTop4CSS = {
         'flexDirection': 'row',   
         'marginRight': '100px',
         'width': '150px',
+        'marginTop': '-15px',
     }),
     section4_4Spdfx2: css({ 
         'marginRight': '30px',

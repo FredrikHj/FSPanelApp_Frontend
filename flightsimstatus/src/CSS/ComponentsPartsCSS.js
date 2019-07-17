@@ -1,4 +1,4 @@
-import { css } from 'glamor';
+import { css, merge } from 'glamor';
 
 // ======================== LED Light =========================
 export const ledLightCSS = {
@@ -162,10 +162,20 @@ export const spdtCSS = {
 }
 // ========================= Rotary Switches =========================
 
-export const rotaryspdtCSS = {
+export const rotarySpdtCSS = {
+  rotarySpdt12pContainer: css({
+    'position': 'relative',
+    'width': '100px',
+    'height': '100px',
+    'borderRadius': '50%',
+    'top': '-25px',
+    'left': '-28px',
+  }),
   rotarySpdtContainer: css({
       'borderRadius': '50%',
       'position': 'relative',
+      'top': 'calc(50% - 25px)',
+      'left': 'calc(50% - 25px)',
       'width': '50px',
       'height': '50px',
       'background': 'linear-gradient(#585858,#8F8F8F 70%, #DBDBDB)', // 'linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%)',
@@ -173,14 +183,111 @@ export const rotaryspdtCSS = {
   rotarySpdt: css({
       'borderRadius': '50%',
       'position': 'absolute',
-      'left': '7px',
       'top': '7px',
+      'left': '7px',
       'bottom': '7px',
       'right': '7px',
       'margin': '0px',
       'background': 'linear-gradient(90deg,#636068,#242424 43%, #474747 44%, #474747 56%, #7A7A7A 57%, #5a5a5a 68%)',
       'boxShadow': 'inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A',
       'border': 'solid 1px #7E7E7E',
-      'transition': '.5s',
+      'transition': '.9s',
   }),
 }
+ // Strings possision | CL = CommonLabel
+ const rotarySpdtCLCSS = ({
+  'fontWeight': 'bold',
+  'padding': '5px',
+  'width': '10px',
+  'height': '10px',
+});
+
+const possOne = ({
+  'position': 'absolute',
+  'top': '-40px',
+  'left': '30px',
+});
+const possTwo = ({
+  'position': 'absolute',
+  'top': '-19px',
+  'right': '-26px',
+});
+const possThree = ({
+  'position': 'absolute',
+  'top': '6px',
+  'right': '-35px',
+});
+const possFour = ({
+  'position': 'absolute',
+  'top': '31px',
+  'right': '-32px',
+});
+const possFive = ({
+  'position': 'absolute',
+  'top': '50px',
+  'right': '-20px',
+});
+const possSix = ({
+  'position': 'absolute',
+  'top': '60px',
+  'left': '30px',
+});
+const possSeven = ({
+  'position': 'absolute',
+  'top': '60px',
+  'left': '0',
+});
+const possEight = ({
+  'position': 'absolute',
+  'top': '50px',
+  'left': '-18px',
+});
+const possNine = ({
+  'position': 'absolute',
+  'top': '31px',
+  'left': '-32px',
+});
+const possTen = ({
+  'position': 'absolute',
+  'top': '6px',
+  'left': '-38px',
+});
+const possEleven = ({
+  'position': 'absolute',
+  'top': '-19px',
+  'left': '-30px',
+});
+const possTwelve = ({
+  'position': 'absolute',
+  'top': '-40px',
+  'left': '0',
+});
+const rotarySpdtCLCSSPossOne = merge(rotarySpdtCLCSS, possOne);
+const rotarySpdtCLCSSPossTwo = merge(rotarySpdtCLCSS, possTwo);
+const rotarySpdtCLCSSPossThree = merge(rotarySpdtCLCSS, possThree);
+const rotarySpdtCLCSSPossFour = merge(rotarySpdtCLCSS, possFour);
+const rotarySpdtCLCSSPossFive = merge(rotarySpdtCLCSS, possFive);
+const rotarySpdtCLCSSPossSix = merge(rotarySpdtCLCSS, possSix);
+const rotarySpdtCLCSSPossSeven = merge(rotarySpdtCLCSS, possSeven);
+const rotarySpdtCLCSSPossEight = merge(rotarySpdtCLCSS, possEight);
+const rotarySpdtCLCSSPossNine = merge(rotarySpdtCLCSS, possNine);
+const rotarySpdtCLCSSPossTen = merge(rotarySpdtCLCSS, possTen);
+const rotarySpdtCLCSSPossEleven = merge(rotarySpdtCLCSS, possEleven);
+const rotarySpdtCLCSSPossTwelve = merge(rotarySpdtCLCSS, possTwelve);
+
+export const rotarySpdtCLCSSPossisons = {
+  rotarySpdtCLCSSPossOne,
+  rotarySpdtCLCSSPossOne,
+  rotarySpdtCLCSSPossTwo,
+  rotarySpdtCLCSSPossThree,
+  rotarySpdtCLCSSPossFour,
+  rotarySpdtCLCSSPossFive,
+  rotarySpdtCLCSSPossSix,
+  rotarySpdtCLCSSPossSeven,
+  rotarySpdtCLCSSPossEight,
+  rotarySpdtCLCSSPossNine,
+  rotarySpdtCLCSSPossTen,
+  rotarySpdtCLCSSPossEleven,
+  rotarySpdtCLCSSPossTwelve
+}
+// =============================================================
