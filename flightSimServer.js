@@ -41,8 +41,7 @@ boardVs1_2.on("ready", function () {
     console.log("Ansluten");
   }).catch(function (err) {
     console.error("Anslutningsfel", err);
-  });
-  
+  });  
   
   // Initilize LED Channels ====================================================================================
   let LEDBoard1ChannelObj = {};
@@ -98,15 +97,22 @@ boardVs1_2.on("ready", function () {
   let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
   // API
   app.get('/FSData', (req, res) => {
-    res.status(200).send({"test": vs1_13Status});
+    res.status(200).send({
+      "test": vs1_13Status,
+      "rotaryStatus": "7"
+    });
   });
+  let lcd = new jFive.LCD({ 
+    controller: "LCM1602",
+    pins: [20, 21],
+      backlight: 3,
+      rows: 4,
+      cols: 20,
+    });
+    lcd.on()
+    
+    lcd.cursor(1,1).print("Hi");
   
-/*   app.set('Views', './Views');
-  app.set('view engine', 'pug');
-  app.get('/', (req, res) => {
-    res.render('index', { title: 'Filmer', headline: 'Filmer', lista: vs1_13Status });
-  }); */
-
 });
 // ====================================== initilize the Boards ======================================
 function initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj){
@@ -124,49 +130,12 @@ function initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj){
   LEDBoardObj['board1'] = LEDBoard1ChannelObj;
   LEDBoardObj['board2'] = LEDBoard2ChannelObj;
 }
-/* const socket = require('socket.io');
-const io = socket(server);
- */
-/* // Prevent cors error
-//Header add Access-Control-Allow-Headers "origin, x-requested-with, content-type";
-//io.origins('*:*') // for latest version
-function sendToFrontend(vs1_13Status) {
-  //Using Socket.io as a the webbhooks for auto updating the Frontend
-
-  io.on('connection', (client) => {
-/*     client.on('join', function(handshake){
-      console.log(handshake);
-    }) */
-/*     console.log(client);
-    
-    console.log(vs1_13Status);
-    
-    let dbFlightSimTest = vs1_13Status;
-    let dbFlightSimTest = {
-      component1: vs1_13Status,
-      component2: 5,
-    }
-    
-    client.emit('fsAPIData', vs1_13Status);
-    
-  });
-  // Initizial run
-
-} */
 
 /*   led.setLEDForwardVoltage(5);
 led.setLEDCurrentLimit(0.04); */
 
 
-/*   let lcd = new jFive.LCD({ 
-  controller: "LCM1602",
-  pins: [20, 21],
-    backlight: 3,
-    rows: 2,
-    cols: 16,
-  });
-  lcd.print("Hi");
-  
+
 
  
     //38 Flera triggering, fixa genom kod

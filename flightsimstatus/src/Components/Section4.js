@@ -1,7 +1,7 @@
 import React, { useState  } from 'react';
 import { BasicCSS } from '../CSS/GenerallCSS.js'
 import { SectionTop4CSS } from '../CSS/Sections/SectionTop4CSS.js';
-import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt } from './ComponentsParts.js';
+import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder } from './ComponentsParts.js';
 import { log } from 'util';
 
 function SectionTop4(props){
@@ -84,7 +84,25 @@ function SectionTop4(props){
                     ledStatusStr={ '0.0.0.0.0.0.0.0' }
                 />
             </section>
-
+            <section className={ SectionTop4CSS.section4_2Row2 }>
+                <section className={ SectionTop4CSS.section4_2Row22xledSpdf }>
+                    <GreenLED/>       
+                    <div className={ SectionTop4CSS.section4_2Row2Spdf }>
+                        <SPDTVertical spdtStatus={props.spdtStatus.test }/>
+                    </div>
+                    <GreenLED/>
+                </section>
+                <section className={ SectionTop4CSS.section4_2Row2RotaryEncorder }>
+                    <div>
+                        <RotaryEncorder/>
+                        <RotaryEncorder/>
+                    </div>
+                    <div>Rotary</div>
+                </section>
+                <div className={ SectionTop4CSS.section4_2Row2LeftRotarySpdt }> 
+                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                </div>
+            </section>
         </div>
     );
 }
@@ -98,6 +116,9 @@ let Section4_3 = (props) => {
                 <LEDSegmentDigit8
                     ledStatusStr={ '0.0.0.0.0.0.0.0' }
                 />
+            </section>
+            <section className={ SectionTop4CSS.section4_3Row2 }>
+
             </section>
         </div>
     );

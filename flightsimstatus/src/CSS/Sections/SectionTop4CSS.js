@@ -102,9 +102,29 @@ export const SectionTop4CSS = {
         'marginLeft': '-5px',
     }),
     section4_2Row2: css({
+        'marginLeft': '10px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
+        'alignItems': 'Center',
+        //'width': '90%',
+    }),
+    section4_2Row22xledSpdf: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+        'alignItems': 'Center',
+    }),
+    section4_2Row2Spdf: css({
+        'marginLeft': '50%',
+    }),
+    section4_2Row2RotaryEncorder: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section4_2Row2LeftRotarySpdt: css({
+        'marginTop': '40px',
     }),
     // ===========================================================
     section4_3: css({

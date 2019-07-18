@@ -170,6 +170,7 @@ export const rotarySpdtCSS = {
     'borderRadius': '50%',
     'top': '-25px',
     'left': '-28px',
+    'background': 'linear-gradient(#585858,#8F8F8F 70%, #DBDBDB)', // 'linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%)',
   }),
   rotarySpdtContainer: css({
       'borderRadius': '50%',
@@ -250,7 +251,7 @@ const possNine = ({
 const possTen = ({
   'position': 'absolute',
   'top': '6px',
-  'left': '-38px',
+  'left': '-42px',
 });
 const possEleven = ({
   'position': 'absolute',
@@ -291,3 +292,27 @@ export const rotarySpdtCLCSSPossisons = {
   rotarySpdtCLCSSPossTwelve
 }
 // =============================================================
+export const rotaryEncorderCSS = {
+  rotaryEncorderContainer: css({
+      'borderRadius': '50%',
+      'position': 'relative',
+      'top': 'calc(50% - 25px)',
+      'left': 'calc(50% - 25px)',
+      'width': '50px',
+      'height': '50px',
+      'background': 'linear-gradient(#585858,#8F8F8F 70%, #DBDBDB)', // 'linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%)',
+  }),
+  rotaryEncorder: css({
+      'borderRadius': '50%',
+      'position': 'absolute',
+      'top': '7px',
+      'left': '7px',
+      'bottom': '7px',
+      'right': '7px',
+      'margin': '0px',
+      'background': 'linear-gradient(90deg,#636068,#242424 43%, #474747 44%, #474747 56%, #7A7A7A 57%, #5a5a5a 68%)',
+      'boxShadow': 'inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A',
+      'border': 'solid 1px #7E7E7E',
+      'transition': '.9s',
+  }),
+}
