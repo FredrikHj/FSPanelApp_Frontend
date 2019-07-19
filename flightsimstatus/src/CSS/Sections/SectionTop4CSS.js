@@ -89,9 +89,8 @@ export const SectionTop4CSS = {
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
-        'width': '330px',
+        'width': '100%',
         'marginTop': '20px',
-        'marginLeft': '20px',
     }),
     section4_2Row1Middle: css({
         'display': 'flex',
@@ -119,6 +118,7 @@ export const SectionTop4CSS = {
         'marginLeft': '50%',
     }),
     section4_2Row2RotaryEncorder: css({
+        'width': '100px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',

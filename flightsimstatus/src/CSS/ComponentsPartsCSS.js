@@ -292,14 +292,27 @@ export const rotarySpdtCLCSSPossisons = {
   rotarySpdtCLCSSPossTwelve
 }
 // =============================================================
+// Rotate animation for Rotary Encorder
+
+export function rotateRotaryEncorder(direction) {
+  let rotateRotaryEncorder = css.keyframes({
+    'from': { 'transform': 'rotate(0deg)'},
+    'to': { 'transform': 'rotate(' + direction + 'deg)'},   
+  });
+
+  return rotateRotaryEncorder;
+}
+
+// ====================================
+
 export const rotaryEncorderCSS = {
   rotaryEncorderContainer: css({
       'borderRadius': '50%',
       'position': 'relative',
       'top': 'calc(50% - 25px)',
       'left': 'calc(50% - 25px)',
-      'width': '50px',
-      'height': '50px',
+      'width': '40px',
+      'height': '40px',
       'background': 'linear-gradient(#585858,#8F8F8F 70%, #DBDBDB)', // 'linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%)',
   }),
   rotaryEncorder: css({
@@ -310,9 +323,63 @@ export const rotaryEncorderCSS = {
       'bottom': '7px',
       'right': '7px',
       'margin': '0px',
-      'background': 'linear-gradient(90deg,#636068,#242424 43%, #474747 44%, #474747 56%, #7A7A7A 57%, #5a5a5a 68%)',
-      'boxShadow': 'inset 0 1px 1px 1px #39373C, 0 0 1px 1px #69696A',
+      'boxShadow': 'inset 0 0.5px 1px 4px #39373C, 0 0 1px 1px #69696A',
       'border': 'solid 1px #7E7E7E',
       'transition': '.9s',
+  }),
+  rotaryEncorderKnob: css({
+    'position': 'absolute',
+    'borderRadius': '50%',
+    'width': '17px',
+    'height': '17px',
+    'top': '2px',
+    'left': '2px',
+    'background': 'white',
+    'border': '2px solid black',
+    'boxShadow': 'inset 0 0.5px 1px 11px #39373C, 0 0 1px 1px #69696A',
+    'opacity': '1',
+    'animationName': rotateRotaryEncorder,
+    'animationDuration': '6s',
+    'animationIterationCount': 'infinite',
+    'animationTimingFunction': 'linear', 
+  }),
+  rotaryEncorderKnobCrossLine1: css({
+    'width': '2px',
+    'height': '100%',
+    'position': 'absolute',
+    'left': 'calc(50% - 1px)',
+    'background': 'white',
+  }),
+  rotaryEncorderKnobCrossLine2: css({
+    'width': '100%',
+    'height': '2px',
+    'position': 'absolute',
+    'top': 'calc(50% - 1px)',
+    'background': 'white',
+  }),
+  rotaryEncorderKnobCrossLine3: css({
+    'width': '2px',
+    'height': '100%',
+    'position': 'absolute',
+    'left': 'calc(50% - 1px)',
+    'background': 'white',
+    'transform': 'rotate(135deg)',
+  }),
+  rotaryEncorderKnobCrossLine4: css({
+    'width': '2px',
+    'height': '100%',
+    'position': 'absolute',
+    'left': 'calc(50% - 1px)',
+    'background': 'white',
+    'transform': 'rotate(230deg)',
+  }),
+  rotaryEncorderKnobCrossLineRoughCircle: css({
+    'width': '12px',
+    'height': '12px',
+    'position': 'absolute',
+    'top': 'calc(50% - 6px)',
+    'left': 'calc(50% - 6px)',
+    'background': 'white',
+    'borderRadius': '50%',
   }),
 }

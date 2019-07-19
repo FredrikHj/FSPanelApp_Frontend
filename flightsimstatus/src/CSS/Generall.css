@@ -51,6 +51,13 @@ body {
   border-top-right-radius: 100%;
   border-top-left-radius: 100%;
 }
+/* CSS roule for fix the animation for the rotary Encorder */
+/* @keyframes spin {
+  from {transform: rotate(0deg); }
+  to {transform: rotate(-360deg);}
+}
+ */
+
 
 /* /* Switches ===========================================================================
 Overall */

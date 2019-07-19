@@ -99,7 +99,7 @@ boardVs1_2.on("ready", function () {
   app.get('/FSData', (req, res) => {
     res.status(200).send({
       "test": vs1_13Status,
-      "rotaryStatus": "7"
+      "rotaryStatus": "1"
     });
   });
   let lcd = new jFive.LCD({ 

@@ -93,11 +93,8 @@ function SectionTop4(props){
                     <GreenLED/>
                 </section>
                 <section className={ SectionTop4CSS.section4_2Row2RotaryEncorder }>
-                    <div>
-                        <RotaryEncorder/>
-                        <RotaryEncorder/>
-                    </div>
-                    <div>Rotary</div>
+                    <RotaryEncorder/>
+                    <RotaryEncorder/>
                 </section>
                 <div className={ SectionTop4CSS.section4_2Row2LeftRotarySpdt }> 
                     <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
