@@ -7,6 +7,9 @@ body {
   color: black;
   margin: 0px 0 0 50px;
 }
+/* *{
+  border: 1px solid red;
+} */
 .mainHeadLine{
   font-size: 2em;
   text-align: center;

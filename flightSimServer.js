@@ -35,7 +35,19 @@ let boardVs1_2 = new jFive.Board({ port: // Runt skrivaren usb = 'COM11',
 // ============================ Connect the Arduino and phidget boards =========================================
 let vs1_13Status = 0;
 boardVs1_2.on("ready", function () {
-  // Connect the Phidget server
+  let lcd = new jFive.LCD({ 
+   controller: "PCF8574AT",
+    pins: [5 ,6],
+    backlight: 3,
+  /*   rows: 2,
+    cols: 20, */
+  });
+/*   lcd.on();
+  lcd.cursor(0,0); */
+  lcd.print("scsadcs");
+
+
+  /* // Connect the Phidget server
   let ledConn = new phidget22.Connection(3003, 'localhost');
   ledConn.connect().then(function () {
     console.log("Ansluten");
@@ -57,7 +69,6 @@ boardVs1_2.on("ready", function () {
   //require('./ServerFlightSim/Boards/D1Board.json'); 
   let vs1_13 = new jFive.Switch(12);
   vs1_13.on('open', function () {
-
     LEDBoardObj.board1.chInstance1.setDutyCycle(0.0);  
     console.log('vs1_13 on');
     vs1_13Status = "1";
@@ -77,6 +88,7 @@ boardVs1_2.on("ready", function () {
   });
   
   vs1_13.on('close', function () {
+
     LEDBoardObj.board1.chInstance0.setDutyCycle(0.0); 
     console.log('vs1_13 off');
     vs1_13Status = "0";
@@ -94,25 +106,17 @@ boardVs1_2.on("ready", function () {
     //sendToFrontend(vs1_13Status);
     // FlightSim setting
   });
-  let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
+ */
+
+/*   let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
   // API
   app.get('/FSData', (req, res) => {
     res.status(200).send({
       "test": vs1_13Status,
       "rotaryStatus": "1"
     });
-  });
-  let lcd = new jFive.LCD({ 
-    controller: "LCM1602",
-    pins: [20, 21],
-      backlight: 3,
-      rows: 4,
-      cols: 20,
-    });
-    lcd.on()
-    
-    lcd.cursor(1,1).print("Hi");
-  
+  }); */
+
 });
 // ====================================== initilize the Boards ======================================
 function initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj){

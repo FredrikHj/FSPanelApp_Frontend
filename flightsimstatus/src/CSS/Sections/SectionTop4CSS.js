@@ -95,7 +95,7 @@ export const SectionTop4CSS = {
     section4_2Row1Middle: css({
         'display': 'flex',
         'flexDirection': 'row',
-        'justifyContent': 'space-around',
+        'justifyContent': 'space-between',
         'width': '60px',
         'marginTop': '-10px',
         'marginLeft': '-5px',
@@ -113,9 +113,18 @@ export const SectionTop4CSS = {
         'flexDirection': 'row',
         'justifyContent': 'space-between',
         'alignItems': 'Center',
+        'width': '5%',
+     
     }),
-    section4_2Row2Spdf: css({
-        'marginLeft': '50%',
+    section4_2Row2Led1: css({
+        'margin': '10px',
+    }),
+    section4_2Row2Spdf2: css({
+        'margin': '10px',
+
+    }),
+    section4_2Row2Led3: css({
+        'marginLeft': '-40px',
     }),
     section4_2Row2RotaryEncorder: css({
         'width': '100px',
@@ -135,14 +144,30 @@ export const SectionTop4CSS = {
     section4_3Row1: css({
         'display': 'flex',
         'flexDirection': 'row',
-        'justifyContent': 'space-around',
+        'justifyContent': 'space-between',
         'width': '250px',
         'marginTop': '20px',
+        'marginLeft': 'calc(50% - 125px)',
     }),
     section4_3Row2: css({
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
+        'width': '100%',
+    }),
+    section4_3Row2RotarySpdt1: css({
+        'marginTop': '45px',
+        'marginLeft': '50px',
+    }),
+    section4_3Row22RotaryEncorder2: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+        'width': '100px',
+        'marginLeft': '-10px',
+    }),
+    section4_3Row2Spdt3: css({
+        'marginLeft': '50px',
     }),
     // ===========================================================
     section4_4: css({

@@ -1,4 +1,6 @@
 import React, { useState  } from 'react';
+import { css, merge } from 'glamor';
+
 import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotarySpdtCSS, rotarySpdtCLCSSPossisons, rotaryEncorderCSS, rotateRotaryEncorder } from '../CSS/ComponentsPartsCSS.js';
 import { log } from 'util';
 
@@ -75,12 +77,34 @@ export let RotarySpdt = (props) => {
   );
 }
 export let RotaryEncorder = (props) => {
-  rotateRotaryEncorder(360);
+
+  
+  let rotateRotaryEncorder = css.keyframes({
+    'from': { 'transform': 'rotate(0deg)'},
+    'to': { 'transform': 'rotate(' + props.direction + 'deg)'},   
+  });
+
+  let rotaryEncorderKnob = css({
+    'position': 'absolute',
+    'borderRadius': '50%',
+    'width': '17px',
+    'height': '17px',
+    'top': '2px',
+    'left': '2px',
+    'background': 'white',
+    'border': '2px solid black',
+    'boxShadow': 'inset 0 0.5px 1px 11px #39373C, 0 0 1px 1px #69696A',
+    'opacity': '1',
+    'animationName': rotateRotaryEncorder,
+    'animationDuration': '6s',
+    'animationIterationCount': 'infinite',
+    'animationTimingFunction': 'linear', 
+  });
   return(
     <> 
       <div className={ rotaryEncorderCSS.rotaryEncorderContainer }>    
         <div className={ rotaryEncorderCSS.rotaryEncorder }>
-          <div className={ rotaryEncorderCSS.rotaryEncorderKnob }>
+          <div className={ rotaryEncorderKnob }>
             <div className={ rotaryEncorderCSS.rotaryEncorderKnobCrossLine1 }></div>
             <div className={ rotaryEncorderCSS.rotaryEncorderKnobCrossLine2 }></div>
             <div className={ rotaryEncorderCSS.rotaryEncorderKnobCrossLine3 }></div>

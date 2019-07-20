@@ -86,15 +86,19 @@ function SectionTop4(props){
             </section>
             <section className={ SectionTop4CSS.section4_2Row2 }>
                 <section className={ SectionTop4CSS.section4_2Row22xledSpdf }>
-                    <GreenLED/>       
-                    <div className={ SectionTop4CSS.section4_2Row2Spdf }>
+                    <div className={ SectionTop4CSS.section4_2Row2Led1 }>
+                        <GreenLED/>       
+                    </div>
+                    <div className={ SectionTop4CSS.section4_2Row2Spdf2 }>
                         <SPDTVertical spdtStatus={props.spdtStatus.test }/>
                     </div>
-                    <GreenLED/>
+                    <div className={ SectionTop4CSS.section4_2Row2Led3 }>
+                        <GreenLED/>       
+                    </div>
                 </section>
                 <section className={ SectionTop4CSS.section4_2Row2RotaryEncorder }>
-                    <RotaryEncorder/>
-                    <RotaryEncorder/>
+                    <RotaryEncorder direction= { '-360' }/>
+                    <RotaryEncorder direction= { '360' }/>
                 </section>
                 <div className={ SectionTop4CSS.section4_2Row2LeftRotarySpdt }> 
                     <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
@@ -115,7 +119,16 @@ let Section4_3 = (props) => {
                 />
             </section>
             <section className={ SectionTop4CSS.section4_3Row2 }>
-
+                <div className={ SectionTop4CSS.section4_3Row2RotarySpdt1 }>
+                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                </div>
+                <div className={ SectionTop4CSS.section4_3Row22RotaryEncorder2 }>
+                    <RotaryEncorder direction= { '-360' }/>
+                    <RotaryEncorder direction= { '360' }/>
+                </div>
+                <div className={ SectionTop4CSS.section4_3Row2Spdt3 }>
+                    <SPDTVertical spdtStatus={props.spdtStatus.test }/>
+                </div>
             </section>
         </div>
     );

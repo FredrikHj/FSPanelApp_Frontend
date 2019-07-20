@@ -294,14 +294,6 @@ export const rotarySpdtCLCSSPossisons = {
 // =============================================================
 // Rotate animation for Rotary Encorder
 
-export function rotateRotaryEncorder(direction) {
-  let rotateRotaryEncorder = css.keyframes({
-    'from': { 'transform': 'rotate(0deg)'},
-    'to': { 'transform': 'rotate(' + direction + 'deg)'},   
-  });
-
-  return rotateRotaryEncorder;
-}
 
 // ====================================
 
@@ -327,22 +319,9 @@ export const rotaryEncorderCSS = {
       'border': 'solid 1px #7E7E7E',
       'transition': '.9s',
   }),
-  rotaryEncorderKnob: css({
-    'position': 'absolute',
-    'borderRadius': '50%',
-    'width': '17px',
-    'height': '17px',
-    'top': '2px',
-    'left': '2px',
-    'background': 'white',
-    'border': '2px solid black',
-    'boxShadow': 'inset 0 0.5px 1px 11px #39373C, 0 0 1px 1px #69696A',
-    'opacity': '1',
-    'animationName': rotateRotaryEncorder,
-    'animationDuration': '6s',
-    'animationIterationCount': 'infinite',
-    'animationTimingFunction': 'linear', 
-  }),
+  /* CSS for the animation for the rotary encorder see --> ComponentsParts.js and
+  the function RotaryEncorder */
+
   rotaryEncorderKnobCrossLine1: css({
     'width': '2px',
     'height': '100%',
