@@ -2,7 +2,7 @@ import { css } from 'glamor';
 
 export const BasicCSS = {
   outerFrame: css({
-     'width': '2400px',
+     'width': '2100px',
   }),
   sectionHeadline: css({
         'width': '100%',

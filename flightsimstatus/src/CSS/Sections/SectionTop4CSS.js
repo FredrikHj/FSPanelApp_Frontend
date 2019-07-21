@@ -3,20 +3,20 @@ import { SectionCommonRoules } from '../GenerallCSS.js';
 
 // ======================== Section Top4 =========================
 export const SectionTop4CSS = {
-    sectionTop4: css({
-        'width': '100%',
-        'height': '180px',
-        'display': 'flex',
-        'flexDirection': 'row',
-    }),
     section4_1: css({
         'display': 'flex',
         'flexDirection': 'row',   
         'position': 'relative',
         'bottom': '0',
-        'width': '27%',
+        'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3,
+    }),
+    sectionTop4: css({
+        'width': '100%',
+        'height': '180px',
+        'display': 'flex',
+        'flexDirection': 'row',
     }),
     section4_1ComponentsContainer: css({
         'display': 'flex',
@@ -81,7 +81,7 @@ export const SectionTop4CSS = {
     }),
     // ===========================================================
     section4_2: css({
-        'width': '30%',
+        'width': '20%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3,
     }),
@@ -137,7 +137,7 @@ export const SectionTop4CSS = {
     }),
     // ===========================================================
     section4_3: css({
-        'width': '20%',
+        'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3,
     }),

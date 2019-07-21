@@ -76,21 +76,95 @@ let Section5_2 = (props) => {
 let Section5_3 = (props) => {
     return(
         <div className={ SectionTop5CSS.section5_3 }>
-            efwsdvdsa
+            <section className={ SectionTop5CSS.section5_3Row1 }>
+                <div className={ SectionTop5CSS.section5_3Row1Led1 }>
+                    <GreenLED test={ '1' }/>
+                </div>
+                <div className={ SectionTop5CSS.section5_3Row1Led2 }>
+                    <GreenLED test={ '2' }/>
+                </div>
+                <div className={ SectionTop5CSS.section5_3Row1Led3 }>
+                    <GreenLED test={ '3' }/>
+                </div>
+             
+            </section>
+            <section className={ SectionTop5CSS.section5_3Row2 }>
+                <div className={ SectionTop5CSS.section5_3Row2LedSeg8Dig }>
+                    <LEDSegmentDigit8
+                        ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                />  
+                </div>
+                <div className={ SectionTop5CSS.section5_3Row2LedSeg4Dig }>
+                    <LEDSegmentDigit4
+                        ledStatusStr={ '0.0.0.0' }
+                    />
+                </div>
+            </section>
+            <section className={ SectionTop5CSS.section5_3Row3 }>
+                <GreenLED test={ '3' }/>
+            </section>
+            <section className={ SectionTop5CSS.section5_3Row4 }>
+                <div><GreenLED test={ '1' }/></div>
+                <div><GreenLED test={ '2' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led3_4_5 }><GreenLED test={ '3' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led3_4_5 }><GreenLED test={ '4' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led5 }><GreenLED test={ '5' }/></div>
+                <div><GreenLED test={ '6' }/></div>
+                <div><GreenLED test={ '7' }/></div>
+                <div><GreenLED test={ '8' }/></div>
+            </section>
         </div>
     );
 }
 let Section5_4 = (props) => {
     return(
         <div className={ SectionTop5CSS.section5_4 }>
-            efwsdvdsa
+            <section className={ SectionTop5CSS.section5_4Row1 }>
+                <LEDSegmentDigit4
+                    ledStatusStr={ '0.0.0.0' }
+                />  
+                <LEDSegmentDigit8
+                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                />  
+                <LEDSegmentDigit4
+                    ledStatusStr={ '0.0.0.0' }
+                />
+            </section>
+            <section className={ SectionTop5CSS.section5_4Row2 }>
+                <div><GreenLED test={ '1' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '2' }/></div>
+                <div><GreenLED test={ '3' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '4' }/></div>
+                <div><GreenLED test={ '5' }/></div>
+                <div><GreenLED test={ '6' }/></div>
+                <div><GreenLED test={ '7' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '8' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '9' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '10' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '11' }/></div>
+            </section>
         </div>
     );
 }
 let Section5_5 = (props) => {
     return(
         <div className={ SectionTop5CSS.section5_5 }>
-            efwsdvdsa
+            <div>
+                <LEDDisplay20x4
+                    strRow1={ '11111111111111111111' }
+                    strRow2={ '11111111111111111111' }
+                    strRow3={ '11111111111111111111' }
+                    strRow4={ '11111111111111111111' }
+                />
+            </div>
+            <div>
+                <LEDDisplay20x4
+                    strRow1={ '11111111111111111111' }
+                    strRow2={ '11111111111111111111' }
+                    strRow3={ '11111111111111111111' }
+                    strRow4={ '11111111111111111111' }
+                />
+            </div>
         </div>
     );
 }
