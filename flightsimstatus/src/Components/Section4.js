@@ -16,7 +16,6 @@ function SectionTop4(props){
                 <Section4_4 spdtStatus={ props.thisState.fsApi }/>
                 <Section4_5 spdtStatus={ props.thisState.fsApi }/>
                 <Section4_6 spdtStatus={ props.thisState.fsApi }/>
-                />
             </div>
         </>
     );

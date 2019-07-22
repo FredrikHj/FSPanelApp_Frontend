@@ -106,8 +106,8 @@ let Section5_3 = (props) => {
             <section className={ SectionTop5CSS.section5_3Row4 }>
                 <div><GreenLED test={ '1' }/></div>
                 <div><GreenLED test={ '2' }/></div>
-                <div className={ SectionTop5CSS.section5_3Row4Led3_4_5 }><GreenLED test={ '3' }/></div>
-                <div className={ SectionTop5CSS.section5_3Row4Led3_4_5 }><GreenLED test={ '4' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led3_4 }><GreenLED test={ '3' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led3_4 }><GreenLED test={ '4' }/></div>
                 <div className={ SectionTop5CSS.section5_3Row4Led5 }><GreenLED test={ '5' }/></div>
                 <div><GreenLED test={ '6' }/></div>
                 <div><GreenLED test={ '7' }/></div>

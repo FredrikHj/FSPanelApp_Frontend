@@ -99,7 +99,7 @@ export const SectionTop5CSS = {
         'marginTop': '3px',
         'marginLeft': '16px',
     }),
-    section5_3Row4Led3_4_5: css({
+    section5_3Row4Led3_4: css({
         'marginTop': '-15px',
     }),
     section5_3Row4Led5: css({
