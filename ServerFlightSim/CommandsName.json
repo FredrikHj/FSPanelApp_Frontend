@@ -1,0 +1,31 @@
+{
+    "CENTER_PEDESTAL": {
+        "HGS_HUD": "['ENTER', '0', 'TEST', ]",
+        "Radios": {
+            "NAV": "['Läges väljare', 'Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'NAV1', 'NAV2']",
+            "COM": "['Läges väljare', 'Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'COM1', 'COM2', 'COM3']"
+        },
+        "Status_Light": {
+            "Engine": {
+                "Shutdown": "[1, 2]",
+                "Reverser": "[1, 2]"
+            },
+            "HGS_HUD": "['RNW', ]",
+            "Generall": "['Parking Brake', ]"
+        }, 
+        "Engine": {
+            "Shutdown": "[1, 2]",
+            "Reverser": "[1, 2]"
+        },
+        "ADF": "['Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'Knob Inners', 'Knob Mellan', 'Knob Ytterst', ]",
+        "SECAL": "{
+
+        }"
+
+
+        }
+    },
+    ": "fvd"
+}
+
+

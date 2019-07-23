@@ -47,7 +47,7 @@ boardVs1_2.on("ready", function () {
   lcd.print("scsadcs");
 
 
-  /* // Connect the Phidget server
+  // Connect the Phidget server
   let ledConn = new phidget22.Connection(3003, 'localhost');
   ledConn.connect().then(function () {
     console.log("Ansluten");
@@ -106,16 +106,22 @@ boardVs1_2.on("ready", function () {
     //sendToFrontend(vs1_13Status);
     // FlightSim setting
   });
- */
 
-/*   let dbFlightSimTest = require('./ServerFlightSim/dbFlightSimTest.json'); 
-  // API
+  /* Name for commands - Is sent once the app is starting
+      See the file "FSX Panel - Elektronikkort Komponenter --> Komponenter och dess kommandon" 
+      for names for the correspondings commands! */
+  /* app.get('/CommandsName', (req, res) => {
+    let dbFlightCommandsName = require('./ServerFlightSim/CommandsName.json'); 
+    res.status(200).send(dbFlightCommandsName);
+  }); */
+  
+  // FS Data -  Is sent at least every secund for the app
   app.get('/FSData', (req, res) => {
     res.status(200).send({
       "test": vs1_13Status,
       "rotaryStatus": "1"
     });
-  }); */
+  });
 
 });
 // ====================================== initilize the Boards ======================================
