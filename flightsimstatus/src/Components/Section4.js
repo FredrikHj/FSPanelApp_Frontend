@@ -3,19 +3,17 @@ import { BasicCSS } from '../CSS/GenerallCSS.js'
 import { SectionTop4CSS } from '../CSS/Sections/SectionTop4CSS.js';
 import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder } from './ComponentsParts.js';
 
-function SectionTop4(props){
-    console.log(props);
-    
+function SectionTop4(props){   
     return(
         <> 
             <p className={ BasicCSS.sectionHeadline }>Övre sektion 4</p>        
             <div className={ SectionTop4CSS.sectionTop4 }>
-                <Section4_1 spdtStatus={ props.thisState.fsApi }/>
-                <Section4_2 spdtStatus={ props.thisState.fsApi }/>
-                <Section4_3 spdtStatus={ props.thisState.fsApi }/>
-                <Section4_4 spdtStatus={ props.thisState.fsApi }/>
-                <Section4_5 spdtStatus={ props.thisState.fsApi }/>
-                <Section4_6 spdtStatus={ props.thisState.fsApi }/>
+                <Section4_1 spdtStatus={ props.thisState.fsDataValuesApi }/>
+                <Section4_2 spdtStatus={ props.thisState.fsDataValuesApi }/>
+                <Section4_3 spdtStatus={ props.thisState.fsDataValuesApi }/>
+                <Section4_4 spdtStatus={ props.thisState.fsDataValuesApi }/>
+                <Section4_5 spdtStatus={ props.thisState.fsDataValuesApi }/>
+                <Section4_6 spdtStatus={ props.thisState.fsDataValuesApi }/>
             </div>
         </>
     );
@@ -131,9 +129,7 @@ let Section4_3 = (props) => {
         </div>
     );
 }
-let Section4_4 = (props) => {
-    console.log(props.spdtStatus.rotaryStatus );
-    
+let Section4_4 = (props) => {  
     return(
         <div className={ SectionTop4CSS.section4_4 }>
             <section className={ SectionTop4CSS.section4_4LedSpdf }>

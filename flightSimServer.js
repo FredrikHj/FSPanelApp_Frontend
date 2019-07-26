@@ -110,10 +110,12 @@ boardVs1_2.on("ready", function () {
   /* Name for commands - Is sent once the app is starting
       See the file "FSX Panel - Elektronikkort Komponenter --> Komponenter och dess kommandon" 
       for names for the correspondings commands! */
-  /* app.get('/CommandsName', (req, res) => {
-    let dbFlightCommandsName = require('./ServerFlightSim/CommandsName.json'); 
+  let dbFlightCommandsName = require('./ServerFlightSim/CommandsName.json'); 
+   app.get('/fsCommandsName', (req, res) => {
     res.status(200).send(dbFlightCommandsName);
-  }); */
+  });
+  // Name of my FScommand
+  console.log(dbFlightCommandsName);
   
   // FS Data -  Is sent at least every secund for the app
   app.get('/FSData', (req, res) => {

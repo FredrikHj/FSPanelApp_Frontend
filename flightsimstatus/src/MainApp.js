@@ -5,7 +5,9 @@ import axios from 'axios';
 
 import SectionTop5 from './Components/Section5.js';
 import SectionTop4 from './Components/Section4.js';
+import SectionMiddle3 from './Components/Section3.js';
 import {SectionLeft2, SectionLeft1 } from './Components/SectionLeft1&2.js';
+import { log } from 'util';
 
 let fsDataApi = {};
 // FS Status ================================================================================
@@ -15,29 +17,42 @@ class MainApp extends PureComponent  {
     super(props);
       this.state = {
         restAPIUrl: '',
-        fsApi: {},
+        fsDataValuesApi: {},
+        fsCommandsNameApi: {},
       };
   }
   componentDidMount() {
-    setInterval(this.getFSData, 50);
+    this.getCommandsName();
+    //setInterval(this.getFSData, 50);
   }
+  getCommandsName = () => {
+    axios.get('http://localhost:3001/fsCommandsName').
+    then(response => {
+      // Store the incomming API data in a object
+    let fsNameApi = response.data;
+
+    this.setState({fsCommandsNameApi: fsNameApi});
+    }).
+    catch(error => {
+      //console.log(error.response);
+    });
+  }
+
   getFSData = () => {
     axios.get('http://localhost:3001/FSData').
     then(response => {
-    let incommingData = response.data;
-    let storedResData = response.data;
-    // Checck for new data
-    console.log(incommingData);
+      // Store the incomming API data in a object
+    let fsDataApi = response.data;
 
-    // Store the incomming API data in a object
-    fsDataApi = incommingData;
-    this.setState({fsApi: fsDataApi});
+    this.setState({fsDataValuesApi: fsDataApi});
     }).
     catch(error => {
-      console.log(error.response);
+      //console.log(error.response);
     });
   }
-  render() {  
+  render() {
+    console.log(this.state.fsCommandsNameApi);
+    
     return (
       <div className={ BasicCSS.outerFrame }>
         <header>
@@ -48,6 +63,9 @@ class MainApp extends PureComponent  {
             thisState={ this.state }
           />
           <SectionTop4
+            thisState={ this.state }
+          />
+          <SectionMiddle3
             thisState={ this.state }
           />
           <SectionLeft2

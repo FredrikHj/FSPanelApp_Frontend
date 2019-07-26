@@ -362,3 +362,19 @@ export const rotaryEncorderCSS = {
     'borderRadius': '50%',
   }),
 }
+
+export const pushBtnCircleCSS = {
+  pushBtn: css({
+    'display': 'inline-block',
+    'padding': '5px 19px',
+    'fontSize': '17px',
+    'textAlign': 'center',
+    'textDecoration': 'none',
+    'outline': 'none',
+    'color': '#fff',
+    'backgroundColor': '#4CAF50',
+    'border': 'none',
+    'borderRadius': '15px',
+    'boxShadow': '0 9px #999',
+  }),
+}

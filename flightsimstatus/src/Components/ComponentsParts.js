@@ -1,10 +1,7 @@
 import React, { useState  } from 'react';
 import { css, merge } from 'glamor';
 
-import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotarySpdtCSS, rotarySpdtCLCSSPossisons, rotaryEncorderCSS, rotateRotaryEncorder } from '../CSS/ComponentsPartsCSS.js';
-import { log } from 'util';
-
-console.log(rotarySpdtCLCSSPossisons);
+import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotarySpdtCSS, rotarySpdtCLCSSPossisons, rotaryEncorderCSS, pushBtnCircleCSS, rotateRotaryEncorder } from '../CSS/ComponentsPartsCSS.js';
 
 export let GreenLED = (props) => {
     return(
@@ -140,6 +137,14 @@ export let LEDDisplay20x4 = (props) => {
         <p className={ LEDDisplayCSS.LEDDisplayValueString }>{ props.strRow3 }</p>
         <p className={ LEDDisplayCSS.LEDDisplayValueString }>{ props.strRow4 }</p>
       </div>
+    </div>
+  );
+}
+
+export let PushBtnCircle = (props) => {
+  return(
+    <div className={ pushBtnCircleCSS.pushBtn }>
+     
     </div>
   );
 }

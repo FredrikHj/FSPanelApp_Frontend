@@ -1,31 +1,121 @@
 {
     "CENTER_PEDESTAL": {
-        "HGS_HUD": "['ENTER', '0', 'TEST', ]",
+        "HGS_HUD": [
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "ENTER", "MODE", "BLANK", "STBY", "CLR", "RNW", "BRIGHT +", "G/S", "DIM -", "TEST"
+        ],
         "Radios": {
-            "NAV": "['Läges väljare', 'Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'NAV1', 'NAV2']",
-            "COM": "['Läges väljare', 'Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'COM1', 'COM2', 'COM3']"
+            "NAV": [
+                "Active", "Standby", "Freq +", "Freq -", "<-->", "Test", "NAV1", "NAV2", "Läges Lampor", "Läges väljare"
+            ],
+            "COM": [
+                "Active", "Standby", "Freq +", "Freq -", "<-->", "Test", "COM1", "COM2", "COM3", "Läges Lampor", "Läges Väljare"
+            ]
         },
         "Status_Light": {
             "Engine": {
-                "Shutdown": "[1, 2]",
-                "Reverser": "[1, 2]"
+                "Shutdown": [
+                    "1", "2"
+                ],   
+                "Reverser": [
+                    "1", "2"
+                ]
             },
-            "HGS_HUD": "['RNW', ]",
-            "Generall": "['Parking Brake', ]"
+            "HGS_HUD": [
+                "RNW"
+            ],
+            "Generall": [
+                "Parking Brake"
+            ]
         }, 
         "Engine": {
-            "Shutdown": "[1, 2]",
-            "Reverser": "[1, 2]"
+            "Shutdown": [
+                "1", "2"
+            ],
+            "Reverser": [
+                "1", "2"
+            ]
         },
-        "ADF": "['Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'Knob Inners', 'Knob Mellan', 'Knob Ytterst', ]",
-        "SECAL": "{
-
-        }"
-
-
+        "ADF": [
+            "Active", "Standby", "Freq +", "Freq -", "<-->", "Test", "Knob Inners", "Knob Mellan", "Knob Ytterst"
+        ],
+        "SECAL": {
+            "Status_Light": [
+                "VHF 1", "VHF 2", "VHF 3", "NF1", "NF2"
+            ],
+            "Generall":  [
+                "VHF 1", "VHF 2", "VHF 3", "NF1", "NF2"
+            ]        
         }
     },
-    ": "fvd"
+    "LIGHT_CONTROL": {
+        "Cockpit_lights": [
+            "BACKGROUND", "AFDS FLOOD"
+        ],
+        "INSTRUMENT_PANEL": [
+            "Main Panel: 2:1", "UPPER DU", "OUTBD DU: 2:1", "INBD DU: 2:1 = Innre knob", "INBD DU: 2:1 = Yttre knob", "LOWER DU = Innre knob", "LOWER DU = Yttre knob"
+        ]
+    },
+    "INSTRUMENT_PANEL": {
+        "monitors": {
+            "Main Panel DU": [
+                "OUTBD PFD", "NORM", "ENG PRI", "PFD", "MFD"
+            ],
+            "Lower DU": [
+                "ENG", "PRI", "NORM", "ND"
+            ]
+        },
+        "mode": [
+            "Pilot", "FO"
+        ],
+        "MCP": [
+            "VNAV", "LNAV", "Speed", "C/O", "N1", "CMD A", "CWS A", "CMD B", "CWS B", "IAS/MACH", "SPD INTV", "LVL CHG", "Heading - Knob", "V/S", "VOR LOC", "APP", "HDG SEL", "AT HOLD", "ALT INTV", "V/S", "Flight Director", "MA", "Course Knob", "Course", "IAS / MACH", "Heading", "Altitude", "Vert Speed", {
+            "modeLight": [
+                "Pilot", "FO"
+                ]
+            }
+        ],
+        "EFIS": [
+            "FPV", "Maps", "Maps", "MTRS", {
+                "radioMode": { 
+                    "spdt1": [
+                        "VOR  1", "OFF", "ADF - 1"
+                    ], 
+                    "spdt2": [
+                        "VOR 2", "OFF", "INOP"
+                    ] 
+                }
+            }, "WXR", "STA", "FO", "FO", "WPT", "ARPT", "MIMS", "MIMS", "BARO", "DATA", "POS", "BARO", { 
+                "Type visare": [
+                    "APP", "VOR", "MAP", "PLN"
+
+                ], 
+                "Top distance visare": [
+                    "5", "10", "20", "40", "80", "160", "320", "640"
+                ]
+            }
+        ],
+        "Center_Control": {
+            "Auto Brake": [
+                "RTO", "OFF", "1", "2", "3", "MAX"
+            ],
+            "N1": [
+                "2", "1", "Auto", "Both"
+            ],
+            "SPD Ref": [
+                "SET", "AUTO", "V1", "VR", "WT", "VREF", "<--"
+            ],      
+            "Fuel Flow": [
+                "Reset", "Rate", "used"
+            ]
+        },
+        "Test": {
+            "TEST": [
+                "1", "2"
+            ],
+            "LIGHT": [
+                "TEST", "BRIGHT", "DIM"
+            ]
+        },
+        "Generall": ["Noose_wheel_Steering"]
+    }
 }
-
-
