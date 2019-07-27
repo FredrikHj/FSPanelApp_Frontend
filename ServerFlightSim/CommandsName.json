@@ -1,7 +1,7 @@
 {
     "CENTER_PEDESTAL": {
-        "HGS_HUD": [
-            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "ENTER", "MODE", "BLANK", "STBY", "CLR", "RNW", "BRIGHT +", "G/S", "DIM -", "TEST"
+        "HGSHUD": [
+            "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "ENTER", "MODE", "BLANK", "STBY", "CLR", "RNW", "BRIGHT +", "G/S", "DIM -", "Up", "Ner", "TEST"
         ],
         "Radios": {
             "NAV": [
@@ -11,7 +11,7 @@
                 "Active", "Standby", "Freq +", "Freq -", "<-->", "Test", "COM1", "COM2", "COM3", "Läges Lampor", "Läges Väljare"
             ]
         },
-        "Status_Light": {
+        "StatusLight": {
             "Engine": {
                 "Shutdown": [
                     "1", "2"
@@ -20,7 +20,7 @@
                     "1", "2"
                 ]
             },
-            "HGS_HUD": [
+            "HGSHUD": [
                 "RNW"
             ],
             "Generall": [
@@ -39,7 +39,7 @@
             "Active", "Standby", "Freq +", "Freq -", "<-->", "Test", "Knob Inners", "Knob Mellan", "Knob Ytterst"
         ],
         "SECAL": {
-            "Status_Light": [
+            "StatusLight": [
                 "VHF 1", "VHF 2", "VHF 3", "NF1", "NF2"
             ],
             "Generall":  [
@@ -48,10 +48,19 @@
         }
     },
     "LIGHT_CONTROL": {
-        "Cockpit_lights": [
-            "BACKGROUND", "AFDS FLOOD"
-        ],
-        "INSTRUMENT_PANEL": [
+        "Cockpitlights": [
+            "BACKGROUND", "AFDS FLOOD","FLOOD", "INSTRUMENTPANEL", {
+                "CircuitBreaker": { 
+                    "Cockpitlight": [
+                        "OFF", "BRIGHT"
+                    ],
+                    "Panellight": [
+                        "OFF", "BRIGHT"
+                    ]
+                }
+            }
+        ],  
+        "INSTRUMENTPANEL": [
             "Main Panel: 2:1", "UPPER DU", "OUTBD DU: 2:1", "INBD DU: 2:1 = Innre knob", "INBD DU: 2:1 = Yttre knob", "LOWER DU = Innre knob", "LOWER DU = Yttre knob"
         ]
     },
@@ -68,7 +77,7 @@
             "Pilot", "FO"
         ],
         "MCP": [
-            "VNAV", "LNAV", "Speed", "C/O", "N1", "CMD A", "CWS A", "CMD B", "CWS B", "IAS/MACH", "SPD INTV", "LVL CHG", "Heading - Knob", "V/S", "VOR LOC", "APP", "HDG SEL", "AT HOLD", "ALT INTV", "V/S", "Flight Director", "MA", "Course Knob", "Course", "IAS / MACH", "Heading", "Altitude", "Vert Speed", {
+            "A/T Arm", "N1", "Speed", "C/O", "VNAV", "LNAV", "VOR LOC", "SPD INTV", "LVL CHG", "HDG SEL", "APP", "AT HOLD", "ALT INTV", "V/S", "Vit lampa", "Course", "IAS/MACH", "Heading", "Altitude", "Vert Speed", "Course - Knob", "IAS/MACH - Knob", "Heading - Knob", "Altitude - Knob", "Vert Speed - Knob", "CMD A", "CWS A", "CMD B", "CWS B", "Flight Director", "MA", "AP Disconnect", {
             "modeLight": [
                 "Pilot", "FO"
                 ]
@@ -83,18 +92,27 @@
                     "spdt2": [
                         "VOR 2", "OFF", "INOP"
                     ] 
-                }
-            }, "WXR", "STA", "FO", "FO", "WPT", "ARPT", "MIMS", "MIMS", "BARO", "DATA", "POS", "BARO", { 
+                },
+                "modeLight": [
+                    "Pilot", "FO"
+                ]   
+            }, "WXR", "STA", "FO", "FO", "WPT", "ARPT", "MIMS", "MIMS", "BARO", "DATA", "POS", "BARO", "RST", "STD", { 
                 "Type visare": [
                     "APP", "VOR", "MAP", "PLN"
 
                 ], 
                 "Top distance visare": [
                     "5", "10", "20", "40", "80", "160", "320", "640"
-                ]
+                ],
+               "MIMS": [
+                    "Radio", "Baro"
+               ],
+               "BARO": [
+                    "In", "HPA"
+               ] 
             }
         ],
-        "Center_Control": {
+        "CenterControl": {
             "Auto Brake": [
                 "RTO", "OFF", "1", "2", "3", "MAX"
             ],
@@ -102,7 +120,7 @@
                 "2", "1", "Auto", "Both"
             ],
             "SPD Ref": [
-                "SET", "AUTO", "V1", "VR", "WT", "VREF", "<--"
+                "SET", "AUTO", "V1", "VR", "WT", "VREF", "<--", "N1 Set", "SYS Set", "C/R Set"
             ],      
             "Fuel Flow": [
                 "Reset", "Rate", "used"
@@ -116,6 +134,75 @@
                 "TEST", "BRIGHT", "DIM"
             ]
         },
-        "Generall": ["Noose_wheel_Steering"]
-    }
+        "Generall": ["NoosewheelSteering", "Flaps Poss", "Speddbrake Poss"],
+        "LandingLight": {
+            "Nosewheel": ["Up", "Down"],
+            "Headwheel": ["Up", "Down"],
+            "Glaresheeld": [
+                "Fire Warning", "Master Caution Warning"
+            ]
+        }
+    },
+    "OVERHEADLOWERPANEL": {
+        "AntiIce": [
+            "Wing Anti-Ice", { "Eng": [1 2]}
+        ],    
+        "ProbeHeat": [
+            "Left", "Right"
+        ],
+        "WindowHeat": [
+            "FWD", "Side", "OVHT", "PWR TEST"
+        ],
+        "AirCondition": [
+            "REC PACK", "ISOLATION VALVE", "Wing", "Anti ICE", "Pack", "APU BLED", "OVHT", "TRIP"
+        ],
+        "CockpitLights": [
+            "Ice FLAP", "INHBIT", "Ice Gear", "Ice Terr", "Sys Test", "COMPASS LIGHT"
+        ],
+        "ExternalLights": [
+            "APU Start", "Engine starter", "Engine", "IGN", "Rotary switch", "L", "R"
+        ],
+        "ACPower": [
+            "Maint", "Bat", "CAB/UTIL", "IFE/PASS SEAT"
+        ],
+        "Elektriskapumpar": [
+            "ENG", "ELEC"
+        ],
+        "GroundPower": [
+            "GRD PWR", "Bus Trans", "Gen", "APU Gen", "Disconnect", "Stanby Power"
+        ],
+        "FuelPumps": [
+            "CTR", "Fuel pumps", "Cross Feed", "FWD", "AFT"
+        ],
+        "Navigation": [
+            "VHF NAV", "IRS", "FMC"
+        ],
+        "Displays": [
+            "Control Panel", "Source"
+        ],
+        "ALTAutoManual": [
+            "Manual - VALVE", "FLT ALT", "LAND ALT"
+        ],
+        "ExternalLights": [
+            {
+                "LandingLight": [
+                    "retract", "extend", "Retractable", "off", "fixed"
+                ],
+                "Wiper": [
+                    "PARK", "INT", "LOW", "HIGH"
+                ],
+                "Position": [
+                    "Strobe & Steady", "Off", "Steady"
+                ]
+            },
+            "RunwayTurnoff", "Taxi", "Logo", "Anti-Collision", "Wing"
+        ],
+        "Generall": [
+           "Cockpit Video Sys", "GRD CALL", "Left" , "Right", "1", "2", "A", "B"
+        ],
+
+    },
+    "Spdt": [
+        "on", "off", "mom"
+    ]
 }
