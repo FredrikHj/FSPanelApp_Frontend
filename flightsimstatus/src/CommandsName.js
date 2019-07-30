@@ -6,16 +6,18 @@ let dbFlightCommandsName = {
             '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'ENTER', 'MODE', 'BLANK', 'STBY', 'CLR', 'RNW', 'BRIGHT +', 'G/S', 'DIM -', 'Up', 'Ner', 'TEST'
         ],
         Radios: {
-            NAV: [
-                'Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'NAV1', 'NAV2', 'Läges Lampor', 'Läges väljare'
-            ],
-            COM: [
-                'Active', 'Standby', 'Freq +', 'Freq -', '<-->', 'Test', 'COM1', 'COM2', 'COM3', 'Läges Lampor', 'Läges Väljare'
-            ]
+            NAV: {
+                Active: 'Active', Standby: 'Standby', FreqAdd: 'Freq +', FreqLess: 'Freq -', NavSet: '<-->', 
+                Nav1: 'NAV1', Nav2: 'NAV2', StatusLight:'Läges Lampor', StatusSpdt: 'Läges Väljare', Test: 'Test', 
+            },
+            COM: {
+                Com1: 'COM1', Com2: 'COM2', Com3: 'COM3', Active: 'Active', Standby: 'Standby', FreqAdd: 'Freq +', FreqLess: 'Freq -', ComSet: '<-->',
+                StatusLight:'Läges Lampor', StatusSpdt: 'Läges Väljare', Test: 'Test', 
+            }
         },
         ADF: {
-            adf: 'ADF', Ant: 'ANT', Active: 'Active', Standby: 'Standby', FreqAdd: 'Freq +', Freq: 'FreqLess', FreqSet: '<-->', Test: 'Test', 
-            Knob1: 'Knob Inners', Knob2: 'Knob Mellan', Knob3: 'Knob Ytterst',
+            adf: 'ADF', Ant: 'ANT', Active: 'Active', Standby: 'Standby', FreqAdd: 'Freq +', Freq: 'FreqLess', FreqSet: '<-->', 
+            Test: 'Test', Knob1: 'Knob Inners', Knob2: 'Knob Mellan', Knob3: 'Knob Ytterst',
         },
         SECAL: {
             StatusLight: [
@@ -25,289 +27,133 @@ let dbFlightCommandsName = {
                 'VHF 1', 'VHF 2', 'VHF 3', 'NF1', 'NF2'
             ]
         },
-    }
+        ATC: {},
+        FIRE_panel: {},
+        FLT_DK_DOOR: {},
+        FIRE_panel: {},
+        FLT_DK_DOOR: {},
+        Radios: {},
+        EEC1_2: {},
+        WXRDR: {},
+        MIC Selector: {},
+        Stab_Trim: {},
+
+        HGS_HUD: {
+            Nr0: '0', Nr1: '1', Nr2: '2', Nr3: '3', Nr4: '4', Nr5: '5', Nr6: '6', Nr7: '7', Nr8: '8', Nr9: '9', Blank: 'BLANK', 
+            Enter: 'ENTER', Mode: 'MODE', Clr: 'CLR', Rnw: 'RNW', StbRnw: 'STBY RNW', BrightAdd: 'BRIGHT +', DimLess: 'DIM -', Gs: 'G/S', Test: 'TEST'
+        }, 
+
+        TCAS: {
+            TCas: 'TCAS', Stb: 'STBY', AltRptigOff: 'ALT RPTIG OFF', IPNde: 'IPNDE', TaOnly: 'TA ONLY', TaRa: 'TA-RA'
+        },
+        Throttle: {
+            Throttle1: Throttle 1
+            Throttle1Rev: Throttle 1 - Reverser
+            Throttle2: Throttle 2
+            Throttle2Rev: Throttle 2 - Reverser
+            Engine1CutOff: Engine 1 - (Cutoff)
+            Engine2CutOff: Engine 2 - (Cutoff)
+            Parking Brake
+        },
+
+
+    },
 
     OVERHEAD_LOWER_PANEL: {
-        ACPower: {
+        AC_Power: {
             RotaryLeft: [
-                STBY PWR / BAT BUS / BAT / AUX BAT / TR1 / TR2 / TR3 / TEST
+                'STBY PWR', 'BAT BUS', 'BAT', 'AUX BAT', 'TR1', 'TR2', 'TR3', 'TEST'
             ],
             RotaryRight: [
-                STBY PWR / GRD PWR / GEN1 / APU GEN / GEN2 / INV / TEST
+                'STBY PWR', 'GRD', 'PWR', 'GEN1', 'APU GEN', 'GEN2', 'INV', 'TEST'
             ],
             Maint: 'MAINT', Bat: 'BAT', CabUtil: 'CAB/UTIL', IfePassSeat: 'IFE/PASS SEAT', On: 'ON', Off: 'OFF'
         },
-        AirCondition: {
-            RecPacks: {
-                L: 'L REC PACK', R: 'R REC PACK', Off: 'OFF', Auto: 'AUTO' 
-            },
-
-            Wing Anti ICE - L Pack
-            	OFF / AUTO / HIGH
-            
-            Isolation_Valve: { 
-                    Isolation_Valve: 'ISOLATION VALVE', Close: 'CLOSE', 'Auto', Open: 'OPEN'
-            },    
-            Wing:. Anti ICE- R Pack
-            		OFF / AUTO / HIGH
-            
-            Wing:. Anti ICE- L Pack
-            		on / off
-            
-            ApuBled: {
-                ApuBled: 'APU BLED', On: 'On', Off: 'OFF'
+        Air_Condition: {
+            RecircFans: {
+                L: 'L RECIRC FAN', R: 'R RECIRC FAN', Off: 'OFF', Auto: 'AUTO' 
             },
             Ovht: {
                 Ovht: 'OVHT', Test: 'TEST'
             },
+            WingAntiICE: {
+                WINGaNTIice: 'Wing - Anti ICE', PackL: 'L Pack', PackR: 'R Pack', L: 'L', R: 'R', On: 'ON', Off: 'OFF', Auto: 'AUTO', High: 'HIGH'
+            },
+            Isolation_Valve: { 
+                    Isolation_Valve: 'ISOLATION VALVE', Close: 'CLOSE', Auto: 'Auto', Open: 'OPEN'
+            },    
+            ApuBled: {
+                ApuBled: 'APU BLED', On: 'On', Off: 'OFF'
+            },
             Trip: {
                 trip: 'TRIP', Test: 'TEST',
             }
-
         },
-
-        
-
-
-    }
-
-    COMPONENTS: {
-        SPDT: [
-            'NORMAL BAT', 'ON', 'OFF', 'OPEN', 'CLOSE', 'MOM', 'AUTO', ' HIGH', 'START', { 
-                EngSpdt: [ 
-                    'ENGINE-STARTER', 'GRD', 'CONT', 'FLT', 'BOTH', 'IGN' 
-                ],
-                DomWhite: ['DIM', 'OFF', 'BRIGHT']
-
-            }
-        ],
-        ParkingBrake: {
-            name: 'Parking Brake', on: 'ON', off: 'OFF'
+        ALT_Auto_Manual: {
+            ManualVALVE: 'Manual - VALVE', Auto: 'AUTO', Alt: 'ALTN', Man: 'MAN',
+            FltAlt: 'FLT ALT', LandAlt: 'LAND ALT', ManualVALVE: [
+                    'CLOSE', 'OFF', 'OPEN'
+            ]
         },
-
-
-        AntiIce: [
-            'Wing Anti-Ice', { Eng: ['1', '2']}
-        ],         
-        ProbeHeat: [
-            'Left', 'Right'
-        ],
-        WindowHeat: [
-            'FWD', 'Side', 'OVHT', 'PWR TEST'
-        ],
-
-        CockpitLights: [
-            'Ice FLAP', 'INHBIT', 'Ice Gear', 'Ice Terr', 'Sys Test', 'COMPASS LIGHT'
-        ],
-        ACPower: [
-            'Maint', 'Bat', 'CAB/UTIL', 'IFE/PASS SEAT'
-        ],
-        Elektriskapumpar: [
-            'ENG', 'ELEC'
-        ],
-        GroundPower: [
-            'GRD PWR', 'Bus Trans', 'Gen', 'APU Gen', 'Disconnect', 'Stanby Power'
-        ],
-        FuelPumps: [
-            'CTR', 'Fuel pumps', 'Cross Feed', 'FWD', 'AFT'
-        ],
-        Navigation: [
-            'VHF NAV', 'IRS', 'FMC'
-        ],
-        Displays: [
-            'Control Panel', 'Source'
-        ],
-        PushBtn: [
-            'GRD CALL'
-        ],
-
-
-        OVERHEAD_LOWER_PANEL: {
-            ExternalLights: [
-                'APU Start', 'Engine starter', 'Engine', 'IGN', 'Rotary switch', 'L', 'R'
-            ],
-            Generall: [
-                'Cockpit Video Sys', 'GRD CALL', 'Left' , 'Right', '1', '2', 'A', 'B', {
-                 }
-            ],
+        AIR_TEMP: {},
+        ALTERNATIVE_FLAPS: {},
+        ALT_HORN_CUTOUT: {},
+        ATTEND: {},
+        FLTCONTROL: {},
+        EQUIP_COOLING: {},
+        FLTCONTROL: {},
+        FASTEN_SEATBELTS: {},
+        Cockpit_Voice_Redorder: {},
+        Flight_Recorder: {},
+        Crew_Pass_Oxygen: {},
+        PSEU: {},
+        Service_inerphone: {},
+        WLAN: {},
+        Anti_Ice: {
+            Eng1: 'Eng 1', Eng1: 'Eng 2', AntiIce: 'Anti-Ice', Off: 'OFF', On: 'ON', Wing: 'Wing'       
         },
+        Navigation: {
+            VhfNav: 'VHF NAV', Irs: 'IRS', Fmc: 'FMC'
+        },
+        FrontPanel:{
 
-
-        RotarySpdt: {
-            Source: [
-                'ALL ON 1', 'AUTO', 'ALL ON 2'
-            ],
-            Manual_VALVE: [
-                'Auto', 'ALTN', 'Man'
-            ],
-            Wiper: [
-                'PARK', 'INT', 'LOW', 'HIGH'
-            ],
-            ALTAutoManual: [
-                'FLT ALT', 'LAND ALT', { 
-                    ManualVALVE: [
-                        'CLOSE', 'OFF', 'OPEN'
-                    ]
-                }
-            ],
         }
     },
-    // Diff panels
-    PANELS: {
-
+    INSTRUMENT_PANEL: {
         CenterControl: {
-            AutoBrake: [
-                'RTO', 'OFF', '1', '2', '3', 'MAX'
-            ],
-            N1: [
-                '2', '1', 'Auto', 'Both'
-            ],
-            SPDRef: [
-                'SET', 'AUTO', 'V1', 'VR', 'WT', 'VREF', '<--', 'N1 Set', 'SYS Set', 'C/R Set'
-            ],      
-            FuelFlow: [
-                'Reset', 'Rate', 'used'
-            ]
-        },
-        Test: {
-            TEST: [
-                '1', '2'
-            ],
-            LIGHT: [
-                'TEST', 'BRIGHT', 'DIM'
-            ]
-        },
-        IRS: [
-            '1', '2 = N', '3', '4 = W', '5 = H', '6 = E', 'DSPL SEL =  Innre Knob', '7', '8 = S', '9', '0', 'CLR', 'ENT', 'SYS DSPL', {
-                ALIGN: [
-                    'L', 'R', 'Off', 'Align', 'Nav', 'Att', 'IRS Display', {
-                        DSPL: [
-                            'DSPL', 'SEL BRT', '<--', '-->', { 
-                                DSPLRotary: [
-                                    'Test', 'TK_GS', 'PPOS', 'WIND', 'HDG_STS'
-                                ]
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        INSTRUMENT: {
-            monitors: {
-                Main_Panel_DU: [
-                    'OUTBD PFD', 'NORM', 'ENG PRI', 'PFD', 'MFD'
-                ],
-                Lower_DU: [
-                    'ENG', 'PRI', 'NORM', 'ND'
-                ]
+            AutoBrake: {
+                Rto: 'RTO', Off: 'OFF', Nr1: '1', Nr2: '2', Nr3: '3', Max: 'MAX'
             },
-            MCP: [
-                'A/T Arm', 'N1', 'Speed', 'C/O', 'VNAV', 'LNAV', 'VOR LOC', 'SPD INTV', 'LVL CHG', 'HDG SEL', 'APP', 'AT HOLD', 'ALT INTV', 'V/S', 'Vit lampa', 'Course', 'IAS/MACH', 'Heading', 'Altitude', 'Vert Speed', 'Course - Knob', 'IAS/MACH - Knob', 'Heading - Knob', 'Altitude - Knob', 'Vert Speed - Knob', 'CMD A', 'CWS A', 'CMD B', 'CWS B', 'Flight Director', 'MA', 'AP Disconnect', {
-                    modeLight: [
-                        'Pilot', 'FO'
-                    ]
-                }
-            ],
-            EFIS: [
-                'FPV', 'Maps', 'Maps', 'MTRS', {
-                    radioMode: { 
-                        spdt1: [
-                            'VOR  1', 'OFF', 'ADF - 1'
-                        ], 
-                        spdt2: [
-                            'VOR 2', 'OFF', 'INOP'
-                        ] 
-                    },
-                    modeLight: [
-                        'Pilot', 'FO'
-                    ]   
-                }, 'WXR', 'STA', 'FO', 'FO', 'WPT', 'ARPT', 'MIMS', 'MIMS', 'BARO', 'DATA', 'POS', 'BARO', 'RST', 'STD', { 
-                    TypeVisare: [
-                        'APP', 'VOR', 'MAP', 'PLN'
-                    ], 
-                    TopDistanceVisare: [
-                        '5', '10', '20', '40', '80', '160', '320', '640'
-                    ],
-                    MIMS: [
-                        'Radio', 'Baro'
-                    ],
-                    BARO: [
-                        'In', 'HPA'
-                    ] 
-                }
-            ],
-            mode: [
-                'Pilot', 'FO'
-            ]
-        }
-        // ==============================================================================
+            N1: {
+                Nr1: '1', Nr2: '2', Auto: 'Auto', Both: 'Both'
+            },
+            SPDRef: {
+                Set: 'SET', Auto: 'AUTO', V1: 'V1', Vr: 'VR', Wt: 'WT', Vref: 'VREF', ArrowLeft: '<--', 
+            },      
+            FuelFlow: {
+                FuelFlow: 'FuelFlow', Reset: 'Reset', Rate: 'Rate', Used: 'used'
+            },
+            SysSet: 'SYS Set', CR_Set: 'C/R Set', N1Set: 'N1 SET', SpeedBrakePoss: 'Speedbrake Poss',
+        },
+
     },
     LIGHT_CONTROL: {
-        Cockpitlights: [
-            'BACKGROUND', 'AFDS FLOOD','FLOOD', 'INSTRUMENTPANEL', 'PANEL', {
-                CircuitBreaker: { 
-                    Cockpitlight: [
-                        'OFF', 'BRIGHT'
-                    ],
-                    Panellight: [
-                        'OFF', 'BRIGHT'
-                    ]
-                },
-                LandingLight: [
-                    'Nosewheel', 'Headwheel', 'Up', 'Down'
-                ],
-            }
-        ],
-        ExternalLights: [
-            'RunwayTurnoff', 'Taxi', 'Logo', 'Anti-Collision', 'Wing', {
-                LandingLight: [
-                    'retract', 'extend', 'Retractable', 'off', 'fixed'
-                ],
-                Position: [
-                    'Strobe & Steady', 'Off', 'Steady'
-                ]
-            }
-        ],
-        INSTRUMENTPANEL: [
-            'Main Panel: 2:1', 'UPPER DU', 'OUTBD DU: 2:1', 'INBD DU: 2:1 = Innre knob', 'INBD DU: 2:1 = Yttre knob', 'LOWER DU = Innre knob', 'LOWER DU = Yttre knob'
-        ],
-    },
-    StatusLight: {
-        Engine: {
-            Shutdown: [
-                '1', '2'
-            ],   
-            Reverser: [
-                '1', '2'
-            ]
+        Cockpitlights: {
+            Backgrund: 'BACKGROUND', AfdsFlood: 'AFDS FLOOD', Flood: 'FLOOD', Instrumentpanel: 'INSTRUMENTPANEL', Panel: 'PANEL', 
+            CompassLight: 'COMPASS LIGHT', DomeWhite: 'DOME WHITE',
+            CircuitBreaker: {
+                CircuitBreaker: 'Circuit Breaker', CockpitLight: 'Cockpit light', PanelLight: 'Panel light', 
+            },
+            Dim: 'DIM', Off: 'OFF', Bright: 'BRIGHT', //AntiIce: 'Anti - Ice', FlapInhbit: 'FLAP INHBIT', ?: '?', Norm: 'NORM',      
         },
-        HGSHUD: [
-            'RNW'
-        ],
-
-    }, 
-    Engine: {
-        Shutdown: [
-            '1', '2'
-        ],
-        Reverser: [
-            '1', '2'
-        ]
-    }, 
-    
-    Generall: ['NoosewheelSteering', 'Flaps Poss', 'Speddbrake Poss'],
-    
-    Glaresheeld: [
-        'Fire Warning', 'Master Caution Warning'
-    ],
-    LED_SEGMENT: [
-    'FLT ALT', 'LAND ALT'
-    ],
-    LCD_Display: {
-        power: [
-            'Rotary Switch', 'stb power'
-        ],
-    }
+        Instrument_Panel: {
+            MainPanel: 'Main Panel',            
+            UpperDU: 'UPPER DU',
+            OutBdDu: 'OUTBD DU',
+            InBdDu: 'INBD DU', 'Innre knob Yttre', 'knob',
+            LowerDu: 'LOWER DU', 'Innre knob', 'Yttre knob',
+        },
+    },    
 };
 
 export default dbFlightCommandsName;
