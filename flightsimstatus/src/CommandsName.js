@@ -35,7 +35,7 @@ let dbFlightCommandsName = {
         Radios: {},
         EEC1_2: {},
         WXRDR: {},
-        MIC Selector: {},
+        MIC_Selector: {},
         Stab_Trim: {},
 
         HGS_HUD: {
@@ -46,14 +46,8 @@ let dbFlightCommandsName = {
         TCAS: {
             TCas: 'TCAS', Stb: 'STBY', AltRptigOff: 'ALT RPTIG OFF', IPNde: 'IPNDE', TaOnly: 'TA ONLY', TaRa: 'TA-RA'
         },
-        Throttle: {
-            Throttle1: Throttle 1
-            Throttle1Rev: Throttle 1 - Reverser
-            Throttle2: Throttle 2
-            Throttle2Rev: Throttle 2 - Reverser
-            Engine1CutOff: Engine 1 - (Cutoff)
-            Engine2CutOff: Engine 2 - (Cutoff)
-            Parking Brake
+        Engine: {
+            Engine1: 'Engine 1', Engine2: 'Engine 2', Shutdown: 'Shutdown', ParkingBrake: 'Parking Brake'
         },
 
 
@@ -92,7 +86,7 @@ let dbFlightCommandsName = {
         ALT_Auto_Manual: {
             ManualVALVE: 'Manual - VALVE', Auto: 'AUTO', Alt: 'ALTN', Man: 'MAN',
             FltAlt: 'FLT ALT', LandAlt: 'LAND ALT', ManualVALVE: [
-                    'CLOSE', 'OFF', 'OPEN'
+                'CLOSE', 'OFF', 'OPEN'
             ]
         },
         AIR_TEMP: {},
@@ -101,6 +95,7 @@ let dbFlightCommandsName = {
         ATTEND: {},
         FLTCONTROL: {},
         EQUIP_COOLING: {},
+        EMER_EXT_LIGHT: {},
         FLTCONTROL: {},
         FASTEN_SEATBELTS: {},
         Cockpit_Voice_Redorder: {},
@@ -110,14 +105,53 @@ let dbFlightCommandsName = {
         Service_inerphone: {},
         WLAN: {},
         Anti_Ice: {
-            Eng1: 'Eng 1', Eng1: 'Eng 2', AntiIce: 'Anti-Ice', Off: 'OFF', On: 'ON', Wing: 'Wing'       
+            Eng1: 'Eng 1', Eng1: 'Eng 2', AntiIce: 'Anti-Ice', Wing: 'Wing'       
         },
         Navigation: {
             VhfNav: 'VHF NAV', Irs: 'IRS', Fmc: 'FMC'
         },
-        FrontPanel:{
-
-        }
+       /*  Probe_Heat: {
+            Heat: Heat
+        },
+        Window_Heat: {		
+            Left Side Left FWD Right FWD Right Side
+        }, */
+        Elektriska_pumpar: {                        
+            Eng: 'ENG', Elec: 'ELEC'
+        },
+        Ground_Power: {
+            GrdPwr: 'GRD PWR', Gen: 'Gen', ApuGen: 'APU Gen'
+        },
+        Fuel_Pumps: {
+            Ctr: 'CTR', FuelPumps: 'Fuel pumps', Aft: 'AFT', Fwvd: 'FWD'
+        },
+        Displays: {
+            ControlPanel: {
+                ControlPanel: 'Control Panel', BothOn: 'BOTH ON', Normal: 'NORMAL'
+            },
+            Source: {
+                Source: 'SOURCE', AllOn: 'ALL ON', Auto: 'AUTO'
+            } 
+            
+        },
+        FrontPanel: {
+            ExtLights: {
+                Landing_Light: {
+                    Retract: 'retract', Extend: 'extend', Retractable: 'Retractable', Fixed: 'Fixed', RnwTuroff: 'Runway Turnoff',
+                    Logo: 'Logo', Taxi: 'Taxi', PossLight: {
+                        Pos: 'POS', StrobeSteady: 'Strobe & Steady', Steady: 'Steady'
+                    },
+                    AntiColl: 'Anti coll', Wing: 'Wing', WheelWell: 'Wheel Well'
+                },
+            },
+            Engine: 'Engine', Starter: 'Starter', Ign: 'IGN', ApuStart: 'APU Start', Start: 'Start',
+            
+            
+            Wipers: {
+                Wipers: 'Wiper', Park: 'PARK', Int: 'INT', Low: 'LOW', High: 'HIGH'
+            }
+        },
+        Off: 'OFF', On: 'ON', Nr1: '1', Nr2: '2', A: 'A', B: 'B', Left: 'Left', Right: 'Right'
     },
     INSTRUMENT_PANEL: {
         CenterControl: {
@@ -135,8 +169,40 @@ let dbFlightCommandsName = {
             },
             SysSet: 'SYS Set', CR_Set: 'C/R Set', N1Set: 'N1 SET', SpeedBrakePoss: 'Speedbrake Poss',
         },
-
+        Mcp: {
+            VNav: 'VNAV', LNav: 'LNAV',Speed: 'Speed',Co: 'C/O',N1: 'N1', CmdA: 'CMD A', CmdB: 'CMD B', 
+            CswA: 'CWS A', CswB: 'CWS B', Ias_Mach: 'IAS/MACH', SpeedIntv: 'SPD INTV', LvlChg: 'LVL CHG', 
+            Heading: 'Heading', BankEagle: 'Bank Agle', Nr10: '10', Nr15: '15', Nr20: '20', Nr25: '25', Nr30: '30',
+            Vs: 'V/S', VorLock: 'VOR LOC', App: 'APP', HdgSel: 'HDG SEL', AtHold: 'AT HOLD', AltIntv: 'ALT INTV', 
+            FlightDirector: 'Flight Director', FDMaster: 'Master', DisengageAp: 'Disengage AP', Hgs: 'HGS',
+            Up: 'UP', Dn: 'DN'              
+        },
+        Efis: {
+            Baro: 'BARO', In: 'IN', Hpa: 'HPA', Maps: 'MAPS', Ctr: 'CTR', Tfc: 'TFC', Vor1: 'VOR 1', Adf1: 'ADF - 1',
+            Vor2: 'VOR 2', Off: 'OFF', Inop: 'INOP', Wpt: 'WPT', Arpt: 'ARPT', Mims: 'MIMS', Rst: 'RST', Std: 
+            'STD', Fpv: 'FPV', Wxr: 'WXR', Sta: 'STA', Data: 'DATA', Pos: 'POS', Terr: 'TERR', Mtrs: 'MTRS',
+            ModeSide: {
+                Pilot: 'PILOT', Fo: 'FO', ModeChoice: 'Läges Väljare',
+            },
+        },
+        Warnings: {
+            FireWarning: 'Fire Warning', MasterCaution: 'Master Caution',
+        },
+        Flaps_Poss: 'Flap poss',
+        Landing_Light: {		
+            NooseWheel: 'NooseWheel', NooseWheelUp: 'Up', NooseWheelDn: 'Down', MainWheel: 'MainWheel', MainWheelLUp: 'Left Up', 
+            MainWheelRUp: 'Right Up', MainWheelLDn: 'Left Down', MainWheelRDn: 'Right Down',
+        },
+        StatusLight: 'Läges lampa', 
+        TEST: {
+            Test: 'TEST', Nr1: '1', Nr2: '2', LightTest: 'LIGHT TEST', Bright: 'BRIGHT', Dim: 'DIM'
+        },
+    MONITORS: {
+        MainPanelDu: 'Main Panel Dus', /*(Monitor 2?)*/	OutBdPfd: 'OUTBD PFD', Norm: 'NORM', Pfd: 'PFD', Mfd: 'MFD',
+        LowerDU: 'Lower DU', /*(Monitor 1?)*/ EngPri: 'ENG PRI', Norm: 'NORM', Nd: 'ND'
     },
+},
+
     LIGHT_CONTROL: {
         Cockpitlights: {
             Backgrund: 'BACKGROUND', AfdsFlood: 'AFDS FLOOD', Flood: 'FLOOD', Instrumentpanel: 'INSTRUMENTPANEL', Panel: 'PANEL', 
@@ -147,13 +213,12 @@ let dbFlightCommandsName = {
             Dim: 'DIM', Off: 'OFF', Bright: 'BRIGHT', //AntiIce: 'Anti - Ice', FlapInhbit: 'FLAP INHBIT', ?: '?', Norm: 'NORM',      
         },
         Instrument_Panel: {
-            MainPanel: 'Main Panel',            
-            UpperDU: 'UPPER DU',
-            OutBdDu: 'OUTBD DU',
-            InBdDu: 'INBD DU', 'Innre knob Yttre', 'knob',
-            LowerDu: 'LOWER DU', 'Innre knob', 'Yttre knob',
+            MainPanel: 'Main Panel', UpperDU: 'UPPER DU', LowerDu: 'LOWER DU', OutBdDu: 'OUTBD DU', InBdDu: 'INBD DU', InnerKnob: 'Innre knob', OuterKnob: 'Yttre knob',
         },
-    },    
+    },  
+    Generall: {
+        NooseWheel: 'Noose Wheel'
+    }
 };
 
 export default dbFlightCommandsName;
