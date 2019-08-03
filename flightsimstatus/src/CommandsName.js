@@ -1,10 +1,10 @@
-import { insertGlobal } from "glamor";
-
 let dbFlightCommandsName = {
     CENTER_PEDESTAL: {
-        HGSHUD: [
-            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'ENTER', 'MODE', 'BLANK', 'STBY', 'CLR', 'RNW', 'BRIGHT +', 'G/S', 'DIM -', 'Up', 'Ner', 'TEST'
-        ],
+        HGSHUD: {
+            Nr0: '0', Nr1: '1', Nr2: '2', Nr3: '3', Nr4: '4', Nr5: '5', Nr6: '6', Nr7: '7', Nr8: '8', Nr9: '9', Enter: 'ENTER',
+            Mode: 'MODE', Blank: 'BLANK', Stb: 'STBY', Clr: 'CLR', Rnw: 'RNW', BrightAdd: 'BRIGHT +', Gs: 'G/S', DimLess: 'DIM -',
+            Up: 'Up', Dn: 'Ner', Test: 'TEST'
+        },
         Radios: {
             NAV: {
                 Active: 'Active', Standby: 'Standby', FreqAdd: 'Freq +', FreqLess: 'Freq -', NavSet: '<-->', 
@@ -20,12 +20,7 @@ let dbFlightCommandsName = {
             Test: 'Test', Knob1: 'Knob Inners', Knob2: 'Knob Mellan', Knob3: 'Knob Ytterst',
         },
         SECAL: {
-            StatusLight: [
-                'VHF 1', 'VHF 2', 'VHF 3', 'NF1', 'NF2'
-            ],
-            Generall:  [
-                'VHF 1', 'VHF 2', 'VHF 3', 'NF1', 'NF2'
-            ]
+           Vhf1: 'VHF 1', Vhf2: 'VHF 2', Vhf3: 'VHF 3', Nf1: 'NF1', Nf2: 'NF2'
         },
         ATC: {},
         FIRE_panel: {},
@@ -54,26 +49,27 @@ let dbFlightCommandsName = {
     },
     OVERHEAD_UPEAR_PANEL: {
         IRS: {
-            DsplSel: 'DSPL SEL
-            DsplSelYttreKnob: 'DSPL SEL Yttr Knob BrightArrowL: '<-- BRT BrightArrowR: 'BRT --> DsplSelInnreKnob: DSPL SEL Innre Knob Test / TK_GS / PPOS / WIND / HDG_STS
-            Nr0: '0 Nr1: '1 Nr2: '2 = N Nr3: '3 Nr4: '4 = W	Nr5: '5 = H Nr6: '6 = E Nr7: '7	Nr8: '8 = S	Nr9: '9	Cls: CLR	
-            Ent: ENT SysDspl: SYS DSPL AlignBiggLetter: ALIGN AlignSmallLetter: Align Nav: Nav Att: Att IrsDisplay: IRS Display            
+            DsplSel: 'DSPL SEL', DsplSelYttreKnob: 'DSPL SEL Yttr Knob', BrightArrowL: '<-- BRT', BrightArrowR: 'BRT -->',
+            DsplSelInnreKnob: 'DSPL SEL Innre Knob', Test: 'Test', TjGs: 'TK_GS', Pros: 'PPOS', Wind: 'WIND', HdgStr: 'HDG_STS',
+            Nr0: '0', Nr1: '1', Nr2: '2 = N', Nr3: '3', Nr4: '4 = W',	Nr5: '5 = H', Nr6: '6 = E', Nr7: '7',	Nr8: '8 = S',
+            Nr9: '9', Clr: 'CLR', Ent: 'ENT', SysDspl: 'SYS DSPL', AlignBiggLetter: 'ALIGN', AlignSmallLetter: 'Align',
+            Nav: 'Nav', Att: 'Att', IrsDisplay: 'IRS Display',            
         },
         Test: {
-            MachAirSpeddWT: MACH AIRSPEED - WARNING TEST StallWT: STALL WARNING TEST LeDevTest: LE DEVICES - TEST
+            MachAirSpeddWT: 'MACH AIRSPEED - WARNING TEST', StallWT: 'STALL WARNING TEST', LeDevTest: 'LE DEVICES - TEST',
         },
-        MIC Selector: {},
-        Engine_1&2_Reverser: {},
+        MICSelector: {},
+        Engine_1_2_Reverser: {},
     },
 
     OVERHEAD_LOWER_PANEL: {
         AC_Power: {
-            RotaryLeft: [
-                'STBY PWR', 'BAT BUS', 'BAT', 'AUX BAT', 'TR1', 'TR2', 'TR3', 'TEST'
-            ],
-            RotaryRight: [
-                'STBY PWR', 'GRD', 'PWR', 'GEN1', 'APU GEN', 'GEN2', 'INV', 'TEST'
-            ],
+            RotaryLeft: {
+                StbPower: 'STBY PWR', BatBus: 'BAT BUS', Bat: 'BAT', AuxBat: 'AUX BAT', Tr1: 'TR1', Tr2: 'TR2', Tr3: 'TR3', Test: 'TEST'
+            },
+            RotaryRight: {
+                StbPower: 'STBY PWR', Grd: 'GRD', Pwr: 'PWR', Gen1: 'GEN1', Gen2: 'GEN2',  ApuGen: 'APU GEN', Inv: 'INV', Test: 'TEST'
+            },
             Maint: 'MAINT', Bat: 'BAT', CabUtil: 'CAB/UTIL', IfePassSeat: 'IFE/PASS SEAT', On: 'ON', Off: 'OFF'
         },
         Air_Condition: {
@@ -118,11 +114,8 @@ let dbFlightCommandsName = {
         Service_inerphone: {},
         WLAN: {},
         SPOILER: {},
-        GRD CALL: {},
+        GRDCALL: {},
         
-
-
-
         Anti_Ice: {
             Eng1: 'Eng 1', Eng1: 'Eng 2', AntiIce: 'Anti-Ice', Wing: 'Wing'       
         },
@@ -134,20 +127,18 @@ let dbFlightCommandsName = {
         },
         Window_Heat: {		
            //Left Side Left FWD Right FWD Right Side
-           Ovht: OVHT PwrTest: PWR TEST
+           Ovht: 'OVHT', PwrTest: 'PWR TEST',
 
         },
         Elektriska_pumpar: {                        
             Eng: 'ENG', Elec: 'ELEC'
         },
         Power: {
-            GrdPwr: 'GRD PWR', Gen: 'Gen', ApuGen: 'APU Gen', BusTrans: Bus Trans Disconnect: Disconnect StbPower: Stanby Power
+            GrdPwr: 'GRD PWR', Gen: 'Gen', ApuGen: 'APU Gen', BusTrans: 'Bus Trans', Disconnect: 'Disconnect', StbPower: 'Stanby Power',
         },
         Stb_Power: {},
         Fuel_Pumps: {
-            CrossFeed: Cross Feed
-
-            Ctr: 'CTR', FuelPumps: 'Fuel pumps', Aft: 'AFT', Fwvd: 'FWD'
+            CrossFeed: 'Cross Feed', Ctr: 'CTR', FuelPumps: 'Fuel pumps', Aft: 'AFT', Fwvd: 'FWD'
         },
         Displays: {
             ControlPanel: {
@@ -226,23 +217,22 @@ let dbFlightCommandsName = {
         },
 },
 
-LIGHT_CONTROL: {
-    Cockpitlights: {
-        Backgrund: 'BACKGROUND', AfdsFlood: 'AFDS FLOOD', Flood: 'FLOOD', Instrumentpanel: 'INSTRUMENTPANEL', Panel: 'PANEL', 
-        CompassLight: 'COMPASS LIGHT', DomeWhite: 'DOME WHITE',
-        CircuitBreaker: {
+    LIGHT_CONTROL: {
+        Cockpitlights: {
+            Backgrund: 'BACKGROUND', AfdsFlood: 'AFDS FLOOD', Flood: 'FLOOD', Instrumentpanel: 'INSTRUMENTPANEL', Panel: 'PANEL', 
+            CompassLight: 'COMPASS LIGHT', DomeWhite: 'DOME WHITE',
+            CircuitBreaker: {
                 CircuitBreaker: 'Circuit Breaker', CockpitLight: 'Cockpit light', PanelLight: 'Panel light', 
+                Dim: 'DIM', Off: 'OFF', Bright: 'BRIGHT', //AntiIce: 'Anti - Ice', FlapInhbit: 'FLAP INHBIT', ?: '?', Norm: 'NORM',      
+                Instrument_Panel: {
+                    MainPanel: 'Main Panel', UpperDU: 'UPPER DU', LowerDu: 'LOWER DU', OutBdDu: 'OUTBD DU', InBdDu: 'INBD DU', InnerKnob: 'Innre knob', OuterKnob: 'Yttre knob',
+                },
             },
-            Dim: 'DIM', Off: 'OFF', Bright: 'BRIGHT', //AntiIce: 'Anti - Ice', FlapInhbit: 'FLAP INHBIT', ?: '?', Norm: 'NORM',      
         },
-        Instrument_Panel: {
-            MainPanel: 'Main Panel', UpperDU: 'UPPER DU', LowerDu: 'LOWER DU', OutBdDu: 'OUTBD DU', InBdDu: 'INBD DU', InnerKnob: 'Innre knob', OuterKnob: 'Yttre knob',
-        },
-    },  
-};
-Generall: {
-    NooseWheel: 'Noose Wheel', Off: 'OFF', On: 'ON', Nr1: '1', Nr2: '2', A: 'A', B: 'B', Left: 'Left', Right: 'Right', 
-    Auto: AUTO Bat: BAT
+    },
+    Generall: {
+        NooseWheel: 'Noose Wheel', Off: 'OFF', On: 'ON', Nr1: '1', Nr2: '2', A: 'A', B: 'B', Left: 'Left', Right: 'Right', Auto: 'AUTO', Bat: 'BAT',
+    },
 };
 
 export default dbFlightCommandsName;
