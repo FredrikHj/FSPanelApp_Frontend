@@ -1,7 +1,7 @@
 import React, { useState  } from 'react';
 import { BasicCSS } from '../CSS/GenerallCSS.js'
 import { SectionMiddle3CSS } from '../CSS/Sections/SectionMiddle3CSS.js';
-import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder, PushBtnCircle } from './ComponentsParts.js';
+import { GreenLED, RedLED, SPDTVertical, SPDTHorizontal, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder, PushBtnCircle } from './ComponentsParts.js';
 
 function SectionMiddle3(props){   
     return(
@@ -22,48 +22,38 @@ function SectionMiddle3(props){
   let Section3_1 = (props) => {
     return(
         <div className={ SectionMiddle3CSS.section3_1 }> 
-            <PushBtnCircle/>
-
-        
-            <section className={ SectionMiddle3CSS.section3_1ComponentsContainer }>
-                {/* ENG status  */}
-                <section className={ SectionMiddle3CSS.section3_1LEDEng4_1Containers }>
-                    <div className={ SectionMiddle3CSS.section3_1LEDEngOnHorizontal }>
-                        <GreenLED test={ '1' }/>
-                        <GreenLED test={ '2' }/>
-                    </div>
-                    <div className={ SectionMiddle3CSS.section3_1LEDEngOffVertical }>
-                        <RedLED test={ '1' }/>
-                        <RedLED test={ '2' }/>
-                    </div>
-                </section>
-                {/* Gear Up / Dn */}
-                
-                <section className={ SectionMiddle3CSS.section3_1GearUp_DnContainers }>
-                    <div className={ SectionMiddle3CSS.section3_1GearNoseWheelUp_Dn }>
-                        <RedLED test={ '1' }/>
-                        <GreenLED test={ '2' }/>
-                    </div>
-                    <div className={ SectionMiddle3CSS.section3_1GearMainWheelUpRow1 }>
-                        <RedLED test={ '1' }/>
-                        <RedLED test={ '2' }/>
-                    </div>
-                    <div className={ SectionMiddle3CSS.section3_1GearMainWheelDnRow2 }>
-                        <GreenLED test={ '1' }/>
-                        <GreenLED test={ '2' }/>
-                    </div>
-                </section>
-
-                {/* Flaps / Speed Brake  Position */}
-                <section className={ SectionMiddle3CSS.section3_1FlapsSpeedbrake_PossContainer }>
-                    <LEDSegmentDigit4
-                        ledStatusStr={ '0.0.0.0' }
-                    />
-                    <LEDSegmentDigit4
-                        ledStatusStr={ '0.0.0.0' }
-                    />
-                </section>
-            </section>
+            <div className={ SectionMiddle3CSS.section3_1Row1 }>
+                <div className={ SectionMiddle3CSS.section3_1Row1_4xSpdt }>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row1_2xRotarySpdt1xSpdt }>
+                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                    <div><SPDTHorizontal spdtStatus={props.spdtStatus.test }/></div>
+                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row1_2xPushBtns }>
+                   <div><PushBtnCircle push={0.8} /></div>
+                   <div><PushBtnCircle push={0.8} /></div>
+                </div>
+            </div>
+            <div className={ SectionMiddle3CSS.section3_1Row2 }>
+            
+            </div>
+            <div className={ SectionMiddle3CSS.section3_1Row3 }>
+            
+            </div>
+            <div className={ SectionMiddle3CSS.section3_1Row4 }>
+            
+            </div>
+            <div className={ SectionMiddle3CSS.section3_1Row5 }>
+            
+            </div>
+            <div className={ SectionMiddle3CSS.section3_1Row6 }>
+            
+            </div>
         </div>
     );
   }

@@ -44,8 +44,6 @@ let dbFlightCommandsName = {
         Engine: {
             Engine1: 'Engine 1', Engine2: 'Engine 2', Shutdown: 'Shutdown', ParkingBrake: 'Parking Brake'
         },
-
-
     },
     OVERHEAD_UPEAR_PANEL: {
         IRS: {

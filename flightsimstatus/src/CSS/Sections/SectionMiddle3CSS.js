@@ -9,16 +9,60 @@ export const SectionMiddle3CSS = {
         'display': 'flex',
         'flexDirection': 'row',
     }),
-
-
     section3_1: css({
         'display': 'flex',
         'flexDirection': 'row',   
         'position': 'relative',
         'bottom': '0',
-        'width': '30 %',
+        'width': '40%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3,
+    }),
+    section3_1Row1: css({
+        'width': '100%',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row1_4xSpdt: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row1_2xRotarySpdt1xSpdt: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row1_2xPushBtns: css({
+        'display': 'flex',
+        'flexDirection': 'column',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row2: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row3: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row4: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row5: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row6: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
     }),
     section3_1ComponentsContainer: css({
         'display': 'flex',
@@ -83,7 +127,7 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_2: css({
-        'width': '20%',
+        'width': '10%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3,
     }),

@@ -31,6 +31,20 @@ export let SPDTVertical = (props) => {
     </>
   );
 }
+export let SPDTHorizontal = (props) => {
+  return(
+    <> 
+      <p className={ spdtCSS.spdtVerticalLabelTop }>on</p>
+      <div className={ spdtCSS.spdtHorizontalContainer }>
+        <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
+        <label className={ spdtCSS.spdtVerticalSlider }></label>
+        <div className={ spdtCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '18px'} : {left: '0px'}}></div>
+        <p className={ spdtCSS.spdtVerticalState }></p>
+      </div>
+      <p className={ spdtCSS.spdtVerticalLabelBottom }>off</p>
+    </>
+  );
+}
 export let RotarySpdt = (props) => {
   function setRotaryPoss(RStatus) {
     let setPoss;    
@@ -74,8 +88,6 @@ export let RotarySpdt = (props) => {
   );
 }
 export let RotaryEncorder = (props) => {
-
-  
   let rotateRotaryEncorder = css.keyframes({
     'from': { 'transform': 'rotate(0deg)'},
     'to': { 'transform': 'rotate(' + props.direction + 'deg)'},   
@@ -142,9 +154,26 @@ export let LEDDisplay20x4 = (props) => {
 }
 
 export let PushBtnCircle = (props) => {
+  let pushedBtn = css.keyframes({
+    'from': {'transform': 'scale(1)'},
+    'to': {'transform': 'scale(' + props.push + ')'},
+  });
+  let pushdBtn = css({
+    'position': 'relative',
+    'borderRadius': '50%',
+    'width': '27.5px',
+    'height': '27.5px',
+    'top': '12px',
+    'left': '12px',
+    'background': 'white',
+    'border': '2px solid white',
+    'boxShadow': 'inset 0 0.5px 1px 11px #39373C, 0 0 1px 1px #69696A',
+    'animationName': pushedBtn,
+    'animationDuration': '4s',
+  });
   return(
-    <div className={ pushBtnCircleCSS.pushBtn }>
-     
+    <div className={ pushBtnCircleCSS.pushBtnContainer }>
+      <div className={ pushdBtn }></div>
     </div>
   );
 }

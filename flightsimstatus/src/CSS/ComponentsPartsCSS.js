@@ -109,6 +109,13 @@ export const spdtCSS = {
     'display': 'inline-block',
     'top': '10px',
   }),
+  spdtHorizontalContainer: css({
+    'left': '-18px',
+    'transform': 'rotate(0deg)',
+    'position': 'relative',
+    'display': 'inline-block',
+    'top': '10px',
+  }),
   spdtVerticalState: css({
   'marginTop': '-37px',
   'marginLeft': '54px',
@@ -364,17 +371,13 @@ export const rotaryEncorderCSS = {
 }
 
 export const pushBtnCircleCSS = {
-  pushBtn: css({
-    'display': 'inline-block',
-    'padding': '5px 19px',
-    'fontSize': '17px',
-    'textAlign': 'center',
+  pushBtnContainer: css({
+    'width': '55px',
+    'height': '55px',
+    'borderRadius': '55px',
     'textDecoration': 'none',
     'outline': 'none',
-    'color': '#fff',
-    'backgroundColor': '#4CAF50',
     'border': 'none',
-    'borderRadius': '15px',
-    'boxShadow': '0 9px #999',
+    'boxShadow': 'inset 0 32px 100px 100px black, 0 0 0px 1px black',
   }),
 }
