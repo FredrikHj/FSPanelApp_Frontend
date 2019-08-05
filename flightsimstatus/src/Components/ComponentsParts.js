@@ -20,7 +20,7 @@ export let RedLED = (props) => {
 export let SPDTVertical = (props) => {
   return(
     <> 
-      <p className={ spdtCSS.spdtVerticalLabelTop }>on</p>
+      <p className={ spdtCSS.spdtLabelTop }>on</p>
       <div className={ spdtCSS.spdtVerticalContainer }>
         <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
         <label className={ spdtCSS.spdtVerticalSlider }></label>
@@ -34,14 +34,14 @@ export let SPDTVertical = (props) => {
 export let SPDTHorizontal = (props) => {
   return(
     <> 
-      <p className={ spdtCSS.spdtVerticalLabelTop }>on</p>
+      <p className={ spdtCSS.spdtLabelTop }>on</p>
       <div className={ spdtCSS.spdtHorizontalContainer }>
         <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
         <label className={ spdtCSS.spdtVerticalSlider }></label>
         <div className={ spdtCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '18px'} : {left: '0px'}}></div>
         <p className={ spdtCSS.spdtVerticalState }></p>
+        <p className={ spdtCSS.spdtHorizontalLabelBottom }>off</p>
       </div>
-      <p className={ spdtCSS.spdtVerticalLabelBottom }>off</p>
     </>
   );
 }

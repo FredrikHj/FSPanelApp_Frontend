@@ -110,15 +110,16 @@ export const spdtCSS = {
     'top': '10px',
   }),
   spdtHorizontalContainer: css({
-    'left': '-18px',
+    'left': '-10px',
+    'padding': '0',
     'transform': 'rotate(0deg)',
     'position': 'relative',
     'display': 'inline-block',
-    'top': '10px',
+    'top': '-20px',
   }),
   spdtVerticalState: css({
-  'marginTop': '-37px',
-  'marginLeft': '54px',
+    'marginTop': '-37px',
+    'marginLeft': '54px',
   }),
   spdtVerticalSlider: css({
     'position': 'absolute',
@@ -145,8 +146,7 @@ export const spdtCSS = {
     'transition': '0.5s',
     'zIndex': '0',
   }),
-
-  spdtVerticalLabelTop: css({
+  spdtLabelTop: css({
     'position': 'relative',
     'top': '-4px',
     'left': '2px',
@@ -155,7 +155,15 @@ export const spdtCSS = {
   }),
   spdtVerticalLabelBottom: css({
     'position': 'relative',
-    'left': '0',
+    'left': '8px',
+    'bottom': '-5px',
+    'width': '13px',
+    'textAlign': 'center',
+  }),
+  spdtHorizontalLabelBottom: css({
+    'position': 'relative',
+    'left': '7px',
+    'top': '50px',
     'bottom': '-5px',
     'width': '13px',
     'textAlign': 'center',

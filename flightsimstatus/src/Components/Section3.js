@@ -23,11 +23,15 @@ function SectionMiddle3(props){
     return(
         <div className={ SectionMiddle3CSS.section3_1 }> 
             <div className={ SectionMiddle3CSS.section3_1Row1 }>
-                <div className={ SectionMiddle3CSS.section3_1Row1_4xSpdt }>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_1Row1_4xSpdtContainer }>
+                    <div className={ SectionMiddle3CSS.section3_1Row1_1xSpdt }>
+                        <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    </div>
+                    <div className={ SectionMiddle3CSS.section3_1Row1_2To4Spdt }>
+                        <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                        <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                        <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    </div>
                 </div>
                 <div className={ SectionMiddle3CSS.section3_1Row1_2xRotarySpdt1xSpdt }>
                     <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
@@ -39,20 +43,50 @@ function SectionMiddle3(props){
                    <div><PushBtnCircle push={0.8} /></div>
                 </div>
             </div>
+
             <div className={ SectionMiddle3CSS.section3_1Row2 }>
-            
+               <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
             </div>
             <div className={ SectionMiddle3CSS.section3_1Row3 }>
-            
+                <div className={ SectionMiddle3CSS.section3_1Row3_2RotarySpdt1xPushBtn }>
+                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                    <div className={ SectionMiddle3CSS.section3_1Row3_PushBtn2 }><PushBtnCircle push={0.8} /></div>
+                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+             
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                
+                <div className={ SectionMiddle3CSS.section3_1Row3_PushBtn7 }><PushBtnCircle push={0.8} /></div>
+                <div><PushBtnCircle push={0.8} /></div>
+                <div><PushBtnCircle push={0.8} /></div>
             </div>
             <div className={ SectionMiddle3CSS.section3_1Row4 }>
-            
+                <div><PushBtnCircle push={0.8} /></div>
+                <div><PushBtnCircle push={0.8} /></div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Rotary3 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                <div><PushBtnCircle push={0.8} /></div>
+                <div><PushBtnCircle push={0.8} /></div>
+                <div><PushBtnCircle push={0.8} /></div>
             </div>
             <div className={ SectionMiddle3CSS.section3_1Row5 }>
-            
-            </div>
-            <div className={ SectionMiddle3CSS.section3_1Row6 }>
-            
+                <div className={ SectionMiddle3CSS.section3_1Row5_Spdt1To3 }>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row5_PushBtns4To10 }>
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                    
+                    <div><PushBtnCircle push={0.8} /></div>
+
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                </div>
             </div>
         </div>
     );
