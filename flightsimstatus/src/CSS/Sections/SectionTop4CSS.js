@@ -10,7 +10,7 @@ export const SectionTop4CSS = {
         'bottom': '0',
         'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     sectionTop4: css({
         'width': '100%',
@@ -83,7 +83,7 @@ export const SectionTop4CSS = {
     section4_2: css({
         'width': '20%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section4_2Row1: css({
         'display': 'flex',
@@ -139,7 +139,7 @@ export const SectionTop4CSS = {
     section4_3: css({
         'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section4_3Row1: css({
         'display': 'flex',
@@ -176,7 +176,7 @@ export const SectionTop4CSS = {
         'width': '20%',
         'paddingLeft': '20px',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section4_4LedSpdf: css({
         'display': 'flex',
@@ -223,7 +223,7 @@ export const SectionTop4CSS = {
     section4_5: css({
         'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section4_6: css({
         'bottom': '0',

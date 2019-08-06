@@ -14,7 +14,8 @@ export const BasicCSS = {
 // ======================== Common CSS roulse =========================
 export const SectionCommonRoules = {
     colorGrey: 'grey',
-    border3: '3px solid black',
-    border2: '2px solid black',
-    border1: '1px solid black',
+    border3B: '3px solid black',
+    border2B: '2px solid black',
+    border1B: '1px solid black',
+    border1R: '1px solid red',
 }

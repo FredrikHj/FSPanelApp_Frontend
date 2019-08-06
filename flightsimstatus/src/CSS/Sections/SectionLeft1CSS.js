@@ -11,7 +11,7 @@ export const SectionLeft1_2CSS = {
         'marginTop': '15px',
         'height': '290px',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderBottom': SectionCommonRoules.border3,
+        'borderBottom': SectionCommonRoules.border3B,
     }),
     sectionLeft2_1Row1: css({
         'marginLeft': '10px',
@@ -69,6 +69,6 @@ export const SectionLeft1_2CSS = {
         'marginTop': '15px',
         'height': '150px',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'border': SectionCommonRoules.border3,
+        'border': SectionCommonRoules.border3B,
     }),
 }

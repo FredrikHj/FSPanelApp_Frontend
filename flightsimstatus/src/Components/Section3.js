@@ -95,35 +95,76 @@ function SectionMiddle3(props){
     return(
         <div className={ SectionMiddle3CSS.section3_2 }>
             <section className={ SectionMiddle3CSS.section3_2Row1 }>
-                <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
-                />
-                <section className={ SectionMiddle3CSS.section3_2Row1Middle }>
-                    <GreenLED/>
-                    <GreenLED/>
-                </section>
-                <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
-                />
+                <GreenLED/>
+                <div className={ SectionMiddle3CSS.section3_2Row1_PushBtn2To3_5To6 }>
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                </div>
+
+                <div className={ SectionMiddle3CSS.section3_2Row1_HorizontalSpdt4 }><SPDTHorizontal spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_2Row1_PushBtn2To3_5To6 }>
+                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                </div>
+                <GreenLED/>
             </section>
+
             <section className={ SectionMiddle3CSS.section3_2Row2 }>
-                <section className={ SectionMiddle3CSS.section3_2Row22xledSpdf }>
-                    <div className={ SectionMiddle3CSS.section3_2Row2Led1 }>
-                        <GreenLED/>       
+                <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt1_6 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt2_5 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <section className={ SectionMiddle3CSS.section3_2Row2_PushBtn2To4_9To10Container }>
+                    <div className={ SectionMiddle3CSS.section3_2Row2_PushBtn2To4_9To10 }>
+                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle push={0.8} /></div>
                     </div>
-                    <div className={ SectionMiddle3CSS.section3_2Row2Spdf2 }>
-                        <SPDTVertical spdtStatus={props.spdtStatus.test }/>
-                    </div>
-                    <div className={ SectionMiddle3CSS.section3_2Row2Led3 }>
-                        <GreenLED/>       
+                    <div className={ SectionMiddle3CSS.section3_2Row2_PushBtn2To4_9To10 }>
+                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle push={0.8} /></div>
                     </div>
                 </section>
-                <section className={ SectionMiddle3CSS.section3_2Row2RotaryEncorder }>
-                    <RotaryEncorder direction= { '-360' }/>
-                    <RotaryEncorder direction= { '360' }/>
-                </section>
-                <div className={ SectionMiddle3CSS.section3_2Row2LeftRotarySpdt }> 
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt2_5 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt1_6 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+
+                <div className={ SectionMiddle3CSS.section3_2Row2_PushBtn7To8 }>
+                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle push={0.8} /></div>
+                </div>
+            </section>
+
+            <section className={ SectionMiddle3CSS.section3_2Row3 }>
+                <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8Container }>
+                    <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>                 
+                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 } ><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                        <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                    </div>
+                    <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>  
+                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                        <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                    </div>
+                </div>
+
+                <div className={ SectionMiddle3CSS.section3_2Row3_PushBtn3To4_9Container }>
+                    <div className={ SectionMiddle3CSS.section3_2Row3_PushBtn3To4_9 }>
+                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle push={0.8} /></div>
+                    </div>
+                    <div><PushBtnCircle push={0.8} /></div>
+                </div>
+
+                <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt5To6_10To11 }>  
+
+                    <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8Container }>
+                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>                 
+                            <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                            <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt6_11 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                        </div>
+
+                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>  
+                            <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                            <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt6_11 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                        </div>
+                    </div>
+                        <div  className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt12 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
                 </div>
             </section>
         </div>
@@ -133,24 +174,19 @@ let Section3_3 = (props) => {
     return(
         <div className={ SectionMiddle3CSS.section3_3 }>
             <section className={ SectionMiddle3CSS.section3_3Row1 }>
-                <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
-                />
-                <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
-                />
+                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
             </section>
             <section className={ SectionMiddle3CSS.section3_3Row2 }>
-                <div className={ SectionMiddle3CSS.section3_3Row2RotarySpdt1 }>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_3Row22RotaryEncorder2 }>
-                    <RotaryEncorder direction= { '-360' }/>
-                    <RotaryEncorder direction= { '360' }/>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_3Row2Spdt3 }>
-                    <SPDTVertical spdtStatus={props.spdtStatus.test }/>
-                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+            </section>
+            <section className={ SectionMiddle3CSS.section3_3Row3 }>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
             </section>
         </div>
     );
@@ -158,39 +194,34 @@ let Section3_3 = (props) => {
 let Section3_4 = (props) => {    
     return(
         <div className={ SectionMiddle3CSS.section3_4 }>
-            <section className={ SectionMiddle3CSS.section3_4LedSpdf }>
-                <section className={ SectionMiddle3CSS.section3_4TopRowRotarySpdf }>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
-                </section>
-                <section className={ SectionMiddle3CSS.section3_4Spdfx2Container }>
-                    <div className={ SectionMiddle3CSS.section3_4Spdfx2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-                    <div className={ SectionMiddle3CSS.section3_4Spdfx2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+            <section className={ SectionMiddle3CSS.section3_4Row1 }>
+                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <div className={ SectionMiddle3CSS.section3_4Row1Led2To3_LedSegment4 }>
+                    <div className={ SectionMiddle3CSS.section3_4Row1Led2To3Container }>
+                        <GreenLED/>
+                        <GreenLED/>
+                    </div>
+                    <div className={ SectionMiddle3CSS.section3_4Row1LedSegment4 }>
+                        <LEDSegmentDigit8
+                            ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                        />
+                    </div> 
+                </div> 
+            </section>
+            <section className={ SectionMiddle3CSS.section3_4Row2 }>
+                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <section className={ SectionMiddle3CSS.section3_4Row2VerticalSpdt2To4 }>
+                    <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
                 </section>
             </section>
-            <section className={ SectionMiddle3CSS.section3_4LedSpdf }>
-                <section className={ SectionMiddle3CSS.section3_4TopRowLed }>
-                    <GreenLED/>
-                    <GreenLED/>
+            <section className={ SectionMiddle3CSS.section3_4Row3 }>
+               <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+               <section className={ SectionMiddle3CSS.section3_4Row3VerticalSpdt2To3 }>
+                    <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+                    <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
                 </section>
-                <div className={ SectionMiddle3CSS.section3_4Spdf }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-            </section>
-            <section className={ SectionMiddle3CSS.section3_4LedSpdf }>
-                <section className={ SectionMiddle3CSS.section3_4TopRowLed }>
-                    <GreenLED/>
-                    <GreenLED/>
-                </section>
-                <div className={ SectionMiddle3CSS.section3_4Spdf }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-            </section>
-            <section className={ SectionMiddle3CSS.section3_4LedSpdf }>
-                <section className={ SectionMiddle3CSS.section3_4TopRowLed }>
-                    <GreenLED/>
-                    <GreenLED/>
-                </section>
-                <div className={ SectionMiddle3CSS.section3_4Spdf }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
-            </section>
-            <section className={ SectionMiddle3CSS.section3_4LedSpdf }>
-                <div className={ SectionMiddle3CSS.section3_4LastColLed }><GreenLED/></div>
-                <div className={ SectionMiddle3CSS.section3_4LastSpdf }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
             </section>
         </div>
     );
@@ -198,32 +229,17 @@ let Section3_4 = (props) => {
 let Section3_5 = (props) => {
     return(
         <div className={ SectionMiddle3CSS.section3_5 }>
-            <section className={ SectionMiddle3CSS.section3_6InnerFrame }>
-                <div className={ SectionMiddle3CSS.section3_6LedSpdt }>
-                    <div><GreenLED/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_6LedSpdt }>
-                    <div><GreenLED/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_6LedSpdt }>
-                    <div><GreenLED/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_6LedSpdt }>
-                    <div><GreenLED/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_6LedSpdt }>
-                    <div><GreenLED/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
-                </div>
-                <div className={ SectionMiddle3CSS.section3_6LedSpdt }>
-                    <div><GreenLED/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
-                </div>
-            </section>
+         
+                <LEDSegmentDigit8
+                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                />
+               
+                    <GreenLED/>
+                    <GreenLED/>
+             
+                <LEDSegmentDigit8
+                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                />
         </div>
     );
 }

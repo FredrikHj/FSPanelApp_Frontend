@@ -10,7 +10,7 @@ export const SectionTop5CSS = {
         'top': '10px',
         'bottom': '0',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     sectionTop5: css({
         'width': '100%',
@@ -48,12 +48,12 @@ export const SectionTop5CSS = {
     section5_2: css({
         'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section5_3: css({
         'width': '27%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section5_3Row1: css({
         'display': 'flex',
@@ -109,7 +109,7 @@ export const SectionTop5CSS = {
     section5_4: css({
         'width': '25%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section5_4Row1: css({
         'display': 'flex',
@@ -138,7 +138,7 @@ export const SectionTop5CSS = {
         'justifyContent': 'space-around',
         'width': '31%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     // ===========================================================
     section5_6: css({

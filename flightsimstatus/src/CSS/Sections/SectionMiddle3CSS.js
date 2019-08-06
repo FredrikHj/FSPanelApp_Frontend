@@ -16,7 +16,7 @@ export const SectionMiddle3CSS = {
         'bottom': '0',
         'width': '40%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section3_1Row1: css({
         'position': 'relative',
@@ -136,26 +136,69 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_2: css({
-        'width': '30%',
+        'width': '31%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section3_2Row1: css({
+        'width': '100%',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
-        'width': '100%',
         'marginTop': '20px',
     }),
-    section3_2Row1Middle: css({
+    section3_2Row1_PushBtn2To3_5To6: css({
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+        'width': '50%',
+    }),
+    section3_2Row1_HorizontalSpdt4: css({
+        'position': 'relative',
+        'top': '-29px',
+        'left': '25px',
+    }),
+    // ===========================
+    section3_2Row2: css({
+        'width': '97%',
+        'marginLeft': '10px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
-        'width': '60px',
-        'marginTop': '-10px',
-        'marginLeft': '-5px',
+        'alignItems': 'Center',
+        'marginBottom': '-33px',
     }),
-    section3_2Row2: css({
+    section3_2Row2_VericalSpdt1_6: css({
+        'position': 'relative',
+        'top': '-49px',
+        'left': '25px',
+    }),
+    section3_2Row2_VericalSpdt2_5: css({
+        'position': 'relative',
+        'top': '-29px',
+        'left': '25px',
+    }),
+    section3_2Row2_PushBtn2To4_9To10Container: css({
+        'display': 'flex',
+        'flexDirection': 'column',
+        'justifyContent': 'space-between',
+    }),
+    section3_2Row2_PushBtn2To4_9To10: css({
+        'width': '130px',
+        'height': '70px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_2Row2_PushBtn7To8: css({
+        'marginTop': '-98px',
+        'height': '122px',
+        'display': 'flex',
+        'flexDirection': 'column',
+        'justifyContent': 'space-between',
+    }),
+    section3_2Row3: css({
+        'width': '95 %',
         'marginLeft': '10px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -163,125 +206,155 @@ export const SectionMiddle3CSS = {
         'alignItems': 'Center',
         //'width': '90%',
     }),
-    section3_2Row22xledSpdf: css({
+    section3_2Row3_RotarySpdt1To2_7To8Container: css({
         'display': 'flex',
-        'flexDirection': 'row',
-        'justifyContent': 'space-between',
-        'alignItems': 'Center',
-        'width': '5%',
-     
-    }),
-    section3_2Row2Led1: css({
-        'margin': '10px',
-    }),
-    section3_2Row2Spdf2: css({
-        'margin': '10px',
-    }),
-    section3_2Row2Led3: css({
-        'marginLeft': '-40px',
-    }),
-    section3_2Row2RotaryEncorder: css({
-        'width': '100px',
-        'display': 'flex',
-        'flexDirection': 'row',
+        'flexDirection': 'column',
         'justifyContent': 'space-between',
     }),
-    section3_2Row2LeftRotarySpdt: css({
-        'marginTop': '40px',
-    }),
-    // ===========================================================
-    section3_3: css({
-        'width': '15%',
-        'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
-    }),
-    section3_3Row1: css({
-        'display': 'flex',
-        'flexDirection': 'row',
-        'justifyContent': 'space-between',
-        'width': '250px',
+    section3_2Row3_RotarySpdt1To2_7To8: css({
         'marginTop': '20px',
-        'marginLeft': 'calc(50% - 125px)',
-    }),
-    section3_3Row2: css({
+        'width': '240px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
-        'width': '100%',
     }),
-    section3_3Row2RotarySpdt1: css({
-        'marginTop': '45px',
-        'marginLeft': '50px',
+    section3_2Row3_RotarySpdt1_8: css({
+        'marginTop': '-40px',
     }),
-    section3_3Row22RotaryEncorder2: css({
+    section3_2Row3_PushBtn3To4_9Container: css({
+        'position': 'relative',
+        'top': '-45px',
+        'left': '-47px',
+        'display': 'flex',
+        'flexDirection': 'column',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+    }),
+    section3_2Row3_PushBtn3To4_9: css({
+        'width': '130px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
-        'width': '100px',
-        'marginLeft': '-10px',
     }),
-    section3_3Row2Spdt3: css({
-        'marginLeft': '50px',
+    section3_2Row3_RotarySpdt6_11: css({
+        'marginTop': '-40px',
+    }),
+    section3_2Row3_RotarySpdt5To6_10To11: css({
+        'marginTop': '20px',
+        'width': '240px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+        'alignItems': 'center',
+    }),
+    section3_2Row3_RotarySpdt12: css({
+        'marginTop': '-66px',
+    }),
+    // ===========================================================
+    section3_3: css({
+        'width': '16%',
+        'backgroundColor': SectionCommonRoules.colorGrey,
+        'borderRight': SectionCommonRoules.border3B,
+    }),
+    section3_3Row1: css({
+        'marginTop': '20px',
+        'paddingLeft': '27px',
+        'width': '100%',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }),
+    section3_3Row1VerticalSpdt2: css({
+        'marginTop': '-40px',
+    }),
+    section3_3Row2: css({
+        'width': '220px',
+        'marginLeft': 'calc(50% - 110px)',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }),
+    section3_3Row3: css({
+        'width': '220px',
+        'marginLeft': 'calc(50% - 110px)',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
     }),
     // ===========================================================
     section3_4: css({
         'display': 'flex',
-        'flexDirection': 'row',
-        'width': '20%',
+        'flexDirection': 'column',
+        'width': '13%',
         'paddingLeft': '20px',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
-    section3_4LedSpdf: css({
-        'display': 'flex',
-        'flexDirection': 'column',
-        'justifyContent': 'space-between',
-        'width': '80px',
-        'marginTop': '10px',
+    section3_4Row1: css({
+        'marginTop': '20px',
         'marginLeft': '20px',
-    }),
-    section3_4TopRowRotarySpdf: css({
-        'marginTop': '0',
-        'marginLeft': '10%',
-    }),
-    section3_4Spdfx2Container: css({
-        'display': 'flex',
-        'flexDirection': 'row',   
-        'marginRight': '100px',
-        'width': '150px',
-        'marginTop': '-15px',
-    }),
-    section3_4Spdfx2: css({ 
-        'marginRight': '30px',
-        'width': '10px',
-    }),
-    section3_4Spdf: css({
-        'marginLeft': '50%',
-    }),
-    section3_4LastColLed: css({
-        'marginTop': '-10px',
-        'marginLeft': '30%',
-    }),
-    section3_4LastSpdf: css({
-        'marginLeft': '30%',
-    }),
-    section3_4TopRowLed: css({
+        'width': '82%',
+        'height': '113px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
-        'width': '100px',
-        'marginTop': '-10px',
-        'marginLeft': '-5px',
+    }),
+    section3_4Row1Led2To3_LedSegment4: css({
+        'height': '60px',
+        'display': 'flex',
+        'flexDirection': 'column',
+        'justifyContent': 'center',
+        'alignItems': 'center',
+    }),
+    section3_4Row1Led2To3Container: css({
+        'marginTop': '-30px',
+        'width': '120px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'center',
+    }),
+    section3_4Row1LedSegment4: css({
+        'marginTop': '13px',
+    }),
+    section3_4Row2: css({
+        'marginTop': '20px',
+        'marginLeft': '20px',
+        'width': '87%',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }),
+    section3_4Row2VerticalSpdt2To4: css({
+        'marginTop': '35px',
+        'width': '130px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_4Row3: css({
+        'marginTop': '43px',
+        'marginLeft': '20px',
+        'width': '87%',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }),
+    section3_4Row3VerticalSpdt2To3: css({
+        'marginTop': '35px',
+        'width': '130px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
     }),
     // ===========================================================
     section3_5: css({
-        'width': '15%',
+        'width': '10%',
         'backgroundColor': SectionCommonRoules.colorGrey,
-        'borderRight': SectionCommonRoules.border3,
+        'borderRight': SectionCommonRoules.border3B,
     }),
     section3_6: css({
         'bottom': '0',
-        'width': '15%',
+        'width': '10%',
         'backgroundColor': SectionCommonRoules.colorGrey,
     }),
     section3_6InnerFrame: css({
