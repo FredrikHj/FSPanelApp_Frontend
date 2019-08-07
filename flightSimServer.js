@@ -37,7 +37,11 @@ let vs1_13Status = 0;
 boardVs1_2.on("ready", function () {
   let lcd = new jFive.LCD({ 
    controller: "PCF8574AT",
-    pins: [5 ,6],
+    pins: [
+      20, //SDA
+      21 // SCL 
+    ],
+    //address 0x3F
     backlight: 3,
   /*   rows: 2,
     cols: 20, */
@@ -45,6 +49,7 @@ boardVs1_2.on("ready", function () {
 /*   lcd.on();
   lcd.cursor(0,0); */
   lcd.print("scsadcs");
+
 
 
   // Connect the Phidget server
