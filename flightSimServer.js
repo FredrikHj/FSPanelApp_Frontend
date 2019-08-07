@@ -31,7 +31,7 @@ const server = app.listen(port, () =>  console.log(`Server körs på port --> ${
 // Connect the Arduino boards 
 let boardVs1_2 = new jFive.Board({ port: // Runt skrivaren usb = 'COM11',
 // Bakom datorn
-'COM4'});
+'COM3'});
 // ============================ Connect the Arduino and phidget boards =========================================
 let vs1_13Status = 0;
 boardVs1_2.on("ready", function () {
@@ -42,15 +42,11 @@ boardVs1_2.on("ready", function () {
       21 // SCL 
     ],
     //address 0x3F
-    backlight: 3,
-  /*   rows: 2,
-    cols: 20, */
+    rows: 4,
+    cols: 20
   });
-/*   lcd.on();
-  lcd.cursor(0,0); */
-  lcd.print("scsadcs");
-
-
+  lcd.cursor(0,0); 
+  lcd.print("Hi, it is working :)");
 
   // Connect the Phidget server
   let ledConn = new phidget22.Connection(3003, 'localhost');

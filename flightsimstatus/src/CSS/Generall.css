@@ -116,6 +116,27 @@ border: solid 1px #7E7E7E;
 transition: .5s;
 }
 
+#fsActiveTable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: -65px;
+  margin-left: 350px;
+}
 
-  /* from {transform: scale(100%);}
-  to {transform: scale(50%);} */ 
+#fsActiveTable td, #fsActiveTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#fsActiveTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#fsActiveTable tr:hover {background-color: #ddd;}
+
+#fsActiveTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
