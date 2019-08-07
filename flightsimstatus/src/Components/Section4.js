@@ -1,12 +1,12 @@
 import React, { useState  } from 'react';
-import { BasicCSS } from '../CSS/GenerallCSS.js'
+import { SectionsCSS } from '../CSS/GenerallCSS.js'
 import { SectionTop4CSS } from '../CSS/Sections/SectionTop4CSS.js';
 import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder } from './ComponentsParts.js';
 
 function SectionTop4(props){   
     return(
         <> 
-            <p className={ BasicCSS.sectionHeadline }>Övre sektion 4</p>        
+            <p className={ SectionsCSS.sectionHeadline }>Övre sektion 4</p>        
             <div className={ SectionTop4CSS.sectionTop4 }>
                 <Section4_1 spdtStatus={ props.thisState.fsDataValuesApi }/>
                 <Section4_2 spdtStatus={ props.thisState.fsDataValuesApi }/>

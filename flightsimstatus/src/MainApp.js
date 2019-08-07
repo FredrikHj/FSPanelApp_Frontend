@@ -1,7 +1,8 @@
 import React, { PureComponent  } from 'react';
-import { BasicCSS } from './CSS/GenerallCSS.js';
+import { BasicCSS, SectionsCSS } from './CSS/GenerallCSS.js';
 import axios from 'axios';
 
+import ActiveFSParts from './Components/ActiveFSParts.js';
 import SectionTop5 from './Components/Section5.js';
 import SectionTop4 from './Components/Section4.js';
 import SectionMiddle3 from './Components/Section3.js';
@@ -43,25 +44,40 @@ class MainApp extends PureComponent  {
     
     return (
       <div className={ BasicCSS.outerFrame }>
-        <header>
-          <p className="mainHeadLine">FlightSim Status</p>
+        <header className={ BasicCSS.header }>
+          <div>
+            <ActiveFSParts/>
+          </div>
+          <div></div>
+          <div><p className={ BasicCSS.mainHeadLine }>FlightSim Status</p></div>
+          <div></div>
         </header>
         <main>
-          <SectionTop5
-            thisState={ this.state }
-          />
-          <SectionTop4
-            thisState={ this.state }
-          />
-          <SectionMiddle3
-            thisState={ this.state }
-          />
-          <SectionLeft2
-            thisState={ this.state }
-          />
-          <SectionLeft1
-            thisState={ this.state }
-          />  
+          <div className={ SectionsCSS.sectionContainer5 }>
+            <SectionTop5 
+              thisState={ this.state }
+            />
+          </div>
+          <div className={ SectionsCSS.sectionContainer4 }>
+            <SectionTop4
+              thisState={ this.state }
+            />
+          </div>
+          <div className={ SectionsCSS.sectionContainer3 }>
+            <SectionMiddle3
+              thisState={ this.state }
+            />
+          </div>
+          <div className={ SectionsCSS.sectionContainer2 }>
+            <SectionLeft2
+              thisState={ this.state }
+            />
+          </div>
+          <div className={ SectionsCSS.sectionContainer1 }>
+            <SectionLeft1
+              thisState={ this.state }
+            />  
+          </div>
         </main>
       </div>
     );

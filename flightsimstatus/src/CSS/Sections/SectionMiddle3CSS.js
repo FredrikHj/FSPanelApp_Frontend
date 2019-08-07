@@ -252,7 +252,7 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_3: css({
-        'width': '16%',
+        'width': '14%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -348,25 +348,52 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_5: css({
-        'width': '10%',
+        'width': '13%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
-    section3_6: css({
-        'bottom': '0',
-        'width': '10%',
-        'backgroundColor': SectionCommonRoules.colorGrey,
-    }),
-    section3_6InnerFrame: css({
+    section3_5Row1: css({
+        'marginTop': '-5',
+        'marginLeft': '40px',
+        'height': '113px',
         'display': 'flex',
-        'flexDirection': 'rox',
-        'width': '300px',
-        'marginLeft': '15px',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
     }),
-    section3_6LedSpdt: css({
+    section3_4Row1Led1To3HorenzontalSpdt4: css({
         'display': 'flex',
-        'flexDirection': 'column',
-        'justifyContent': 'space-betwween',
-        'width': '50px',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_4Row1HorenzontalSpdt4: css({
+        'marginTop': '20px',
+    }),
+    section3_5Row2: css({
+        'marginTop': '20px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }),
+    section3_5Row3: css({
+        'marginTop': '30px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }), 
+    section3_5Row4: css({
+        'marginTop': '43px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-around',
+    }),
+    section3_5Row4RotaryEncorder1To2: css({
+        'marginLeft': '40px',
+        'width': '130px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_5Row4VerticalSpdt3: css({
+        'marginLeft': '80px',
     }),
 }

@@ -1,16 +1,5 @@
 import { css } from 'glamor';
 
-export const BasicCSS = {
-  outerFrame: css({
-     'width': '2500px',
-  }),
-  sectionHeadline: css({
-        'width': '100%',
-        'textAlign': 'center',
-        'marginBottom': '0',
-    }),
-}
-
 // ======================== Common CSS roulse =========================
 export const SectionCommonRoules = {
     colorGrey: 'grey',
@@ -19,3 +8,59 @@ export const SectionCommonRoules = {
     border1B: '1px solid black',
     border1R: '1px solid red',
 }
+// ===================================================================
+export const BasicCSS = {
+    outerFrame: css({
+        'width': '3000px',
+    }),
+    header: css({
+        'width': '100%',
+        'height': '100px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+        'backgroundColor': 'grey',
+    }),
+    mainHeadLine: css({
+        'fontSize': '2em',
+        'textAlign': 'center',
+        'marginTop': '5px',
+        'marginBottom': '10px',
+        'letterSpacing': '20px',
+        'fontWeight': 'bold',
+    }),
+};
+export const SectionsCSS = {
+    sectionHeadline: css({
+        'fontSize': '1.5em',
+        'marginTop': '15px',
+        'marginBottom': '30px',
+        'letterSpacing': '10px',
+        'fontWeight': 'bold',
+    }),
+    sectionContainer1: css({
+        'marginTop': '0px',
+    }),
+    sectionContainer2: css({
+        'marginTop': '0px',
+    }),
+    sectionContainer3: css({
+        'marginTop': '0px',
+    }),
+    sectionContainer4: css({
+        'marginTop': '0px',
+    }),
+    sectionContainer5: css({
+        'marginTop': '0px',
+    }),
+    sectionActiveFSParts: css({
+        'fontSize': '1.5em',
+        'marginLeft': '20px',
+        'marginTop': '15px',
+        'marginBottom': '30px',
+        'letterSpacing': '10px',
+        'fontWeight': 'bold',
+
+    }),
+};
+

@@ -1,12 +1,12 @@
 import React, { useState  } from 'react';
-import { BasicCSS } from '../CSS/GenerallCSS.js';
+import { SectionsCSS } from '../CSS/GenerallCSS.js';
 import { SectionTop5CSS } from '../CSS/Sections/SectionTop5CSS.js';
 import { GreenLED, LEDSegmentDigit4, LEDSegmentDigit8, LEDDisplay20x4 } from './ComponentsParts.js';
 
 function SectionTop5(props){
     return(
       <> 
-        <p className={ BasicCSS.sectionHeadline }>Övre sektion 5</p>        
+        <p className={ SectionsCSS.sectionHeadline }>Övre sektion 5</p>        
         <div className={ SectionTop5CSS.sectionTop5 }>
             <Section5_1/>
             <Section5_2/>

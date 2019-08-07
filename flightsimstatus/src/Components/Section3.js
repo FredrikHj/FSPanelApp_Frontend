@@ -1,12 +1,12 @@
 import React, { useState  } from 'react';
-import { BasicCSS } from '../CSS/GenerallCSS.js'
+import { SectionsCSS } from '../CSS/GenerallCSS.js'
 import { SectionMiddle3CSS } from '../CSS/Sections/SectionMiddle3CSS.js';
 import { GreenLED, RedLED, SPDTVertical, SPDTHorizontal, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder, PushBtnCircle } from './ComponentsParts.js';
 
 function SectionMiddle3(props){   
     return(
         <> 
-            <p className={ BasicCSS.sectionHeadline }>Mitten sektion 3</p>        
+            <p className={ SectionsCSS.sectionHeadline }>Mitten sektion 3</p>        
             <div className={ SectionMiddle3CSS.section3 }>
                 <Section3_1 spdtStatus={ props.thisState.fsDataValuesApi }/>
                 <Section3_2 spdtStatus={ props.thisState.fsDataValuesApi }/>
@@ -229,17 +229,40 @@ let Section3_4 = (props) => {
 let Section3_5 = (props) => {
     return(
         <div className={ SectionMiddle3CSS.section3_5 }>
-         
-                <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
-                />
-               
+            <section className={ SectionMiddle3CSS.section3_5Row1 }>
+                <GreenLED/>
+                <GreenLED/>
+                <GreenLED/>
+                <div ><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>
+            </section> 
+
+            <section className={ SectionMiddle3CSS.section3_5Row2 }>
+                <div>
+                    <LEDSegmentDigit8
+                        ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                    />
+                </div>
+                <div>
                     <GreenLED/>
+                </div>
+            </section>
+            <section className={ SectionMiddle3CSS.section3_5Row3 }>
+                <div>
+                    <LEDSegmentDigit8
+                        ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                    />
+                </div>
+                <div>
                     <GreenLED/>
-             
-                <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
-                />
+                </div>
+            </section>
+            <section className={ SectionMiddle3CSS.section3_5Row4 }>
+                <div className={ SectionMiddle3CSS.section3_5Row4RotaryEncorder1To2 }>
+                    <div><RotaryEncorder direction= { '360' }/></div>
+                    <div><RotaryEncorder direction= { '360' }/></div>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_5Row4VerticalSpdt3 }><SPDTVertical spdtStatus={props.spdtStatus.test }/></div>         
+            </section>
         </div>
     );
 }
