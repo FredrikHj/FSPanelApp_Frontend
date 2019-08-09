@@ -291,7 +291,7 @@ export const SectionMiddle3CSS = {
         'borderRight': SectionCommonRoules.border3B,
     }),
     section3_4Row1: css({
-        'marginTop': '20px',
+        'marginTop': '60px',
         'marginLeft': '20px',
         'width': '82%',
         'height': '113px',
@@ -314,7 +314,7 @@ export const SectionMiddle3CSS = {
         'justifyContent': 'center',
     }),
     section3_4Row1LedSegment4: css({
-        'marginTop': '13px',
+        'marginTop': '35px',
     }),
     section3_4Row2: css({
         'marginTop': '20px',
@@ -353,7 +353,7 @@ export const SectionMiddle3CSS = {
         'borderRight': SectionCommonRoules.border3B,
     }),
     section3_5Row1: css({
-        'marginTop': '-5',
+        'marginTop': '25px',
         'marginLeft': '40px',
         'height': '113px',
         'display': 'flex',

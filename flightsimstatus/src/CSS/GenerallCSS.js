@@ -15,7 +15,7 @@ export const BasicCSS = {
     }),
     header: css({
         'width': '100%',
-        'height': '100px',
+        'height': '150px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',

@@ -1,10 +1,17 @@
 import { css, merge } from 'glamor';
+import { SectionCommonRoules } from './GenerallCSS.js';
 
 // ======================== LED Light =========================
 export const ledLightCSS = {
-  ledBContainer: css({
+  noneLedContainer: css({
     'height': '30px',
-    'width': '25%',
+    'width': '50%',
+    'margin': '10px 0 0 0',
+    'float': 'left',
+  }),
+  ledContainer: css({
+    'height': '30px',
+    'width': '50%',
     'margin': '10px 0 0 0',
     'float': 'left',
   }),
@@ -30,11 +37,12 @@ export const ledLightCSS = {
     'backgroundColor': '#A00',
     'boxShadow': 'rgba(0, 0, 0, 02) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px',
   }),
-
   ledStatusStr: css({
     'position': 'relative',
-    'top': '2px',
-    'left': '4px',
+    'top': '-15px',
+    'left': '-10px',
+    'color': 'white',
+    'fontWeight': 'bold',
   }),
 }
 // ======================== LED Segments =========================
@@ -46,18 +54,26 @@ export const LEDSegmentDigitCSS = {
     'color': 'white',
     'paddingTop': '4px',
     'paddingLeft': '4px',
+  }),
+  LEDSegmentValueContainer: css({
+    'width': '100%',
+    'height': '24px',
+    'paddingTop': '4px',
+    'paddingLeft': '4px',
     'backgroundColor': 'black',
   }),
   LEDSegmentDigit8Container: css({
-    'display': 'flex',
-    'flexDirection': 'row',
-    'justifyContent': 'space-between',
-    'width': '110px',
+    'width': '109px',
     'height': '24px',
     'color': 'white',
     'paddingTop': '4px',
-    'paddingLeft': '6px',
-    'backgroundColor': 'black',
+    'paddingLeft': '4px',
+  }),
+  LEDSegmentLabel: css({
+    'width': '100%',
+    'marginTop': '-20px',
+    'marginBottom': '3px',
+    'textAlign': 'center',
   }),
 }
 
@@ -137,7 +153,7 @@ export const spdtCSS = {
   }),
   spdtVerticalShaft: css({
     'position': 'absolute',
-    'top': '-3px',
+    'top': '-2.5px',
     'backgroundColor': 'green',
     'boxShadow': '0 3px 15px 5px 757575',
     'borderRadius': '20px',
@@ -149,16 +165,18 @@ export const spdtCSS = {
   spdtLabelTop: css({
     'position': 'relative',
     'top': '-4px',
-    'left': '2px',
-    'width': '13px',
+    'left': '-15px',
+    'width': '50px',
     'textAlign': 'center',
+    'color': 'white',
   }),
   spdtVerticalLabelBottom: css({
     'position': 'relative',
-    'left': '8px',
+    'left': '-1px',
     'bottom': '-5px',
     'width': '13px',
     'textAlign': 'center',
+    'color': 'white',
   }),
   spdtHorizontalLabelBottom: css({
     'position': 'relative',
@@ -211,46 +229,74 @@ export const rotarySpdtCSS = {
   }),
 }
  // Strings possision | CL = CommonLabel
- const rotarySpdtCLCSS = ({
+const rotarySpdtCLCSS = ({
   'fontWeight': 'bold',
   'padding': '5px',
-  'width': '10px',
+  'width': '80px',
   'height': '10px',
+});
+const rotarySpdtPossFontLeft = ({
+  'border': '1px solid red',
+  //'direction': 'normal',
+  'marginLeft': '-70px',
+});
+const rotarySpdtPossFontRight = ({
+  'border': '1px solid red',
+  'direction': 'ltr',
+  //'marginLeft': '70px',
 });
 
 const possOne = ({
   'position': 'absolute',
   'top': '-40px',
   'left': '30px',
+  'border': '1px solid red',
+  'width': '75px',
+  'direction': 'ltr',
 });
 const possTwo = ({
   'position': 'absolute',
   'top': '-19px',
-  'right': '-26px',
+  'right': '-90px',
+  'border': '1px solid red',
+  'width': '75px',
+  'direction': 'ltr',
 });
 const possThree = ({
   'position': 'absolute',
   'top': '6px',
-  'right': '-35px',
+  'right': '-100px',
+  'border': '1px solid red',
+  'width': '75px',
+  'direction': 'ltr',
 });
 const possFour = ({
   'position': 'absolute',
   'top': '31px',
-  'right': '-32px',
+  'right': '-100px',
+  'border': '1px solid red',
+  'width': '75px',
+  'direction': 'ltr',
 });
 const possFive = ({
   'position': 'absolute',
   'top': '50px',
-  'right': '-20px',
+  'right': '-90px',
+  'border': '1px solid red',
+  'width': '75px',
+  'direction': 'ltr',
 });
 const possSix = ({
   'position': 'absolute',
-  'top': '60px',
+  'top': '70px',
   'left': '30px',
+  'border': '1px solid red',
+  'width': '75px',
+  'direction': 'ltr',
 });
 const possSeven = ({
   'position': 'absolute',
-  'top': '60px',
+  'top': '70px',
   'left': '0',
 });
 const possEight = ({
@@ -278,18 +324,18 @@ const possTwelve = ({
   'top': '-40px',
   'left': '0',
 });
-const rotarySpdtCLCSSPossOne = merge(rotarySpdtCLCSS, possOne);
-const rotarySpdtCLCSSPossTwo = merge(rotarySpdtCLCSS, possTwo);
-const rotarySpdtCLCSSPossThree = merge(rotarySpdtCLCSS, possThree);
-const rotarySpdtCLCSSPossFour = merge(rotarySpdtCLCSS, possFour);
-const rotarySpdtCLCSSPossFive = merge(rotarySpdtCLCSS, possFive);
-const rotarySpdtCLCSSPossSix = merge(rotarySpdtCLCSS, possSix);
-const rotarySpdtCLCSSPossSeven = merge(rotarySpdtCLCSS, possSeven);
-const rotarySpdtCLCSSPossEight = merge(rotarySpdtCLCSS, possEight);
-const rotarySpdtCLCSSPossNine = merge(rotarySpdtCLCSS, possNine);
-const rotarySpdtCLCSSPossTen = merge(rotarySpdtCLCSS, possTen);
-const rotarySpdtCLCSSPossEleven = merge(rotarySpdtCLCSS, possEleven);
-const rotarySpdtCLCSSPossTwelve = merge(rotarySpdtCLCSS, possTwelve);
+const rotarySpdtCLCSSPossOne = merge(rotarySpdtCLCSS, possOne, rotarySpdtPossFontRight);
+const rotarySpdtCLCSSPossTwo = merge(rotarySpdtCLCSS, possTwo, rotarySpdtPossFontRight);
+const rotarySpdtCLCSSPossThree = merge(rotarySpdtCLCSS, possThree, rotarySpdtPossFontRight);
+const rotarySpdtCLCSSPossFour = merge(rotarySpdtCLCSS, possFour, rotarySpdtPossFontRight);
+const rotarySpdtCLCSSPossFive = merge(rotarySpdtCLCSS, possFive, rotarySpdtPossFontRight);
+const rotarySpdtCLCSSPossSix = merge(rotarySpdtCLCSS, possSix, rotarySpdtPossFontRight);
+const rotarySpdtCLCSSPossSeven = merge(rotarySpdtCLCSS, possSeven, rotarySpdtPossFontLeft);
+const rotarySpdtCLCSSPossEight = merge(rotarySpdtCLCSS, possEight, rotarySpdtPossFontLeft);
+const rotarySpdtCLCSSPossNine = merge(rotarySpdtCLCSS, possNine, rotarySpdtPossFontLeft);
+const rotarySpdtCLCSSPossTen = merge(rotarySpdtCLCSS, possTen, rotarySpdtPossFontLeft);
+const rotarySpdtCLCSSPossEleven = merge(rotarySpdtCLCSS, possEleven, rotarySpdtPossFontLeft);
+const rotarySpdtCLCSSPossTwelve = merge(rotarySpdtCLCSS, possTwelve, rotarySpdtPossFontLeft);
 
 export const rotarySpdtCLCSSPossisons = {
   rotarySpdtCLCSSPossOne,
@@ -307,20 +353,23 @@ export const rotarySpdtCLCSSPossisons = {
   rotarySpdtCLCSSPossTwelve
 }
 // =============================================================
-// Rotate animation for Rotary Encorder
-
-
-// ====================================
-
 export const rotaryEncorderCSS = {
   rotaryEncorderContainer: css({
-      'borderRadius': '50%',
-      'position': 'relative',
-      'top': 'calc(50% - 25px)',
-      'left': 'calc(50% - 25px)',
-      'width': '40px',
-      'height': '40px',
-      'background': 'linear-gradient(#585858,#8F8F8F 70%, #DBDBDB)', // 'linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%)',
+    'borderRadius': '50%',
+    'position': 'relative',
+    'top': 'calc(50% - 25px)',
+    'left': 'calc(50% - 25px)',
+    'width': '40px',
+    'height': '40px',
+    'background': 'linear-gradient(#585858,#8F8F8F 70%, #DBDBDB)', // 'linear-gradient(#ECE9E9,#CACACA 30%, #F4F4F4, #535353 153%)',
+  }),
+  rotaryEncorderLabel: css({
+    'width': '50px',
+    'marginTop': '-30px',
+    'marginLeft': '-15px',
+    'border': '1px solid red',
+    'textAlign': 'center',
+    'color': 'white'
   }),
   rotaryEncorder: css({
       'borderRadius': '50%',
@@ -380,6 +429,10 @@ export const rotaryEncorderCSS = {
 
 export const pushBtnCircleCSS = {
   pushBtnContainer: css({
+    'width': '55px',
+    'height': '55px',
+  }),
+  pushBtnStructure: css({
     'width': '55px',
     'height': '55px',
     'borderRadius': '55px',

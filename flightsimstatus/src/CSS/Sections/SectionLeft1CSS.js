@@ -7,6 +7,13 @@ export const SectionLeft1_2CSS = {
     sectionLeft1_2Container: css({
         'width': '19%',
     }),
+    sectionLeft1: css({
+        'marginTop': '15px',
+        'paddingLeft': '15px',
+        'height': '150px',
+        'backgroundColor': SectionCommonRoules.colorGrey,
+        'border': SectionCommonRoules.border3B,
+    }),
     sectionLeft2_1: css({
         'marginTop': '15px',
         'height': '290px',
@@ -14,13 +21,13 @@ export const SectionLeft1_2CSS = {
         'borderBottom': SectionCommonRoules.border3B,
     }),
     sectionLeft2_1Row1: css({
-        'marginLeft': '10px',
+        'marginLeft': '15px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
     }),
     sectionLeft2_1Row2: css({
-        'marginLeft': '10px',
+        'marginLeft': '15px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -34,7 +41,7 @@ export const SectionLeft1_2CSS = {
         'backgroundColor': SectionCommonRoules.colorGrey,
     }),
     sectionLeft2_2Row1: css({
-        'marginLeft': '10px',
+        'marginLeft': '15px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -43,7 +50,7 @@ export const SectionLeft1_2CSS = {
         'marginTop': '50px'
     }),
     sectionLeft2_2Row2: css({
-        'marginLeft': '10px',
+        'marginLeft': '1px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -53,7 +60,7 @@ export const SectionLeft1_2CSS = {
         'marginTop': '-15px'
     }),
     sectionLeft2_2Row3: css({
-        'marginLeft': '10px',
+        'marginLeft': '15px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -64,11 +71,5 @@ export const SectionLeft1_2CSS = {
     sectionLeft2_2Row3Spdt5: css({
         'marginLeft': '-10px',
         'marginTop': '20px',
-    }),
-    sectionLeft1: css({
-        'marginTop': '15px',
-        'height': '150px',
-        'backgroundColor': SectionCommonRoules.colorGrey,
-        'border': SectionCommonRoules.border3B,
     }),
 }

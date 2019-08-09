@@ -48,9 +48,7 @@ class MainApp extends PureComponent  {
           <div>
             <ActiveFSParts/>
           </div>
-          <div></div>
-          <div><p className={ BasicCSS.mainHeadLine }>FlightSim Status</p></div>
-          <div></div>
+            <p className={ BasicCSS.mainHeadLine }>FlightSim Status</p>
         </header>
         <main>
           <div className={ SectionsCSS.sectionContainer5 }>

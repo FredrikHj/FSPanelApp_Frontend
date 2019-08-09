@@ -27,6 +27,7 @@ body {
   position: absolute;
   border-top: 65px solid white;
   border-right: 200px solid transparent;
+  z-index: 1;
 }
 
 #section5_6TopCorner:before{
@@ -35,6 +36,7 @@ body {
   right: 0;
   border-top: 65px solid white;
   border-left: 200px solid transparent;
+  z-index: 1;
 }
 /* CSS roule for fix the white line at the rotary spdf */
 #rotarySpdt:before {
@@ -123,20 +125,25 @@ transition: .5s;
   margin-top: -65px;
   margin-left: 350px;
 }
-
+#fsActiveTable th{
+  font-size: 1.2em;
+  letter-spacing: 5px;
+}
+#fsActiveTable td{
+  font-size: 0.8em;
+  letter-spacing: 5px;
+}
 #fsActiveTable td, #fsActiveTable th {
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: center;
 }
 
 #fsActiveTable tr:nth-child(even){background-color: #f2f2f2;}
 
-#fsActiveTable tr:hover {background-color: #ddd;}
-
 #fsActiveTable th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #4CAF50;
   color: white;
 }

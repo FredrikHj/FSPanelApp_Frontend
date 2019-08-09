@@ -38,9 +38,9 @@ function ActiveFSParts(props){
                         </tr>
                     </tbody>
                 </table>
-                <p></p> <div>{('namn' === '1') ? <GreenLED/> : <RedLED/> }</div> 
-                <p></p> <div>{('namn' === '1') ? <GreenLED/> : <RedLED/> }</div> 
-                <p></p> <div>{('namn' === '1') ? <GreenLED/> : <RedLED/> }</div> 
+                <p></p> <div>{('namn' === '1') ? <GreenLED commandName={ 'Name' }/> : <RedLED commandName={ 'Name' }/> }</div> 
+                <p></p> <div>{('namn' === '1') ? <GreenLED commandName={ 'Name' }/> : <RedLED commandName={ 'Name' }/> }</div> 
+                <p></p> <div>{('namn' === '1') ? <GreenLED commandName={ 'Name' }/> : <RedLED commandName={ 'Name' }/> }</div> 
             </div>
         </section>
     );

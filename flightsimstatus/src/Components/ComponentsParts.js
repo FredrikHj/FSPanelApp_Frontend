@@ -3,31 +3,40 @@ import { css, merge } from 'glamor';
 
 import { ledLightCSS, spdtCSS, LEDSegmentDigitCSS, LEDDisplayCSS, rotarySpdtCSS, rotarySpdtCLCSSPossisons, rotaryEncorderCSS, pushBtnCircleCSS, rotateRotaryEncorder } from '../CSS/ComponentsPartsCSS.js';
 
+export let NoneLED = (props) => {
+  return(
+      <div className={ ledLightCSS.noneLedContainer }></div>
+  );
+}
 export let GreenLED = (props) => {
     return(
-        <div className={ ledLightCSS.ledBContainer }>
-          <div className={ ledLightCSS.ledGreenUnlight}><span className={ ledLightCSS.ledStatusStr}>{ props.test }</span></div>
+        <div className={ ledLightCSS.ledContainer }>
+          <div className={ ledLightCSS.ledGreenUnlight}>
+            <span className={ ledLightCSS.ledStatusStr}>{ props.commandName }</span>
+          </div>
         </div>
     );
 }
 export let RedLED = (props) => {
   return(
-      <div className={ ledLightCSS.ledBContainer }>
-        <div className={ ledLightCSS.ledRedUnlight}><span className={ ledLightCSS.ledStatusStr}>{ props.test }</span></div>
+      <div className={ ledLightCSS.ledContainer }>
+        <div className={ ledLightCSS.ledRedUnlight}>
+          <span className={ ledLightCSS.ledStatusStr }>{ props.commandName }</span>
+        </div>
       </div>
   );
 }
 export let SPDTVertical = (props) => {
   return(
     <> 
-      <p className={ spdtCSS.spdtLabelTop }>on</p>
+      <p className={ spdtCSS.spdtLabelTop }> { props.commandName } </p>
       <div className={ spdtCSS.spdtVerticalContainer }>
         <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
         <label className={ spdtCSS.spdtVerticalSlider }></label>
-        <div className={ spdtCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '18px'} : {left: '0px'}}></div>
+        <div className={ spdtCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '20px'} : {left: '-1px'}}></div>
         <p className={ spdtCSS.spdtVerticalState }></p>
       </div>
-      <p className={ spdtCSS.spdtVerticalLabelBottom }>off</p>
+      <p className={ spdtCSS.spdtVerticalLabelBottom }>{(props.spdtStatus === "0") ? 'off' : 'on'}</p>
     </>
   );
 }
@@ -40,7 +49,7 @@ export let SPDTHorizontal = (props) => {
         <label className={ spdtCSS.spdtVerticalSlider }></label>
         <div className={ spdtCSS.spdtVerticalShaft } style={(props.spdtStatus === "0") ? {left: '18px'} : {left: '0px'}}></div>
         <p className={ spdtCSS.spdtVerticalState }></p>
-        <p className={ spdtCSS.spdtHorizontalLabelBottom }>off</p>
+        <p className={ spdtCSS.spdtHorizontalLabelBottom }>{(props.spdtStatus === "0") ? 'off' : 'on'}</p>
       </div>
     </>
   );
@@ -69,18 +78,18 @@ export let RotarySpdt = (props) => {
     <> 
       <div className={ rotarySpdtCSS.rotarySpdt12pContainer }>    
         <div className={ rotarySpdtCSS.rotarySpdtContainer }>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossOne }>1</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTwo }>2</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossThree }>3</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossFour }>4</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossFive }>5</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossSix }>6</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossSeven }>7</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossEight }>8</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossNine }>9</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTen }>10</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossEleven }>11</div>
-          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTwelve }>12</div>
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossOne }>{ props.rotarySpdfPosStr1 }</div>      {/* Poss = 1 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTwo }>{ props.rotarySpdfPosStr2 }</div>      {/* Poss = 2 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossThree }>{ props.rotarySpdfPosStr3 }</div>    {/* Poss = 3 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossFour }>{ props.rotarySpdfPosStr4 }</div>     {/* Poss = 4 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossFive }>{ props.rotarySpdfPosStr5 }</div>     {/* Poss = 5 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossSix }>{ props.rotarySpdfPosStr6 }</div>      {/* Poss = 6 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossSeven }>{ props.rotarySpdfPosStr7 }</div>    {/* Poss = 7 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossEight }>{ props.rotarySpdfPosStr8 }</div>    {/* Poss = 8 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossNine }>{ props.rotarySpdfPosStr9 }</div>     {/* Poss = 9 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTen }>{ props.rotarySpdfPosStr10 }</div>      {/* Poss = 10 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossEleven }>{ props.rotarySpdfPosStr11 }</div>   {/* Poss = 11 */}
+          <div className={ rotarySpdtCLCSSPossisons.rotarySpdtCLCSSPossTwelve }>{ props.rotarySpdfPosStr12 }</div>   {/* Poss = 12 */}
           <div className={ rotarySpdtCSS.rotarySpdt } style={setRotaryPoss(props.rotaryStatus)} id="rotarySpdt"></div>
         </div>
       </div>    
@@ -111,8 +120,9 @@ export let RotaryEncorder = (props) => {
   });
   return(
     <> 
-      <div className={ rotaryEncorderCSS.rotaryEncorderContainer }>    
+      <div className={ rotaryEncorderCSS.rotaryEncorderContainer }>
         <div className={ rotaryEncorderCSS.rotaryEncorder }>
+          <p className={ rotaryEncorderCSS.rotaryEncorderLabel }>{ props.commandName }</p>    
           <div className={ rotaryEncorderKnob }>
             <div className={ rotaryEncorderCSS.rotaryEncorderKnobCrossLine1 }></div>
             <div className={ rotaryEncorderCSS.rotaryEncorderKnobCrossLine2 }></div>
@@ -125,18 +135,23 @@ export let RotaryEncorder = (props) => {
     </>
   );
 }
-
 export let LEDSegmentDigit4 = (props) => {
   return(
     <div className={ LEDSegmentDigitCSS.LEDSegmentDigit4Container }>
-      { props.ledStatusStr }
+      <p className={ LEDSegmentDigitCSS.LEDSegmentLabel }>{ props.segmentName }</p>
+      <div className={ LEDSegmentDigitCSS.LEDSegmentValueContainer }>
+        { props.segmentsValue }
+      </div>
     </div>
   );
 }
 export let LEDSegmentDigit8 = (props) => {
   return(
     <div className={ LEDSegmentDigitCSS.LEDSegmentDigit8Container }>
-    { props.ledStatusStr } 
+        <p className={ LEDSegmentDigitCSS.LEDSegmentLabel }>{ props.segmentName }</p>
+      <div className={ LEDSegmentDigitCSS.LEDSegmentValueContainer }>
+        { props.segmentsValue }
+      </div>
     </div>
   );
 }
@@ -158,7 +173,7 @@ export let PushBtnCircle = (props) => {
     'from': {'transform': 'scale(1)'},
     'to': {'transform': 'scale(' + props.push + ')'},
   });
-  let pushdBtn = css({
+  let pushBtn = css({
     'position': 'relative',
     'borderRadius': '50%',
     'width': '27.5px',
@@ -173,7 +188,10 @@ export let PushBtnCircle = (props) => {
   });
   return(
     <div className={ pushBtnCircleCSS.pushBtnContainer }>
-      <div className={ pushdBtn }></div>
+      <p className={ pushBtnCircleCSS.pushBtnLabel }>'rgfed'</p>
+      <div className={ pushBtnCircleCSS.pushBtnStructure }>
+        <div className={ pushBtn }></div>
+      </div>
     </div>
   );
 }

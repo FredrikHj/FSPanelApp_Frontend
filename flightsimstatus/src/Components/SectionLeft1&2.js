@@ -10,45 +10,45 @@ export function SectionLeft2(props){
         <p className={ SectionsCSS.sectionHeadline }>Vänster sektion 2:1 & 2:2</p>
         <div className={ SectionLeft1_2CSS.sectionLeft2_1 }>
           <div className={ SectionLeft1_2CSS.sectionLeft2_1Row1 }>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
           </div>
           <div className={ SectionLeft1_2CSS.sectionLeft2_1Row2 }>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_1Row2Spdt3 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_1Row2Spdt3 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
           </div>
         </div>
         <div className={ SectionLeft1_2CSS.sectionLeft2_2 }>
         <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1 }>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1Spdt2_3_4 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1Spdt2_3_4 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1Spdt2_3_4 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1Spdt2_3_4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1Spdt2_3_4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row1Spdt2_3_4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
           </div>
           <div className={ SectionLeft1_2CSS.sectionLeft2_2Row2 }>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row22_3_4 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row22_3_4 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row22_3_4 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row22_3_4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row22_3_4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row22_3_4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
           </div>
           <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3 }>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt5 }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
-            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt5 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
+            <div className={ SectionLeft1_2CSS.sectionLeft2_2Row3Spdt }><SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } /></div>
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@ export function SectionLeft2(props){
       <section className={ SectionLeft1_2CSS.sectionLeft1_2Container }> 
         <p className={ SectionsCSS.sectionHeadline }>Vänster sektion 1 - Nivå 1</p>
         <div className={ SectionLeft1_2CSS.sectionLeft1 }>
-          <SPDTVertical spdtStatus={props.thisState.fsDataValuesApi.test }/>
+          <SPDTVertical commandName={ 'Name' } spdtStatus={props.thisState.fsDataValuesApi.test } />
         </div>
       </section>
     );

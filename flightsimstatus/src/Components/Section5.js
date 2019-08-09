@@ -1,7 +1,7 @@
 import React, { useState  } from 'react';
 import { SectionsCSS } from '../CSS/GenerallCSS.js';
 import { SectionTop5CSS } from '../CSS/Sections/SectionTop5CSS.js';
-import { GreenLED, LEDSegmentDigit4, LEDSegmentDigit8, LEDDisplay20x4 } from './ComponentsParts.js';
+import { NoneLED, GreenLED, LEDSegmentDigit4, LEDSegmentDigit8, LEDDisplay20x4 } from './ComponentsParts.js';
 
 function SectionTop5(props){
     return(
@@ -24,37 +24,44 @@ let Section5_1 = (props) => {
     return(
         <div className={ SectionTop5CSS.section5_1 } id="section5_1TopCorner"> 
             <section className={ SectionTop5CSS.section5_1__LEDContainer }>
-                <section className={ SectionTop5CSS.section5_1LEDContainer__rowdTop }>
-                    <GreenLED test={ '1' }/>
-                    <GreenLED test={ '2' }/>
-                    <GreenLED test={ '3' }/>
-                    <GreenLED test={ '4' }/>              
-                    <GreenLED test={ '5' }/>
-                    <GreenLED test={ '6' }/>
+                <section className={ SectionTop5CSS.section5CornerLEDContainer__rowd1To3 }>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>              
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </section>
-                <section className={ SectionTop5CSS.section5_1LEDContainer__rowdMiddle }>
-                    <GreenLED test={ '1' }/>
-                    <GreenLED test={ '2' }/>
-                    <GreenLED test={ '3' }/>
-                    <GreenLED test={ '4' }/>              
-                    <GreenLED test={ '5' }/>
-                    <GreenLED test={ '6' }/>
-                    <GreenLED test={ '7' }/>
-                    <GreenLED test={ '8' }/>
-                    <GreenLED test={ '9' }/>
+                <section className={ SectionTop5CSS.section5CornerLEDContainer__rowd1To3 }>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </section>
-                <section className={ SectionTop5CSS.section5_1LEDContainer__rowdBottom }>
-                    <GreenLED test={ '1' }/>
-                    <GreenLED test={ '2' }/>
-                    <GreenLED test={ '3' }/>
-                    <GreenLED test={ '4' }/>              
-                    <GreenLED test={ '5' }/>
-                    <GreenLED test={ '6' }/>
-                    <GreenLED test={ '7' }/>
-                    <GreenLED test={ '8' }/>
-                    <GreenLED test={ '9' }/>
-                    <GreenLED test={ '10' }/>
-                    <GreenLED test={ '11' }/>
+                <section className={ SectionTop5CSS.section5CornerLEDContainer__rowd1To3 }>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </section>
             </section>
         </div>
@@ -65,6 +72,7 @@ let Section5_2 = (props) => {
     return(
         <div className={ SectionTop5CSS.section5_2 }>
             <LEDDisplay20x4
+                segmentName={ 'Name' }
                 strRow1={ '11111111111111111111' }
                 strRow2={ '11111111111111111111' }
                 strRow3={ '11111111111111111111' }
@@ -78,40 +86,42 @@ let Section5_3 = (props) => {
         <div className={ SectionTop5CSS.section5_3 }>
             <section className={ SectionTop5CSS.section5_3Row1 }>
                 <div className={ SectionTop5CSS.section5_3Row1Led1 }>
-                    <GreenLED test={ '1' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </div>
                 <div className={ SectionTop5CSS.section5_3Row1Led2 }>
-                    <GreenLED test={ '2' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </div>
                 <div className={ SectionTop5CSS.section5_3Row1Led3 }>
-                    <GreenLED test={ '3' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </div>
              
             </section>
             <section className={ SectionTop5CSS.section5_3Row2 }>
                 <div className={ SectionTop5CSS.section5_3Row2LedSeg8Dig }>
                     <LEDSegmentDigit8
-                        ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                        segmentName={ 'Name' }
+                        segmentsValue={ '0.0.0.0.0.0.0.0' }
                 />  
                 </div>
                 <div className={ SectionTop5CSS.section5_3Row2LedSeg4Dig }>
                     <LEDSegmentDigit4
-                        ledStatusStr={ '0.0.0.0' }
+                        segmentName={ 'Name' }
+                        segmentsValue={ '0.0.0.0' }
                     />
                 </div>
             </section>
             <section className={ SectionTop5CSS.section5_3Row3 }>
-                <GreenLED test={ '3' }/>
+                <GreenLED commandName={ 'Name' }/>
             </section>
             <section className={ SectionTop5CSS.section5_3Row4 }>
-                <div><GreenLED test={ '1' }/></div>
-                <div><GreenLED test={ '2' }/></div>
-                <div className={ SectionTop5CSS.section5_3Row4Led3_4 }><GreenLED test={ '3' }/></div>
-                <div className={ SectionTop5CSS.section5_3Row4Led3_4 }><GreenLED test={ '4' }/></div>
-                <div className={ SectionTop5CSS.section5_3Row4Led5 }><GreenLED test={ '5' }/></div>
-                <div><GreenLED test={ '6' }/></div>
-                <div><GreenLED test={ '7' }/></div>
-                <div><GreenLED test={ '8' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led3_4 }><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led3_4 }><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_3Row4Led5 }><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
             </section>
         </div>
     );
@@ -121,27 +131,30 @@ let Section5_4 = (props) => {
         <div className={ SectionTop5CSS.section5_4 }>
             <section className={ SectionTop5CSS.section5_4Row1 }>
                 <LEDSegmentDigit4
-                    ledStatusStr={ '0.0.0.0' }
+                    segmentName={ 'Name' }
+                    segmentsValue={ '0.0.0.0' }
                 />  
                 <LEDSegmentDigit8
-                    ledStatusStr={ '0.0.0.0.0.0.0.0' }
+                    segmentName={ 'Name' }
+                    segmentsValue={ '0.0.0.0.0.0.0.0' }
                 />  
                 <LEDSegmentDigit4
-                    ledStatusStr={ '0.0.0.0' }
+                    segmentName={ 'Name' }
+                    segmentsValue={ '0.0.0.0' }
                 />
             </section>
             <section className={ SectionTop5CSS.section5_4Row2 }>
-                <div><GreenLED test={ '1' }/></div>
-                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '2' }/></div>
-                <div><GreenLED test={ '3' }/></div>
-                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '4' }/></div>
-                <div><GreenLED test={ '5' }/></div>
-                <div><GreenLED test={ '6' }/></div>
-                <div><GreenLED test={ '7' }/></div>
-                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '8' }/></div>
-                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '9' }/></div>
-                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '10' }/></div>
-                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED test={ '11' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED commandName={ 'Name' }/></div>
+                <div className={ SectionTop5CSS.section5_4Row4Led2_4_7To11 }><GreenLED commandName={ 'Name' }/></div>
             </section>
         </div>
     );
@@ -151,6 +164,7 @@ let Section5_5 = (props) => {
         <div className={ SectionTop5CSS.section5_5 }>
             <div>
                 <LEDDisplay20x4
+                    segmentName={ 'Name' }
                     strRow1={ '11111111111111111111' }
                     strRow2={ '11111111111111111111' }
                     strRow3={ '11111111111111111111' }
@@ -159,6 +173,7 @@ let Section5_5 = (props) => {
             </div>
             <div>
                 <LEDDisplay20x4
+                    segmentName={ 'Name' }
                     strRow1={ '11111111111111111111' }
                     strRow2={ '11111111111111111111' }
                     strRow3={ '11111111111111111111' }
@@ -172,37 +187,44 @@ let Section5_6 = (props) => {
     return(
         <div className={ SectionTop5CSS.section5_6 } id="section5_6TopCorner">
            <section className={ SectionTop5CSS.section5_6__LEDContainer }>
-                <section className={ SectionTop5CSS.section5_6LEDContainer__rowdTop }>
-                    <GreenLED test={ '1' }/>
-                    <GreenLED test={ '2' }/>
-                    <GreenLED test={ '3' }/>
-                    <GreenLED test={ '4' }/>              
-                    <GreenLED test={ '5' }/>
-                    <GreenLED test={ '6' }/>
+                <section className={ SectionTop5CSS.section5CornerLEDContainer__rowd1To3 }>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>              
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <NoneLED/>
+                    <NoneLED/>
                 </section>
-                <section className={ SectionTop5CSS.section5_6LEDContainer__rowdMiddle }>
-                    <GreenLED test={ '1' }/>
-                    <GreenLED test={ '2' }/>
-                    <GreenLED test={ '3' }/>
-                    <GreenLED test={ '4' }/>              
-                    <GreenLED test={ '5' }/>
-                    <GreenLED test={ '6' }/>
-                    <GreenLED test={ '7' }/>
-                    <GreenLED test={ '8' }/>
-                    <GreenLED test={ '9' }/>
+                <section className={ SectionTop5CSS.section5CornerLEDContainer__rowd1To3 }>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <NoneLED/>
+                    <NoneLED/>
                 </section>
-                <section className={ SectionTop5CSS.section5_6LEDContainer__rowdBottom }>
-                    <GreenLED test={ '1' }/>
-                    <GreenLED test={ '2' }/>
-                    <GreenLED test={ '3' }/>
-                    <GreenLED test={ '4' }/>              
-                    <GreenLED test={ '5' }/>
-                    <GreenLED test={ '6' }/>
-                    <GreenLED test={ '7' }/>
-                    <GreenLED test={ '8' }/>
-                    <GreenLED test={ '9' }/>
-                    <GreenLED test={ '10' }/>
-                    <GreenLED test={ '11' }/>
+                <section className={ SectionTop5CSS.section5CornerLEDContainer__rowd1To3 }>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
+                    <GreenLED commandName={ 'Name' }/>
                 </section>
             </section>
         </div>

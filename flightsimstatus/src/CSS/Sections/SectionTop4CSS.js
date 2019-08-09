@@ -3,6 +3,12 @@ import { SectionCommonRoules } from '../GenerallCSS.js';
 
 // ======================== Section Top4 =========================
 export const SectionTop4CSS = {
+    sectionTop4: css({
+        'width': '100%',
+        'height': '200px',
+        'display': 'flex',
+        'flexDirection': 'row',
+    }),
     section4_1: css({
         'display': 'flex',
         'flexDirection': 'row',   
@@ -11,12 +17,6 @@ export const SectionTop4CSS = {
         'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
-    }),
-    sectionTop4: css({
-        'width': '100%',
-        'height': '180px',
-        'display': 'flex',
-        'flexDirection': 'row',
     }),
     section4_1ComponentsContainer: css({
         'display': 'flex',
@@ -29,12 +29,12 @@ export const SectionTop4CSS = {
     }),
     section4_1GearUp_DnContainers: css({
         'position': 'relative',
-        'width': '200px',
-        'top': '-100px',
-        'left': '50px',
+        'width': '400px',
+        'top': '-90px',
+        'left': '30px',
     }),
     section4_1LEDEngOnHorizontal: css({
-        'width': '80px',
+        'width': '120px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -42,10 +42,10 @@ export const SectionTop4CSS = {
     section4_1LEDEngOffVertical: css({
         'marginTop': '10px',
         'width': '10%',
-        'height': '50%',
+        'height': '65%',
         'display': 'flex',
-        'marginTop': '-60px',
-        'marginLeft': '30px',
+        'marginTop': '-80px',
+        'marginLeft': '50px',
         'flexDirection': 'column',
         'justifyContent': 'space-between',
     }),
@@ -56,7 +56,7 @@ export const SectionTop4CSS = {
         'marginTop': '100px',
         'width': '10%',
         'height': '50%',
-        'marginLeft': '20px',
+        'marginLeft': '40px',
     }),
     section4_1GearMainWheelUpRow1: css({
         'width': '25%',
@@ -75,7 +75,7 @@ export const SectionTop4CSS = {
         'height': '50%',
         'display': 'flex',
         'marginTop': '30px',
-        'marginLeft': '-20px',
+        'marginLeft': '-200px',
         'flexDirection': 'column',
         'justifyContent': 'space-between',
     }),
@@ -96,17 +96,18 @@ export const SectionTop4CSS = {
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
-        'width': '60px',
+        'width': '100px',
         'marginTop': '-10px',
         'marginLeft': '-5px',
     }),
     section4_2Row2: css({
-        'marginLeft': '10px',
+        'marginTop': '10px',
+        'marginLeft': '15px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
         'alignItems': 'Center',
-        //'width': '90%',
+        'width': '80%',
     }),
     section4_2Row22xledSpdf: css({
         'display': 'flex',
@@ -117,14 +118,14 @@ export const SectionTop4CSS = {
      
     }),
     section4_2Row2Led1: css({
-        'margin': '10px',
+        'marginRight': '15px',
     }),
     section4_2Row2Spdf2: css({
         'margin': '10px',
 
     }),
     section4_2Row2Led3: css({
-        'marginLeft': '-40px',
+        'marginLeft': '-35px',
     }),
     section4_2Row2RotaryEncorder: css({
         'width': '100px',
@@ -134,6 +135,7 @@ export const SectionTop4CSS = {
     }),
     section4_2Row2LeftRotarySpdt: css({
         'marginTop': '40px',
+        'marginLeft': '50px',
     }),
     // ===========================================================
     section4_3: css({
@@ -173,7 +175,7 @@ export const SectionTop4CSS = {
     section4_4: css({
         'display': 'flex',
         'flexDirection': 'row',
-        'width': '20%',
+        'width': '22%',
         'paddingLeft': '20px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
@@ -184,7 +186,7 @@ export const SectionTop4CSS = {
         'justifyContent': 'space-between',
         'width': '80px',
         'marginTop': '10px',
-        'marginLeft': '20px',
+        'marginLeft': '50px',
     }),
     section4_4TopRowRotarySpdf: css({
         'marginTop': '0',
@@ -198,14 +200,14 @@ export const SectionTop4CSS = {
         'marginTop': '-15px',
     }),
     section4_4Spdfx2: css({ 
-        'marginRight': '30px',
+        'marginRight': '40px',
         'width': '10px',
     }),
     section4_4Spdf: css({
         'marginLeft': '50%',
     }),
     section4_4LastColLed: css({
-        'marginTop': '-10px',
+        'marginTop': '10px',
         'marginLeft': '30%',
     }),
     section4_4LastSpdf: css({
@@ -216,12 +218,12 @@ export const SectionTop4CSS = {
         'flexDirection': 'row',
         'justifyContent': 'space-around',
         'width': '100px',
-        'marginTop': '-10px',
+        'marginTop': '10px',
         'marginLeft': '-5px',
     }),
     // ===========================================================
     section4_5: css({
-        'width': '15%',
+        'width': '12%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -238,6 +240,7 @@ export const SectionTop4CSS = {
     }),
     section4_6LedSpdt: css({
         'display': 'flex',
+        'marginTop': '20px',
         'flexDirection': 'column',
         'justifyContent': 'space-betwween',
         'width': '50px',
