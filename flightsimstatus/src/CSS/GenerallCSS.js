@@ -11,7 +11,7 @@ export const SectionCommonRoules = {
 // ===================================================================
 export const BasicCSS = {
     outerFrame: css({
-        'width': '3000px',
+        'width': '4000px',
     }),
     header: css({
         'width': '100%',

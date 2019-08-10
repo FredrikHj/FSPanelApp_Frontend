@@ -140,7 +140,21 @@ let Section4_3 = (props) => {
             </section>
             <section className={ SectionTop4CSS.section4_3Row2 }>
                 <div className={ SectionTop4CSS.section4_3Row2RotarySpdt1 }>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                    <RotarySpdt
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                    />
                 </div>
                 <div className={ SectionTop4CSS.section4_3Row22RotaryEncorder2 }>
                     <RotaryEncorder
@@ -162,37 +176,53 @@ let Section4_4 = (props) => {
         <div className={ SectionTop4CSS.section4_4 }>
             <section className={ SectionTop4CSS.section4_4LedSpdf }>
                 <section className={ SectionTop4CSS.section4_4TopRowRotarySpdf }>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <RotarySpdt
+                    rotarySpdfPosStr1= { ' Name = 1' }
+                    rotarySpdfPosStr2= { ' Name = 2' }
+                    rotarySpdfPosStr3= { ' Name = 3' }
+                    rotarySpdfPosStr4= { ' Name = 4' }
+                    rotarySpdfPosStr5= { ' Name = 5' }
+                    rotarySpdfPosStr6= { ' Name = 6' }
+                    rotarySpdfPosStr7= { ' Name = 7' }
+                    rotarySpdfPosStr8= { ' Name = 8' }
+                    rotarySpdfPosStr9= { ' Name = 9' }
+                    rotarySpdfPosStr10= { ' Name = 10' }
+                    rotarySpdfPosStr11= { ' Name = 11' }
+                    rotarySpdfPosStr12= { ' Name = 12' }
+                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                />
                 </section>
                 <section className={ SectionTop4CSS.section4_4Spdfx2Container }>
                     <div className={ SectionTop4CSS.section4_4Spdfx2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
                     <div className={ SectionTop4CSS.section4_4Spdfx2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
                 </section>
             </section>
-            <section className={ SectionTop4CSS.section4_4LedSpdf }>
-                <section className={ SectionTop4CSS.section4_4TopRowLed }>
-                    <GreenLED commandName={ 'Name' }/>
-                    <GreenLED commandName={ 'Name' }/>
+            <section className={ SectionTop4CSS.section4_4LedSpdfContainer }>
+                <section className={ SectionTop4CSS.section4_4LedSpdf }>
+                    <section className={ SectionTop4CSS.section4_4TopRowLed }>
+                        <GreenLED commandName={ 'Name' }/>
+                        <GreenLED commandName={ 'Name' }/>
+                    </section>
+                    <div className={ SectionTop4CSS.section4_4Spdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
                 </section>
-                <div className={ SectionTop4CSS.section4_4Spdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
-            </section>
-            <section className={ SectionTop4CSS.section4_4LedSpdf }>
-                <section className={ SectionTop4CSS.section4_4TopRowLed }>
-                    <GreenLED commandName={ 'Name' }/>
-                    <GreenLED commandName={ 'Name' }/>
+                <section className={ SectionTop4CSS.section4_4LedSpdf }>
+                    <section className={ SectionTop4CSS.section4_4TopRowLed }>
+                        <GreenLED commandName={ 'Name' }/>
+                        <GreenLED commandName={ 'Name' }/>
+                    </section>
+                    <div className={ SectionTop4CSS.section4_4Spdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
                 </section>
-                <div className={ SectionTop4CSS.section4_4Spdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
-            </section>
-            <section className={ SectionTop4CSS.section4_4LedSpdf }>
-                <section className={ SectionTop4CSS.section4_4TopRowLed }>
-                    <GreenLED commandName={ 'Name' }/>
-                    <GreenLED commandName={ 'Name' }/>
+                <section className={ SectionTop4CSS.section4_4LedSpdf }>
+                    <section className={ SectionTop4CSS.section4_4TopRowLed }>
+                        <GreenLED commandName={ 'Name' }/>
+                        <GreenLED commandName={ 'Name' }/>
+                    </section>
+                    <div className={ SectionTop4CSS.section4_4Spdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
                 </section>
-                <div className={ SectionTop4CSS.section4_4Spdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
-            </section>
-            <section className={ SectionTop4CSS.section4_4LedSpdf }>
-                <div className={ SectionTop4CSS.section4_4LastColLed }><GreenLED commandName={ 'Name' }/></div>
-                <div className={ SectionTop4CSS.section4_4LastSpdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
+                <section className={ SectionTop4CSS.section4_4LedSpdf }>
+                    <div className={ SectionTop4CSS.section4_4LastColLed }><GreenLED commandName={ 'Name' }/></div>
+                    <div className={ SectionTop4CSS.section4_4LastSpdf }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>
+                </section>
             </section>
         </div>
     );
@@ -202,28 +232,28 @@ let Section4_5 = (props) => {
         <div className={ SectionTop4CSS.section4_5 }>
             <section className={ SectionTop4CSS.section4_6InnerFrame }>
                 <div className={ SectionTop4CSS.section4_6LedSpdt }>
-                    <div><GreenLED commandName={ 'Name' }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
+                    <div><GreenLED commandName={ 'Name' } commandName={ 'Name' }/></div>
+                    <div><SPDTVertical commandName={ 'Name' } pdtStatus={props.spdtStatus }/></div>
                 </div>
                 <div className={ SectionTop4CSS.section4_6LedSpdt }>
                     <div><GreenLED commandName={ 'Name' }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
+                    <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus }/></div>
                 </div>
                 <div className={ SectionTop4CSS.section4_6LedSpdt }>
                     <div><GreenLED commandName={ 'Name' }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
+                    <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus }/></div>
                 </div>
                 <div className={ SectionTop4CSS.section4_6LedSpdt }>
                     <div><GreenLED commandName={ 'Name' }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
+                    <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus }/></div>
                 </div>
                 <div className={ SectionTop4CSS.section4_6LedSpdt }>
                     <div><GreenLED commandName={ 'Name' }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
+                    <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus }/></div>
                 </div>
                 <div className={ SectionTop4CSS.section4_6LedSpdt }>
                     <div><GreenLED commandName={ 'Name' }/></div>
-                    <div><SPDTVertical spdtStatus={props.spdtStatus }/></div>
+                    <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus }/></div>
                 </div>
             </section>
         </div>

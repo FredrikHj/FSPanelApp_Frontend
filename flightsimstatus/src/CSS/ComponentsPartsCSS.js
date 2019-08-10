@@ -441,4 +441,8 @@ export const pushBtnCircleCSS = {
     'border': 'none',
     'boxShadow': 'inset 0 32px 100px 100px black, 0 0 0px 1px black',
   }),
+  pushBtnLabel: css({
+    'marginLeft': '5px',
+    'marginBottom': '10px',
+  }),
 }

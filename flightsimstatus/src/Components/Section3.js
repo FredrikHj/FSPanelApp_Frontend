@@ -21,7 +21,7 @@ function SectionMiddle3(props){
 
   let Section3_1 = (props) => {
     return(
-        <div className={ SectionMiddle3CSS.section3_1 }> 
+        <div className={ SectionMiddle3CSS.section3_1 }>
             <div className={ SectionMiddle3CSS.section3_1Row1 }>
                 <div className={ SectionMiddle3CSS.section3_1Row1_4xSpdtContainer }>
                     <div className={ SectionMiddle3CSS.section3_1Row1_1xSpdt }>
@@ -34,13 +34,41 @@ function SectionMiddle3(props){
                     </div>
                 </div>
                 <div className={ SectionMiddle3CSS.section3_1Row1_2xRotarySpdt1xSpdt }>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
-                    <div><SPDTHorizontal spdtStatus={props.spdtStatus.test }/></div>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                    <RotarySpdt 
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                    />
+                    <div><SPDTHorizontal commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
+                    <RotarySpdt 
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                    />
                 </div>
                 <div className={ SectionMiddle3CSS.section3_1Row1_2xPushBtns }>
-                   <div><PushBtnCircle push={0.8} /></div>
-                   <div><PushBtnCircle push={0.8} /></div>
+                   <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                   <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
             </div>
 
@@ -49,26 +77,79 @@ function SectionMiddle3(props){
             </div>
             <div className={ SectionMiddle3CSS.section3_1Row3 }>
                 <div className={ SectionMiddle3CSS.section3_1Row3_2RotarySpdt1xPushBtn }>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
-                    <div className={ SectionMiddle3CSS.section3_1Row3_PushBtn2 }><PushBtnCircle push={0.8} /></div>
-                    <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                    <RotarySpdt 
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                    />
+                    <div className={ SectionMiddle3CSS.section3_1Row3_PushBtn2 }><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <RotarySpdt
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }/>
                 </div>
-                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
-             
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
-                
-                <div className={ SectionMiddle3CSS.section3_1Row3_PushBtn7 }><PushBtnCircle push={0.8} /></div>
-                <div><PushBtnCircle push={0.8} /></div>
-                <div><PushBtnCircle push={0.8} /></div>
+
+                <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }>
+                    <SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/>
+                </div>
+
+                <div className={ SectionMiddle3CSS.section3_1Row3PushBtn5To6 }>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_PushBtn7 }><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                <div className={ SectionMiddle3CSS.section3_1Row3PushBtn8To9 }>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                </div>        
             </div>
             <div className={ SectionMiddle3CSS.section3_1Row4 }>
-                <div><PushBtnCircle push={0.8} /></div>
-                <div><PushBtnCircle push={0.8} /></div>
-                <div className={ SectionMiddle3CSS.section3_1Row3_Rotary3 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
-                <div><PushBtnCircle push={0.8} /></div>
-                <div><PushBtnCircle push={0.8} /></div>
-                <div><PushBtnCircle push={0.8} /></div>
+                <div className={ SectionMiddle3CSS.section3_1Row4Push1To2 }>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row3_Rotary3 }>
+                    <RotarySpdt
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                    />
+                </div>
+                <div className={ SectionMiddle3CSS.section3_1Row4Push4To6 }>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                </div>
             </div>
             <div className={ SectionMiddle3CSS.section3_1Row5 }>
                 <div className={ SectionMiddle3CSS.section3_1Row5_Spdt1To3 }>
@@ -77,15 +158,15 @@ function SectionMiddle3(props){
                     <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                 </div>
                 <div className={ SectionMiddle3CSS.section3_1Row5_PushBtns4To10 }>
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                     
-                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
 
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
             </div>
         </div>
@@ -97,14 +178,14 @@ function SectionMiddle3(props){
             <section className={ SectionMiddle3CSS.section3_2Row1 }>
                 <GreenLED commandName={ 'Name' }/>
                 <div className={ SectionMiddle3CSS.section3_2Row1_PushBtn2To3_5To6 }>
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
 
                 <div className={ SectionMiddle3CSS.section3_2Row1_HorizontalSpdt4 }><SPDTHorizontal spdtStatus={props.spdtStatus.test }/></div>
                 <div className={ SectionMiddle3CSS.section3_2Row1_PushBtn2To3_5To6 }>
-                    <div><PushBtnCircle push={0.8} /></div>
-                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
                 <GreenLED commandName={ 'Name' }/>
             </section>
@@ -114,20 +195,20 @@ function SectionMiddle3(props){
                 <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt2_5 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                 <section className={ SectionMiddle3CSS.section3_2Row2_PushBtn2To4_9To10Container }>
                     <div className={ SectionMiddle3CSS.section3_2Row2_PushBtn2To4_9To10 }>
-                        <div><PushBtnCircle push={0.8} /></div>
-                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                     </div>
                     <div className={ SectionMiddle3CSS.section3_2Row2_PushBtn2To4_9To10 }>
-                        <div><PushBtnCircle push={0.8} /></div>
-                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                     </div>
                 </section>
                 <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt2_5 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                 <div className={ SectionMiddle3CSS.section3_2Row2_VericalSpdt1_6 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
 
                 <div className={ SectionMiddle3CSS.section3_2Row2_PushBtn7To8 }>
-                        <div><PushBtnCircle push={0.8} /></div>
-                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
             </section>
 
@@ -139,16 +220,30 @@ function SectionMiddle3(props){
                     </div>
                     <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>  
                         <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
-                        <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
-                    </div>
+                         <RotarySpdt
+                            rotarySpdfPosStr1= { ' Name = 1' }
+                            rotarySpdfPosStr2= { ' Name = 2' }
+                            rotarySpdfPosStr3= { ' Name = 3' }
+                            rotarySpdfPosStr4= { ' Name = 4' }
+                            rotarySpdfPosStr5= { ' Name = 5' }
+                            rotarySpdfPosStr6= { ' Name = 6' }
+                            rotarySpdfPosStr7= { ' Name = 7' }
+                            rotarySpdfPosStr8= { ' Name = 8' }
+                            rotarySpdfPosStr9= { ' Name = 9' }
+                            rotarySpdfPosStr10= { ' Name = 10' }
+                            rotarySpdfPosStr11= { ' Name = 11' }
+                            rotarySpdfPosStr12= { ' Name = 12' }
+                            rotaryStatus={ props.spdtStatus.rotaryStatus }
+                        />
+                                        </div>
                 </div>
 
                 <div className={ SectionMiddle3CSS.section3_2Row3_PushBtn3To4_9Container }>
                     <div className={ SectionMiddle3CSS.section3_2Row3_PushBtn3To4_9 }>
-                        <div><PushBtnCircle push={0.8} /></div>
-                        <div><PushBtnCircle push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                     </div>
-                    <div><PushBtnCircle push={0.8} /></div>
+                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
 
                 <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt5To6_10To11 }>  

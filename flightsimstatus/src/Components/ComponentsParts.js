@@ -29,7 +29,7 @@ export let RedLED = (props) => {
 export let SPDTVertical = (props) => {
   return(
     <> 
-      <p className={ spdtCSS.spdtLabelTop }> { props.commandName } </p>
+      <p className={ spdtCSS.spdtLabelTop }>{ props.commandName }</p>
       <div className={ spdtCSS.spdtVerticalContainer }>
         <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
         <label className={ spdtCSS.spdtVerticalSlider }></label>
@@ -43,7 +43,7 @@ export let SPDTVertical = (props) => {
 export let SPDTHorizontal = (props) => {
   return(
     <> 
-      <p className={ spdtCSS.spdtLabelTop }>on</p>
+      <p className={ spdtCSS.spdtLabelTop }>{ props.commandName }</p>
       <div className={ spdtCSS.spdtHorizontalContainer }>
         <input type="checkbox" className={ spdtCSS.spdtVerticalChhide }/>
         <label className={ spdtCSS.spdtVerticalSlider }></label>
@@ -188,7 +188,7 @@ export let PushBtnCircle = (props) => {
   });
   return(
     <div className={ pushBtnCircleCSS.pushBtnContainer }>
-      <p className={ pushBtnCircleCSS.pushBtnLabel }>'rgfed'</p>
+      <p className={ pushBtnCircleCSS.pushBtnLabel }>{ props.commandName }</p>
       <div className={ pushBtnCircleCSS.pushBtnStructure }>
         <div className={ pushBtn }></div>
       </div>
