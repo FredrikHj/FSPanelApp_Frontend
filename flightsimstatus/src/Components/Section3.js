@@ -157,16 +157,20 @@ function SectionMiddle3(props){
                     <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                     <div><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                 </div>
-                <div className={ SectionMiddle3CSS.section3_1Row5_PushBtns4To10 }>
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
-                    
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
-
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
-                    <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                <div className={ SectionMiddle3CSS.section3_1Row5_PushBtn4To10Container }>    
+                    <div className={ SectionMiddle3CSS.section3_1Row5_PushBtn4To6 }>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    </div>
+                    <div className={ SectionMiddle3CSS.section3_1Row5_PushBtn7 }>
+                        <PushBtnCircle commandName={ 'Name' } push={0.8} />
+                    </div>
+                    <div className={ SectionMiddle3CSS.section3_1Row5_PushBtn8To10 }>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                        <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -182,8 +186,9 @@ function SectionMiddle3(props){
                     <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
 
-                <div className={ SectionMiddle3CSS.section3_2Row1_HorizontalSpdt4 }><SPDTHorizontal spdtStatus={props.spdtStatus.test }/></div>
-                <div className={ SectionMiddle3CSS.section3_2Row1_PushBtn2To3_5To6 }>
+                <div className={ SectionMiddle3CSS.section3_2Row1_HorizontalSpdt4 }><SPDTHorizontal commandName={ 'Name' }  spdtStatus={props.spdtStatus.test }/></div>
+               
+               <div className={ SectionMiddle3CSS.section3_2Row1_PushBtn2To3_5To6 }>
                     <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                     <div><PushBtnCircle commandName={ 'Name' } push={0.8} /></div>
                 </div>
@@ -215,12 +220,59 @@ function SectionMiddle3(props){
             <section className={ SectionMiddle3CSS.section3_2Row3 }>
                 <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8Container }>
                     <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>                 
-                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 } ><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
-                        <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 } >
+                            <RotarySpdt 
+                                 rotarySpdfPosStr1= { ' Name = 1' }
+                                 rotarySpdfPosStr2= { ' Name = 2' }
+                                 rotarySpdfPosStr3= { ' Name = 3' }
+                                 rotarySpdfPosStr4= { ' Name = 4' }
+                                 rotarySpdfPosStr5= { ' Name = 5' }
+                                 rotarySpdfPosStr6= { ' Name = 6' }
+                                 rotarySpdfPosStr7= { ' Name = 7' }
+                                 rotarySpdfPosStr8= { ' Name = 8' }
+                                 rotarySpdfPosStr9= { ' Name = 9' }
+                                 rotarySpdfPosStr10= { ' Name = 10' }
+                                 rotarySpdfPosStr11= { ' Name = 11' }
+                                 rotarySpdfPosStr12= { ' Name = 12' }
+                                 rotaryStatus={ props.spdtStatus.rotaryStatus }
+                            />
+                        </div>
+                        <div>
+                            <RotarySpdt
+                                rotarySpdfPosStr1= { ' Name = 1' }
+                                rotarySpdfPosStr2= { ' Name = 2' }
+                                rotarySpdfPosStr3= { ' Name = 3' }
+                                rotarySpdfPosStr4= { ' Name = 4' }
+                                rotarySpdfPosStr5= { ' Name = 5' }
+                                rotarySpdfPosStr6= { ' Name = 6' }
+                                rotarySpdfPosStr7= { ' Name = 7' }
+                                rotarySpdfPosStr8= { ' Name = 8' }
+                                rotarySpdfPosStr9= { ' Name = 9' }
+                                rotarySpdfPosStr10= { ' Name = 10' }
+                                rotarySpdfPosStr11= { ' Name = 11' }
+                                rotarySpdfPosStr12= { ' Name = 12' }
+                                rotaryStatus={ props.spdtStatus.rotaryStatus }
+                            />
+                        </div>
                     </div>
                     <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>  
-                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
-                         <RotarySpdt
+                        <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1_8 }>
+                            <RotarySpdt
+                                 rotarySpdfPosStr1= { ' Name = 1' }
+                                 rotarySpdfPosStr2= { ' Name = 2' }
+                                 rotarySpdfPosStr3= { ' Name = 3' }
+                                 rotarySpdfPosStr4= { ' Name = 4' }
+                                 rotarySpdfPosStr5= { ' Name = 5' }
+                                 rotarySpdfPosStr6= { ' Name = 6' }
+                                 rotarySpdfPosStr7= { ' Name = 7' }
+                                 rotarySpdfPosStr8= { ' Name = 8' }
+                                 rotarySpdfPosStr9= { ' Name = 9' }
+                                 rotarySpdfPosStr10= { ' Name = 10' }
+                                 rotarySpdfPosStr11= { ' Name = 11' }
+                                 rotarySpdfPosStr12= { ' Name = 12' }
+                                 rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                        </div>
+                        <RotarySpdt
                             rotarySpdfPosStr1= { ' Name = 1' }
                             rotarySpdfPosStr2= { ' Name = 2' }
                             rotarySpdfPosStr3= { ' Name = 3' }
@@ -235,7 +287,7 @@ function SectionMiddle3(props){
                             rotarySpdfPosStr12= { ' Name = 12' }
                             rotaryStatus={ props.spdtStatus.rotaryStatus }
                         />
-                                        </div>
+                    </div>
                 </div>
 
                 <div className={ SectionMiddle3CSS.section3_2Row3_PushBtn3To4_9Container }>
@@ -250,16 +302,79 @@ function SectionMiddle3(props){
 
                     <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8Container }>
                         <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>                 
-                            <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                            <div>
+                                <RotarySpdt rotarySpdfPosStr1= { ' Name = 1' }
+                                    rotarySpdfPosStr2= { ' Name = 2' }
+                                    rotarySpdfPosStr3= { ' Name = 3' }
+                                    rotarySpdfPosStr4= { ' Name = 4' }
+                                    rotarySpdfPosStr5= { ' Name = 5' }
+                                    rotarySpdfPosStr6= { ' Name = 6' }
+                                    rotarySpdfPosStr7= { ' Name = 7' }
+                                    rotarySpdfPosStr8= { ' Name = 8' }
+                                    rotarySpdfPosStr9= { ' Name = 9' }
+                                    rotarySpdfPosStr10= { ' Name = 10' }
+                                    rotarySpdfPosStr11= { ' Name = 11' }
+                                    rotarySpdfPosStr12= { ' Name = 12' }
+                                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                                />
+                            </div>
                             <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt6_11 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
                         </div>
 
                         <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt1To2_7To8 }>  
-                            <div><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
-                            <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt6_11 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                            <div>
+                                <RotarySpdt
+                                    rotarySpdfPosStr1= { ' Name = 1' }
+                                    rotarySpdfPosStr2= { ' Name = 2' }
+                                    rotarySpdfPosStr3= { ' Name = 3' }
+                                    rotarySpdfPosStr4= { ' Name = 4' }
+                                    rotarySpdfPosStr5= { ' Name = 5' }
+                                    rotarySpdfPosStr6= { ' Name = 6' }
+                                    rotarySpdfPosStr7= { ' Name = 7' }
+                                    rotarySpdfPosStr8= { ' Name = 8' }
+                                    rotarySpdfPosStr9= { ' Name = 9' }
+                                    rotarySpdfPosStr10= { ' Name = 10' }
+                                    rotarySpdfPosStr11= { ' Name = 11' }
+                                    rotarySpdfPosStr12= { ' Name = 12' }
+                                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                                />
+                            </div>
+                            <div className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt6_11 }>
+                                <RotarySpdt
+                                    rotarySpdfPosStr1= { ' Name = 1' }
+                                    rotarySpdfPosStr2= { ' Name = 2' }
+                                    rotarySpdfPosStr3= { ' Name = 3' }
+                                    rotarySpdfPosStr4= { ' Name = 4' }
+                                    rotarySpdfPosStr5= { ' Name = 5' }
+                                    rotarySpdfPosStr6= { ' Name = 6' }
+                                    rotarySpdfPosStr7= { ' Name = 7' }
+                                    rotarySpdfPosStr8= { ' Name = 8' }
+                                    rotarySpdfPosStr9= { ' Name = 9' }
+                                    rotarySpdfPosStr10= { ' Name = 10' }
+                                    rotarySpdfPosStr11= { ' Name = 11' }
+                                    rotarySpdfPosStr12= { ' Name = 12' }
+                                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                                />
+                            </div>
                         </div>
                     </div>
-                        <div  className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt12 }><RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/></div>
+                        <div  className={ SectionMiddle3CSS.section3_2Row3_RotarySpdt12 }>
+                            <RotarySpdt
+                                rotarySpdfPosStr1= { ' Name = 1' }
+                                rotarySpdfPosStr2= { ' Name = 2' }
+                                rotarySpdfPosStr3= { ' Name = 3' }
+                                rotarySpdfPosStr4= { ' Name = 4' }
+                                rotarySpdfPosStr5= { ' Name = 5' }
+                                rotarySpdfPosStr6= { ' Name = 6' }
+                                rotarySpdfPosStr7= { ' Name = 7' }
+                                rotarySpdfPosStr8= { ' Name = 8' }
+                                rotarySpdfPosStr9= { ' Name = 9' }
+                                rotarySpdfPosStr10= { ' Name = 10' }
+                                rotarySpdfPosStr11= { ' Name = 11' }
+                                rotarySpdfPosStr12= { ' Name = 12' }
+                                rotaryStatus={ props.spdtStatus.rotaryStatus }
+                            />
+                        </div>
                 </div>
             </section>
         </div>
@@ -269,9 +384,37 @@ let Section3_3 = (props) => {
     return(
         <div className={ SectionMiddle3CSS.section3_3 }>
             <section className={ SectionMiddle3CSS.section3_3Row1 }>
-                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <RotarySpdt
+                    rotarySpdfPosStr1= { ' Name = 1' }
+                    rotarySpdfPosStr2= { ' Name = 2' }
+                    rotarySpdfPosStr3= { ' Name = 3' }
+                    rotarySpdfPosStr4= { ' Name = 4' }
+                    rotarySpdfPosStr5= { ' Name = 5' }
+                    rotarySpdfPosStr6= { ' Name = 6' }
+                    rotarySpdfPosStr7= { ' Name = 7' }
+                    rotarySpdfPosStr8= { ' Name = 8' }
+                    rotarySpdfPosStr9= { ' Name = 9' }
+                    rotarySpdfPosStr10= { ' Name = 10' }
+                    rotarySpdfPosStr11= { ' Name = 11' }
+                    rotarySpdfPosStr12= { ' Name = 12' }
+                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                />
                 <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
-                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <RotarySpdt
+                    rotarySpdfPosStr1= { ' Name = 1' }
+                    rotarySpdfPosStr2= { ' Name = 2' }
+                    rotarySpdfPosStr3= { ' Name = 3' }
+                    rotarySpdfPosStr4= { ' Name = 4' }
+                    rotarySpdfPosStr5= { ' Name = 5' }
+                    rotarySpdfPosStr6= { ' Name = 6' }
+                    rotarySpdfPosStr7= { ' Name = 7' }
+                    rotarySpdfPosStr8= { ' Name = 8' }
+                    rotarySpdfPosStr9= { ' Name = 9' }
+                    rotarySpdfPosStr10= { ' Name = 10' }
+                    rotarySpdfPosStr11= { ' Name = 11' }
+                    rotarySpdfPosStr12= { ' Name = 12' }
+                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                />
             </section>
             <section className={ SectionMiddle3CSS.section3_3Row2 }>
                 <div className={ SectionMiddle3CSS.section3_1Row3_Spdt4 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
@@ -305,7 +448,21 @@ let Section3_4 = (props) => {
                 </div> 
             </section>
             <section className={ SectionMiddle3CSS.section3_4Row2 }>
-                <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+                <RotarySpdt
+                    rotarySpdfPosStr1= { ' Name = 1' }
+                    rotarySpdfPosStr2= { ' Name = 2' }
+                    rotarySpdfPosStr3= { ' Name = 3' }
+                    rotarySpdfPosStr4= { ' Name = 4' }
+                    rotarySpdfPosStr5= { ' Name = 5' }
+                    rotarySpdfPosStr6= { ' Name = 6' }
+                    rotarySpdfPosStr7= { ' Name = 7' }
+                    rotarySpdfPosStr8= { ' Name = 8' }
+                    rotarySpdfPosStr9= { ' Name = 9' }
+                    rotarySpdfPosStr10= { ' Name = 10' }
+                    rotarySpdfPosStr11= { ' Name = 11' }
+                    rotarySpdfPosStr12= { ' Name = 12' }
+                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                />
                 <section className={ SectionMiddle3CSS.section3_4Row2VerticalSpdt2To4 }>
                     <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                     <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
@@ -313,7 +470,21 @@ let Section3_4 = (props) => {
                 </section>
             </section>
             <section className={ SectionMiddle3CSS.section3_4Row3 }>
-               <RotarySpdt rotaryStatus={ props.spdtStatus.rotaryStatus }/>
+               <RotarySpdt
+                    rotarySpdfPosStr1= { ' Name = 1' }
+                    rotarySpdfPosStr2= { ' Name = 2' }
+                    rotarySpdfPosStr3= { ' Name = 3' }
+                    rotarySpdfPosStr4= { ' Name = 4' }
+                    rotarySpdfPosStr5= { ' Name = 5' }
+                    rotarySpdfPosStr6= { ' Name = 6' }
+                    rotarySpdfPosStr7= { ' Name = 7' }
+                    rotarySpdfPosStr8= { ' Name = 8' }
+                    rotarySpdfPosStr9= { ' Name = 9' }
+                    rotarySpdfPosStr10= { ' Name = 10' }
+                    rotarySpdfPosStr11= { ' Name = 11' }
+                    rotarySpdfPosStr12= { ' Name = 12' }
+                    rotaryStatus={ props.spdtStatus.rotaryStatus }
+                />
                <section className={ SectionMiddle3CSS.section3_4Row3VerticalSpdt2To3 }>
                     <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>
                     <div className={ SectionMiddle3CSS.section3_3Row1VerticalSpdt2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.spdtStatus.test }/></div>

@@ -176,21 +176,21 @@ let Section4_4 = (props) => {
         <div className={ SectionTop4CSS.section4_4 }>
             <section className={ SectionTop4CSS.section4_4LedSpdf }>
                 <section className={ SectionTop4CSS.section4_4TopRowRotarySpdf }>
-                <RotarySpdt
-                    rotarySpdfPosStr1= { ' Name = 1' }
-                    rotarySpdfPosStr2= { ' Name = 2' }
-                    rotarySpdfPosStr3= { ' Name = 3' }
-                    rotarySpdfPosStr4= { ' Name = 4' }
-                    rotarySpdfPosStr5= { ' Name = 5' }
-                    rotarySpdfPosStr6= { ' Name = 6' }
-                    rotarySpdfPosStr7= { ' Name = 7' }
-                    rotarySpdfPosStr8= { ' Name = 8' }
-                    rotarySpdfPosStr9= { ' Name = 9' }
-                    rotarySpdfPosStr10= { ' Name = 10' }
-                    rotarySpdfPosStr11= { ' Name = 11' }
-                    rotarySpdfPosStr12= { ' Name = 12' }
-                    rotaryStatus={ props.spdtStatus.rotaryStatus }
-                />
+                    <RotarySpdt
+                        rotarySpdfPosStr1= { ' Name = 1' }
+                        rotarySpdfPosStr2= { ' Name = 2' }
+                        rotarySpdfPosStr3= { ' Name = 3' }
+                        rotarySpdfPosStr4= { ' Name = 4' }
+                        rotarySpdfPosStr5= { ' Name = 5' }
+                        rotarySpdfPosStr6= { ' Name = 6' }
+                        rotarySpdfPosStr7= { ' Name = 7' }
+                        rotarySpdfPosStr8= { ' Name = 8' }
+                        rotarySpdfPosStr9= { ' Name = 9' }
+                        rotarySpdfPosStr10= { ' Name = 10' }
+                        rotarySpdfPosStr11= { ' Name = 11' }
+                        rotarySpdfPosStr12= { ' Name = 12' }
+                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                    />
                 </section>
                 <section className={ SectionTop4CSS.section4_4Spdfx2Container }>
                     <div className={ SectionTop4CSS.section4_4Spdfx2 }><SPDTVertical commandName={ 'Name' } spdtStatus={props.test } /></div>

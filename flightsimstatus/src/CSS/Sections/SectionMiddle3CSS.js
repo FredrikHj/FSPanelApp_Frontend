@@ -5,22 +5,22 @@ import { SectionCommonRoules } from '../GenerallCSS.js';
 export const SectionMiddle3CSS = {
     section3: css({
         'width': '100%',
-        'height': '510px',
+        'height': '570px',
         'display': 'flex',
         'flexDirection': 'row',
     }),
     section3_1: css({
+        'position': 'relative',
         'display': 'flex',
         'flexDirection': 'column',   
-        'position': 'relative',
         'bottom': '0',
-        'width': '45.5%',
+        'width': '1550px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
     section3_1Row1: css({
         'position': 'relative',
-        'top': '40px',
+        'top': '60px',
         'left': '3%',
         'width': '85%',
         'height': '120px',
@@ -47,7 +47,8 @@ export const SectionMiddle3CSS = {
         'justifyContent': 'space-between',
     }),
     section3_1Row1_2xRotarySpdt1xSpdt: css({
-        'marginLeft': '50px',
+        'position': 'relative',
+        'left': '50px',
         'width': '500px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -56,14 +57,16 @@ export const SectionMiddle3CSS = {
     section3_1Row1_2xPushBtns: css({
         'position': 'relative',
         'top': '-50px',
-        'left': '25px',
+        'left': '-10px',
         'display': 'flex',
         'flexDirection': 'column',
         'justifyContent': 'space-between',
         'height': '170px',
     }),
     section3_1Row2: css({
-        'marginTop': '-60px',
+        'position': 'relative',
+        'top': '30px',
+        'left': '220px',
         'width': '1175px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -72,7 +75,7 @@ export const SectionMiddle3CSS = {
     // ===========================
     section3_1Row3: css({
         'position': 'relative',
-        'top': '5px',
+        'top': '-30px',
         'left': '130px',
         'width': '1100px',
         'display': 'flex',
@@ -95,7 +98,7 @@ export const SectionMiddle3CSS = {
     }),
     section3_1Row3PushBtn5To6:css({
         'position': 'relative',
-        'width': '175px',
+        'width': '140px',
         'top': '10px',
         'left': '-10px',
         'display': 'flex',
@@ -111,7 +114,7 @@ export const SectionMiddle3CSS = {
         'position': 'relative',
         'top': '10px',
         'left': '230px',
-        'width': '175px',
+        'width': '140px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -134,7 +137,7 @@ export const SectionMiddle3CSS = {
     section3_1Row4Push1To2: css({
         'position': 'relative',
         'top': '-60px',
-        'width': '175px',
+        'width': '140px',
         'left': '50px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -142,14 +145,14 @@ export const SectionMiddle3CSS = {
     }),
     section3_1Row3_Rotary3: css({
         'position': 'relative',
-        'top': '-60px',
-        'left': '85px',
+        'top': '-80px',
+        'left': '40px',
     }),
     section3_1Row4Push4To6: css({
         'position': 'relative',
         'top': '-60px',
-        'width': '280px',
-        'left': '55px',
+        'width': '240px',
+        'left': '-29px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -171,35 +174,54 @@ export const SectionMiddle3CSS = {
         'flexDirection': 'row',
         'justifyContent': 'space-between',
     }),
-    section3_1Row5_PushBtns4To10: css({
+    section3_1Row5_PushBtn4To10Container: css({
         'marginLeft': '278px',
         'width': '1231px',
+        'display': 'flex',
+        'flexDirection': 'row',
+    }),
+    section3_1Row5_PushBtn4To6: css({
+        'marginLeft': '-16px',
+        'width': '223px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_1Row5_PushBtn7: css({
+        'marginLeft': '114px',
+        'marginRight': '135px',
+    }),
+    section3_1Row5_PushBtn8To10: css({
+        'marginLeft': '-15px',
+        'width': '235px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
     }),
     // ===========================================================
     section3_2: css({
-        'width': '50%',
+        'position': 'relative',
+        'width': '1300px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
     section3_2Row1: css({
+        'marginTop': '20px',
         'width': '100%',
         'display': 'flex',
         'flexDirection': 'row',
-        'justifyContent': 'space-around',
-        'marginTop': '20px',
+        //'justifyContent': 'space-between',
     }),
     section3_2Row1_PushBtn2To3_5To6: css({
+        'marginTop': '-30px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
-        'width': '50%',
+        'width': '600px',
     }),
     section3_2Row1_HorizontalSpdt4: css({
         'position': 'relative',
-        'top': '-29px',
+        'top': '29px',
         'left': '25px',
     }),
     // ===========================
@@ -256,18 +278,19 @@ export const SectionMiddle3CSS = {
         'justifyContent': 'space-between',
     }),
     section3_2Row3_RotarySpdt1To2_7To8: css({
-        'marginTop': '20px',
-        'width': '240px',
+        'marginTop': '60px',
+        'marginLeft': '120px',
+        'width': '370px',
         'display': 'flex',
         'flexDirection': 'row',
-        'justifyContent': 'space-around',
+        'justifyContent': 'space-between',
     }),
     section3_2Row3_RotarySpdt1_8: css({
         'marginTop': '-40px',
     }),
     section3_2Row3_PushBtn3To4_9Container: css({
         'position': 'relative',
-        'top': '-45px',
+        'top': '-20px',
         'left': '-47px',
         'display': 'flex',
         'flexDirection': 'column',
@@ -284,11 +307,11 @@ export const SectionMiddle3CSS = {
         'marginTop': '-40px',
     }),
     section3_2Row3_RotarySpdt5To6_10To11: css({
-        'marginTop': '20px',
+        'marginTop': '60px',
         'width': '240px',
         'display': 'flex',
         'flexDirection': 'row',
-        'justifyContent': 'space-around',
+        'justifyContent': 'space-between',
         'alignItems': 'center',
     }),
     section3_2Row3_RotarySpdt12: css({
@@ -296,6 +319,7 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_3: css({
+        'position': 'relative',
         'width': '14%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
@@ -327,6 +351,7 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_4: css({
+        'position': 'relative',
         'display': 'flex',
         'flexDirection': 'column',
         'width': '13%',
@@ -392,6 +417,7 @@ export const SectionMiddle3CSS = {
     }),
     // ===========================================================
     section3_5: css({
+        'position': 'relative',
         'width': '13%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,

@@ -39,6 +39,7 @@ export const SectionsCSS = {
         'fontWeight': 'bold',
     }),
     sectionContainer1: css({
+        'position': 'relative',
         'marginTop': '0px',
     }),
     sectionContainer2: css({
@@ -51,6 +52,7 @@ export const SectionsCSS = {
         'marginTop': '0px',
     }),
     sectionContainer5: css({
+        'position': 'relative',
         'marginTop': '0px',
     }),
     sectionActiveFSParts: css({

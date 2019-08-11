@@ -4,7 +4,7 @@ import { SectionCommonRoules } from '../GenerallCSS.js';
 // ======================== Section Top 5 =========================
 export const SectionTop5CSS = {
     sectionTop5: css({
-        'width': '100%',
+        'position': 'relative',
         'height': '151px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -16,11 +16,11 @@ export const SectionTop5CSS = {
         'flexDirection': 'row',
     }),
     section5_1: css({
-        'width': '22%',
-        'height': '141px',
         'position': 'relative',
         'top': '10px',
         'bottom': '0',
+        'width': '600px',
+        'height': '141px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -31,13 +31,15 @@ export const SectionTop5CSS = {
     }),
     // ===========================================================
     section5_2: css({
-        'width': '12%',
+        'position': 'relative',
+        'width': '300px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
     // ===========================================================
     section5_3: css({
-        'width': '26%',
+        'position': 'relative',
+        'width': '700px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -93,7 +95,8 @@ export const SectionTop5CSS = {
     }),
     // ===========================================================
     section5_4: css({
-        'width': '35%',
+        'position': 'relative',
+        'width': '800px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -117,17 +120,18 @@ export const SectionTop5CSS = {
     section5_4Row4Led4: css({
         'marginTop': '-15px',
     }),
+    // ===========================================================
     section5_5: css({
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
-        'width': '24%',
+        'width': '500px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
     // ===========================================================
     section5_6: css({
-        'width': '30%',
+        'width': '600px',
         'height': '141px',
         'position': 'relative',
         'top': '10px',

@@ -10,11 +10,11 @@ export const SectionTop4CSS = {
         'flexDirection': 'row',
     }),
     section4_1: css({
-        'display': 'flex',
-        'flexDirection': 'row',   
         'position': 'relative',
         'bottom': '0',
-        'width': '15%',
+        'display': 'flex',
+        'flexDirection': 'row',   
+        'width': '400px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -81,7 +81,8 @@ export const SectionTop4CSS = {
     }),
     // ===========================================================
     section4_2: css({
-        'width': '20%',
+        'position': 'relative',
+        'width': '700px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
@@ -90,7 +91,7 @@ export const SectionTop4CSS = {
         'flexDirection': 'row',
         'justifyContent': 'space-around',
         'width': '100%',
-        'marginTop': '20px',
+        'marginTop': '30px',
     }),
     section4_2Row1Middle: css({
         'display': 'flex',
@@ -102,7 +103,7 @@ export const SectionTop4CSS = {
     }),
     section4_2Row2: css({
         'marginTop': '10px',
-        'marginLeft': '15px',
+        'marginLeft': '50px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
@@ -137,6 +138,7 @@ export const SectionTop4CSS = {
     }),
     // ===========================================================
     section4_3: css({
+        'position': 'relative',
         'width': '15%',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
@@ -146,11 +148,11 @@ export const SectionTop4CSS = {
         'flexDirection': 'row',
         'justifyContent': 'space-between',
         'width': '250px',
-        'marginTop': '20px',
+        'marginTop': '25px',
         'marginLeft': 'calc(50% - 125px)',
     }),
     section4_3Row2: css({
-        'marginTop': '5px',
+        'marginTop': '10px',
         'marginLeft': '50px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -174,9 +176,10 @@ export const SectionTop4CSS = {
     }),
     // ===========================================================
     section4_4: css({
+        'position': 'relative',
         'display': 'flex',
         'flexDirection': 'row',
-        'width': '22%',
+        'width': '800px',
         'paddingLeft': '40px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
@@ -193,8 +196,8 @@ export const SectionTop4CSS = {
         'flexDirection': 'column',
         'justifyContent': 'space-between',
         'width': '80px',
-        'marginTop': '10px',
-        'marginLeft': '40px',
+        'marginTop': '15px',
+        'marginLeft': '60px',
     }),
     section4_4TopRowRotarySpdf: css({
         'marginTop': '30px',
@@ -231,13 +234,14 @@ export const SectionTop4CSS = {
     }),
     // ===========================================================
     section4_5: css({
-        'width': '15%',
+        'position': 'relative',
+        'width': '450px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
     section4_6: css({
         'bottom': '0',
-        'width': '15%',
+        'width': '500px',
         'backgroundColor': SectionCommonRoules.colorGrey,
     }),
     section4_6InnerFrame: css({
@@ -255,4 +259,4 @@ export const SectionTop4CSS = {
         'width': '80px',
         'height': '200px',
     }),
-}
+};
