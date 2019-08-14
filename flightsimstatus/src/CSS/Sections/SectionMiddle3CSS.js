@@ -201,19 +201,19 @@ export const SectionMiddle3CSS = {
     // ===========================================================
     section3_2: css({
         'position': 'relative',
-        'width': '1300px',
+        'width': '1400px',
         'backgroundColor': SectionCommonRoules.colorGrey,
         'borderRight': SectionCommonRoules.border3B,
     }),
     section3_2Row1: css({
-        'marginTop': '20px',
+        'marginTop': '50px',
         'width': '100%',
         'display': 'flex',
         'flexDirection': 'row',
         //'justifyContent': 'space-between',
     }),
     section3_2Row1_PushBtn2To3_5To6: css({
-        'marginTop': '-30px',
+        'marginTop': '-50px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-around',
@@ -234,17 +234,25 @@ export const SectionMiddle3CSS = {
         'alignItems': 'Center',
         'marginBottom': '-33px',
     }),
-    section3_2Row2_VericalSpdt1_6: css({
+    section3_2Row2_VerticalSpdt1_2: css({
+        'width': '340px',
+        'marginLeft': '130px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
+    section3_2Row2_VerticalSpdt1_6: css({
         'position': 'relative',
         'top': '-49px',
-        'left': '25px',
     }),
-    section3_2Row2_VericalSpdt2_5: css({
+    section3_2Row2_VerticalSpdt2_5: css({
         'position': 'relative',
         'top': '-29px',
-        'left': '25px',
     }),
     section3_2Row2_PushBtn2To4_9To10Container: css({
+        'marginTop': '20px',
+        'marginLeft': '-50px',
+        'height': '170px',
         'display': 'flex',
         'flexDirection': 'column',
         'justifyContent': 'space-between',
@@ -263,6 +271,13 @@ export const SectionMiddle3CSS = {
         'flexDirection': 'column',
         'justifyContent': 'space-between',
     }),
+    section3_2Row2_VerticalSpdt5_6: css({
+        'width': '340px',
+        'marginLeft': '230px',
+        'display': 'flex',
+        'flexDirection': 'row',
+        'justifyContent': 'space-between',
+    }),
     section3_2Row3: css({
         'width': '95%',
         'marginLeft': '10px',
@@ -273,6 +288,9 @@ export const SectionMiddle3CSS = {
         //'width': '90%',
     }),
     section3_2Row3_RotarySpdt1To2_7To8Container: css({
+        'position': 'relative',
+        'top': '-30px',
+        'left': '-5px',
         'display': 'flex',
         'flexDirection': 'column',
         'justifyContent': 'space-between',
@@ -290,14 +308,16 @@ export const SectionMiddle3CSS = {
     }),
     section3_2Row3_PushBtn3To4_9Container: css({
         'position': 'relative',
-        'top': '-20px',
-        'left': '-47px',
+        'top': '-55px',
+        'left': '-120px',
         'display': 'flex',
         'flexDirection': 'column',
         'justifyContent': 'center',
         'alignItems': 'center',
     }),
     section3_2Row3_PushBtn3To4_9: css({
+        'marginTop': '120px',
+        'marginBottom': '20px',
         'width': '130px',
         'display': 'flex',
         'flexDirection': 'row',
@@ -307,12 +327,20 @@ export const SectionMiddle3CSS = {
         'marginTop': '-40px',
     }),
     section3_2Row3_RotarySpdt5To6_10To11: css({
-        'marginTop': '60px',
+        'marginTop': '0',
         'width': '240px',
         'display': 'flex',
         'flexDirection': 'row',
         'justifyContent': 'space-between',
         'alignItems': 'center',
+    }),
+    section3_2Row3_RotarySpdt5To6_11To12Container: css({
+        'position': 'relative',
+        'top': '-30px',
+        'left': '-290px',
+        'display': 'flex',
+        'flexDirection': 'column',
+        'justifyContent': 'space-between',
     }),
     section3_2Row3_RotarySpdt12: css({
         'marginTop': '-66px',

@@ -10,9 +10,9 @@ function ActiveFSParts(props){
                 <table id="fsActiveTable">
                     <thead>
                         <tr>
-                            <th rowspan="2">FS Server</th>
-                            <th rowspan="2">FSUIPC</th>
-                            <th colspan="6">FS Styrkort</th>
+                            <th rowSpan="2">FS Server</th>
+                            <th rowSpan="2">FSUIPC</th>
+                            <th colSpan="6">FS Styrkort</th>
                         </tr>
                     </thead>
                     <tbody>

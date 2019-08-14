@@ -214,7 +214,6 @@ let dbFlightCommandsName = {
             LowerDU: 'Lower DU', /*(Monitor 1?)*/ EngPri: 'ENG PRI', Norm: 'NORM', Nd: 'ND'
         },
 },
-
     LIGHT_CONTROL: {
         Cockpitlights: {
             Backgrund: 'BACKGROUND', AfdsFlood: 'AFDS FLOOD', Flood: 'FLOOD', Instrumentpanel: 'INSTRUMENTPANEL', Panel: 'PANEL', 

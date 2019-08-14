@@ -31,11 +31,11 @@ const server = app.listen(port, () =>  console.log(`Server körs på port --> ${
 // Connect the Arduino boards 
 let boardVs1_2 = new jFive.Board({ port: // Runt skrivaren usb = 'COM11',
 // Bakom datorn
-'COM3'});
+'COM9'});
 // ============================ Connect the Arduino and phidget boards =========================================
 let vs1_13Status = 0;
 boardVs1_2.on("ready", function () {
-  let lcd = new jFive.LCD({ 
+/*   let lcd = new jFive.LCD({ 
    controller: "PCF8574AT",
     pins: [
       20, //SDA
@@ -46,34 +46,34 @@ boardVs1_2.on("ready", function () {
     cols: 20
   });
   lcd.cursor(0,0); 
-  lcd.print("Hi, it is working :)");
+  lcd.print("Hi, it is working :)"); */
 
   // Connect the Phidget server
-  let ledConn = new phidget22.Connection(3003, 'localhost');
+/*   let ledConn = new phidget22.Connection(3003, 'localhost');
   ledConn.connect().then(function () {
     console.log("Ansluten");
   }).catch(function (err) {
     console.error("Anslutningsfel", err);
-  });  
+  });   */
   
   // Initilize LED Channels ====================================================================================
-  let LEDBoard1ChannelObj = {};
+/*   let LEDBoard1ChannelObj = {};
   let LEDBoard2ChannelObj = {}; 
   let LEDBoardObj = {};
   let dimValue = 0.2;
   
-  initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj);
+  initilizeBoards(LEDBoard1ChannelObj, LEDBoard2ChannelObj, LEDBoardObj); */
 
   // ===========================================================================================================
   //Integrerar kortfiler
   // Left section 1 & 2
   //require('./ServerFlightSim/Boards/D1Board.json'); 
-  let vs1_13 = new jFive.Switch(12);
+  let vs1_13 = new jFive.Switch(5);
   vs1_13.on('open', function () {
-    LEDBoardObj.board1.chInstance1.setDutyCycle(0.0);  
+//    LEDBoardObj.board1.chInstance1.setDutyCycle(0.0);  
     console.log('vs1_13 on');
     vs1_13Status = "1";
-    //LED on
+    /*//LED on
     LEDBoardObj.board1.chInstance0.open().then(function () {
       // code to execute after open succeeds
       console.log('Utgång 0 - Öppen');
@@ -81,7 +81,7 @@ boardVs1_2.on("ready", function () {
     }).catch(function (err) {
       // code to execute if open fails
       console.log('Utgång 0 - Ej öppen');  
-    });
+    }); */
     // Status setting
     console.log(vs1_13Status);
     //sendToFrontend(vs1_13Status);
@@ -90,9 +90,9 @@ boardVs1_2.on("ready", function () {
   
   vs1_13.on('close', function () {
 
-    LEDBoardObj.board1.chInstance0.setDutyCycle(0.0); 
+    //LEDBoardObj.board1.chInstance0.setDutyCycle(0.0); 
     console.log('vs1_13 off');
-    vs1_13Status = "0";
+    /*vs1_13Status = "0";
     //LED on
     LEDBoardObj.board1.chInstance1.open().then(function () {
       // code to execute after open succeeds
@@ -101,7 +101,7 @@ boardVs1_2.on("ready", function () {
     }).catch(function (err) {
       // code to execute if open fails
       console.log('Utgång 0 - Ej öppen');  
-    });
+    }); */
     // Status setting
     console.log(vs1_13Status);
     //sendToFrontend(vs1_13Status);
