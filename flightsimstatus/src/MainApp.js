@@ -3,8 +3,8 @@ import { BasicCSS, SectionsCSS } from './CSS/GenerallCSS.js';
 import axios from 'axios';
 
 import ActiveFSParts from './Components/ActiveFSParts.js';
-import Top5 from './Components/Section5.js';
-import Top4 from './Components/Section4.js';
+import Top5 from './Components/SectionTop5/MainTop5.js';
+import Top4 from './Components/SectionTop4/MainTop4.js';
 import Middle3 from './Components/SectionMiddle3/MainMiddle3.js';
 import { Left1, Left2 } from './Components/SectionLeft/MainLeft.js';
 
@@ -55,12 +55,12 @@ class MainApp extends PureComponent  {
             <SectionTop5 
               importedFsDataApi={ sendFsDataApi }
             />
-          </div>
+          </div>*/}
           <div className={ SectionsCSS.sectionContainer4 }>
-            <SectionTop4
+            <Top4
               importedFsDataApi={ sendFsDataApi }
             />
-          </div>*/}
+          </div>
           <div className={ SectionsCSS.sectionContainer3 }>
             <Middle3
               importedFsDataApi={ sendFsDataApi }

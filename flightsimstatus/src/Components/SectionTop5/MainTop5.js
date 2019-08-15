@@ -1,7 +1,7 @@
 import React, { useState  } from 'react';
-import { SectionsCSS } from '../CSS/GenerallCSS.js';
-import { SectionTop5CSS } from '../CSS/Sections/SectionTop5CSS.js';
-import { NoneLED, GreenLED, LEDSegmentDigit4, LEDSegmentDigit8, LEDDisplay20x4 } from './ComponentsParts.js';
+import { SectionsCSS } from '../../CSS/GenerallCSS.js';
+import { SectionTop5CSS } from '../../CSS/Sections/SectionTop5CSS.js';
+import { NoneLED, GreenLED, LEDSegmentDigit4, LEDSegmentDigit8, LEDDisplay20x4 } from '../ComponentsParts.js';
 
 function SectionTop5(props){
     return(

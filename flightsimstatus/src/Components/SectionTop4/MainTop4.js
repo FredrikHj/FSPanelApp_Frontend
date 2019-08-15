@@ -1,26 +1,27 @@
 import React, { useState  } from 'react';
-import { SectionsCSS } from '../CSS/GenerallCSS.js'
-import { SectionTop4CSS } from '../CSS/Sections/SectionTop4CSS.js';
-import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder } from './ComponentsParts.js';
-
-function SectionTop4(props){   
+import { SectionsCSS } from '../../CSS/GenerallCSS.js'
+import { SectionTop4CSS } from '../../CSS/Sections/SectionTop4CSS.js';
+import { GreenLED, RedLED, SPDTVertical, LEDSegmentDigit4, LEDSegmentDigit8, RotarySpdt, RotaryEncorder } from '../ComponentsParts.js';
+import { Top4Panel2Row1, Top4Panel2Row2, Top4Panel2Row3 } from './Top4Panel2Rows.js';
+function Top4(props){
+    let fsDataApi = props.importedFsDataApi.fsDataValuesApi;
     return(
         <> 
             <p className={ SectionsCSS.sectionHeadline }>Övre sektion 4</p>        
             <div className={ SectionTop4CSS.sectionTop4 }>
-                <Section4_1 spdtStatus={ props.thisState.fsDataValuesApi }/>
-                <Section4_2 spdtStatus={ props.thisState.fsDataValuesApi }/>
-                <Section4_3 spdtStatus={ props.thisState.fsDataValuesApi }/>
-                <Section4_4 spdtStatus={ props.thisState.fsDataValuesApi }/>
-                <Section4_5 spdtStatus={ props.thisState.fsDataValuesApi }/>
-                <Section4_6 spdtStatus={ props.thisState.fsDataValuesApi }/>
+                <Top4_1 spdtStatus={ fsDataApi }/>
+                <Top4_2 spdtStatus={ fsDataApi }/>
+                <Top4_3 spdtStatus={ fsDataApi }/>
+                <Top4_4 spdtStatus={ fsDataApi }/>
+                <Top4_5 spdtStatus={ fsDataApi }/>
+                <Top4_6 spdtStatus={ fsDataApi }/>
             </div>
         </>
     );
   }
-  export default SectionTop4;
+  export default Top4;
 
-  let Section4_1 = (props) => {
+  let Top4_1 = (props) => {
     return(
         <div className={ SectionTop4CSS.section4_1 }> 
             <section className={ SectionTop4CSS.section4_1ComponentsContainer }>
@@ -67,65 +68,20 @@ function SectionTop4(props){
         </div>
     );
   }
-  let Section4_2 = (props) => {
+  let Top4_2 = (props) => {
+    let fsDataApi = props.spdtStatus;
     return(
         <div className={ SectionTop4CSS.section4_2 }>
-            <section className={ SectionTop4CSS.section4_2Row1 }>
-                <LEDSegmentDigit8
-                    segmentName={ 'Name' }
-                    segmentsValue={ '0.0.0.0.0.0.0.0' }
-                />
-                <section className={ SectionTop4CSS.section4_2Row1Middle }>
-                    <GreenLED commandName={ 'Name' }/>
-                    <GreenLED commandName={ 'Name' }/>
-                </section>
-                <LEDSegmentDigit8
-                    segmentName={ 'Name' }
-                    segmentsValue={ '0.0.0.0.0.0.0.0' }
-                />
-            </section>
-            <section className={ SectionTop4CSS.section4_2Row2 }>
-                <section className={ SectionTop4CSS.section4_2Row22xledSpdf }>
-                    <div className={ SectionTop4CSS.section4_2Row2Led1 }>
-                        <GreenLED commandName={ 'Name' }/>       
-                    </div>
-                    <div className={ SectionTop4CSS.section4_2Row2Spdf2 }>
-                        <SPDTVertical commandName={ 'Name' } spdtStatus={props.test } />
-                    </div>
-                    <div className={ SectionTop4CSS.section4_2Row2Led3 }>
-                        <GreenLED commandName={ 'Name' }/>       
-                    </div>
-                </section>
-                <section className={ SectionTop4CSS.section4_2Row2RotaryEncorder }>
-                    <RotaryEncorder 
-                        commandName={ 'Name' }
-                        direction= { '-360' }/>
-                    <RotaryEncorder 
-                        commandName={ 'Name' }
-                        direction= { '360' }/>
-                </section>
-                <div className={ SectionTop4CSS.section4_2Row2LeftRotarySpdt }> 
-                    <RotarySpdt 
-                        rotarySpdfPosStr1= { ' Name = 1' }
-                        rotarySpdfPosStr2= { ' Name = 2' }
-                        rotarySpdfPosStr3= { ' Name = 3' }
-                        rotarySpdfPosStr4= { ' Name = 4' }
-                        rotarySpdfPosStr5= { ' Name = 5' }
-                        rotarySpdfPosStr6= { ' Name = 6' }
-                        rotarySpdfPosStr7= { ' Name = 7' }
-                        rotarySpdfPosStr8= { ' Name = 8' }
-                        rotarySpdfPosStr9= { ' Name = 9' }
-                        rotarySpdfPosStr10= { ' Name = 10' }
-                        rotarySpdfPosStr11= { ' Name = 11' }
-                        rotarySpdfPosStr12= { ' Name = 12' }
-                        rotaryStatus={ props.spdtStatus.rotaryStatus }
-                    />
-                </div>
-            </section>
+           <Top4Panel2Row1
+                fsDataApi={ fsDataApi }
+            />
+            <Top4Panel2Row2
+                fsDataApi={ fsDataApi }
+            />
         </div>
     );
 }
-let Section4_3 = (props) => {
+let Top4_3 = (props) => {
     return(
         <div className={ SectionTop4CSS.section4_3 }>
             <section className={ SectionTop4CSS.section4_3Row1 }>
@@ -153,7 +109,7 @@ let Section4_3 = (props) => {
                         rotarySpdfPosStr10= { ' Name = 10' }
                         rotarySpdfPosStr11= { ' Name = 11' }
                         rotarySpdfPosStr12= { ' Name = 12' }
-                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                        rotaryStatus={ props.rotaryStatus }
                     />
                 </div>
                 <div className={ SectionTop4CSS.section4_3Row22RotaryEncorder2 }>
@@ -171,7 +127,7 @@ let Section4_3 = (props) => {
         </div>
     );
 }
-let Section4_4 = (props) => {  
+let Top4_4 = (props) => {  
     return(
         <div className={ SectionTop4CSS.section4_4 }>
             <section className={ SectionTop4CSS.section4_4LedSpdf }>
@@ -189,7 +145,7 @@ let Section4_4 = (props) => {
                         rotarySpdfPosStr10= { ' Name = 10' }
                         rotarySpdfPosStr11= { ' Name = 11' }
                         rotarySpdfPosStr12= { ' Name = 12' }
-                        rotaryStatus={ props.spdtStatus.rotaryStatus }
+                        rotaryStatus={ props.rotaryStatus }
                     />
                 </section>
                 <section className={ SectionTop4CSS.section4_4Spdfx2Container }>
@@ -227,7 +183,7 @@ let Section4_4 = (props) => {
         </div>
     );
 }
-let Section4_5 = (props) => {
+let Top4_5 = (props) => {
     return(
         <div className={ SectionTop4CSS.section4_5 }>
             <section className={ SectionTop4CSS.section4_6InnerFrame }>
@@ -259,7 +215,7 @@ let Section4_5 = (props) => {
         </div>
     );
 }
-let Section4_6 = (props) => {
+let Top4_6 = (props) => {
     return(
         <div className={ SectionTop4CSS.section4_6 }>
             <section className={ SectionTop4CSS.section4_6InnerFrame }>
